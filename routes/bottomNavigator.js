@@ -7,6 +7,7 @@ import UpdateStack from './updateStack';
 import Projects from '../screens/projects';
 import Featured from '../screens/featured';
 import Map from '../screens/map';
+import globalStyles from '../styles/global';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -19,7 +20,7 @@ function AppTabs() {
       activeColor="#E84A27"
       inactiveColor="#FFCC96"
       labeled={true}
-      barStyle={styles.navigator}>
+      barStyle={[styles.navigator, globalStyles.illiniBlue]}>
       {/* Home Screen */}
       <Tab.Screen
         name="Home"
@@ -81,8 +82,9 @@ function AppTabs() {
 
 const styles = StyleSheet.create({
   navigator: {
-    backgroundColor: '#13294B',
+    fontFamily: 'Montserrat-Black',
     paddingBottom: 0,
+    height: 50,
   },
 });
 

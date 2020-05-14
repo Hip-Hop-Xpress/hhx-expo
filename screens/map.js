@@ -14,7 +14,6 @@ import Header from '../components/header';
 import strings from '../assets/strings/strings';
 import coords from '../assets/coords';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {SocialIcon} from 'react-native-elements';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import globalStyles from '../styles/global';
@@ -120,20 +119,21 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
   },
   titleText: {
+    fontFamily: 'Montserrat-Black',
     marginTop: 5,
     marginBottom: 10,
     fontSize: 32,
     textAlign: 'center',
-    fontWeight: 'bold',
   },
   introText: {
+    fontFamily: 'Karla-BoldItalic',
     textAlign: 'center',
     marginHorizontal: 30,
     fontSize: 16,
     marginBottom: 30,
   },
   body: {
-    backgroundColor: Colors.white,
+    backgroundColor: 'white',
     marginBottom: 40,
     paddingBottom: 40,
   },

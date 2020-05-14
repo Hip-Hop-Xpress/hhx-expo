@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     marginHorizontal: win.width / 3.9,
     width: 209,
-    height: 25,
+    height: 18,
   },
 });

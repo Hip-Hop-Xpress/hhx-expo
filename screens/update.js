@@ -13,6 +13,7 @@ import globalStyles from '../styles/global';
 const Update = props => {
   const {title} = props.route.params;
   const {body} = props.route.params;
+  const {date} = props.route.params;
 
   return (
     <>
@@ -26,6 +27,11 @@ const Update = props => {
             {/* Title */}
             <View style={styles.title}>
               <Text style={styles.titleText}>{title}</Text>
+            </View>
+
+            {/* Date */}
+            <View style={styles.date}>
+              <Text style={styles.dateText}>{date}</Text>
             </View>
 
             {/* Text body */}
@@ -54,6 +60,16 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 15,
     paddingHorizontal: 20,
+  },
+  date: {
+    paddingHorizontal: 12,
+    paddingBottom: 20,
+  },
+  dateText: {
+    fontFamily: 'Karla-BoldItalic',
+    fontSize: 16,
+    textAlign: 'right',
+    color: 'lightgray',
   },
   bodyText: {
     fontFamily: 'Karla-Regular',

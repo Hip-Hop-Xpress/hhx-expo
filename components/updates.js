@@ -12,6 +12,7 @@ const Updates = props => {
     <UpdateComponent
       title={update.title}
       body={update.body}
+      date={update.date}
       key={key++}
       navigation={props.navigation}
     />

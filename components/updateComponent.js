@@ -12,11 +12,12 @@ const UpdateComponent = props => {
           props.navigation.navigate('Update', {
             title: props.title,
             body: props.body,
-            //navigation: props.navigation,
+            date: props.date,
           })
       }>
       <View style={[styles.updateContainer, globalStyles.illiniOrange]}>
         <Text style={styles.updateTitle}>{props.title}</Text>
+        <Text style={styles.updateDate}>{props.date}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -36,6 +37,13 @@ const styles = StyleSheet.create({
     fontFamily: 'Karla-Regular',
     fontSize: 19,
     textAlign: 'left',
+    color: 'white',
+    marginBottom: 10,
+  },
+  updateDate: {
+    fontFamily: 'Karla-BoldItalic',
+    fontSize: 17,
+    textAlign: 'right',
     color: 'white',
   },
   updateDescription: {
