@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import globalStyles from '../styles/global';
 
 const UpdateComponent = props => {
@@ -34,16 +33,16 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   updateTitle: {
+    fontFamily: 'Karla-Regular',
     fontSize: 19,
-    fontWeight: '700',
     textAlign: 'left',
-    color: Colors.white,
+    color: 'white',
   },
   updateDescription: {
     marginTop: 0,
     fontSize: 16,
     fontWeight: '400',
-    color: Colors.white,
+    color: 'white',
   },
 });
 

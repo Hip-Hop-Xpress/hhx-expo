@@ -12,7 +12,6 @@ import Header from '../components/header';
 import ProjectsList from '../components/projectsList';
 import strings from '../assets/strings/strings';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import globalStyles from '../styles/global';
 
 export default function Projects() {
@@ -46,20 +45,21 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   titleText: {
+    fontFamily: 'Montserrat-Black',
     marginTop: 5,
     marginBottom: 10,
     fontSize: 32,
     textAlign: 'center',
-    fontWeight: 'bold',
   },
   introText: {
+    fontFamily: 'Karla-Regular',
     textAlign: 'center',
     marginHorizontal: 30,
     fontSize: 16,
     marginBottom: 30,
   },
   body: {
-    backgroundColor: Colors.white,
+    backgroundColor: 'white',
     marginBottom: 40,
     paddingBottom: 40,
   },

@@ -18,12 +18,8 @@ import strings from '../assets/strings/strings';
 
 import {SocialIcon} from 'react-native-elements';
 import globalStyles from '../styles/global';
-import { useFonts } from '@use-expo/font';
-import * as Font from 'expo-font';
-import { AppLoading } from 'expo';
 
 export default function Home({navigation}) {
-
   // App layout
   return (
     <>
@@ -138,7 +134,7 @@ const styles = StyleSheet.create({
   topIntroText: {
     color: 'white',
     fontSize: 20,
-    fontWeight: 'bold',
+    fontFamily: 'Montserrat-Regular',
   },
   topTitleText: {
     marginTop: 10,
@@ -170,14 +166,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   sectionTitle: {
+    fontFamily: 'Montserrat-Black',
     fontSize: 24,
-    fontWeight: '700',
     textAlign: 'center',
     color: 'black',
     marginBottom: 12,
-    fontFamily: 'Montserrat-Regular',
   },
   sectionDescription: {
+    fontFamily: 'Karla-Regular',
     marginTop: 0,
     fontSize: 16,
     fontWeight: '400',

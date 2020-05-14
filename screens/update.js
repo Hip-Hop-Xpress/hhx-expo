@@ -44,17 +44,19 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleText: {
+    fontFamily: 'Montserrat-Black',
     fontSize: 30,
-    fontWeight: 'bold',
     textAlign: 'center',
     color: 'rgba(232, 74, 39, 1.0)',
   },
   title: {
+    fontFamily: 'Montserrat-Black',
     paddingTop: 20,
     paddingBottom: 15,
     paddingHorizontal: 20,
   },
   bodyText: {
+    fontFamily: 'Karla-Regular',
     fontSize: 21,
     color: 'lightgray',
   },
