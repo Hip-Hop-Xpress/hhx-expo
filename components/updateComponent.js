@@ -12,7 +12,7 @@ const UpdateComponent = props => {
           props.navigation.navigate('Update', {
             title: props.title,
             body: props.body,
-            navigation: props.navigation,
+            //navigation: props.navigation,
           })
       }>
       <View style={styles.updateContainer}>

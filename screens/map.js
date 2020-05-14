@@ -35,7 +35,7 @@ export default function Map() {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView>
+      <SafeAreaView style={styles.illiniBlueBackground}>
         <Header />
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           {/* Body */}

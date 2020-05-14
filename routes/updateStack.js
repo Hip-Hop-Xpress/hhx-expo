@@ -2,6 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/home';
 import Update from '../screens/update';
+import GlobalStyles from '../styles/global';
 
 const Stack = createStackNavigator();
 
@@ -11,11 +12,14 @@ const UpdateStack = props => {
     <Stack.Navigator
       initialRouteName="Home"
       headerMode="screen"
+      mode="card"
+      gesturesEnabled={true}
+      gestureResponseDistance={100}
       screenOptions={{
         headerTintColor: 'white',
         headerStyle: {
-          backgroundColor: 'tomato',
-          height: 40,
+          backgroundColor: 'rgba(232, 74, 39, 1.0)',
+          height: 55,
         },
       }}>
       <Stack.Screen
@@ -24,6 +28,7 @@ const UpdateStack = props => {
         options={{
           gestureDirection: 'horizontal-inverted',
           gestureEnabled: true,
+          gestureResponseDistance: 100,
           title: null,
           headerShown: false,
         }}
@@ -33,6 +38,7 @@ const UpdateStack = props => {
         component={Update}
         options={{
           gestureDirection: 'horizontal',
+          gestureResponseDistance: 100,
           gestureEnabled: true,
           headerTitle: null,
         }}
