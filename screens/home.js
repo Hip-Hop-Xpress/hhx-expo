@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   SafeAreaView,
@@ -16,11 +16,31 @@ import Header from '../components/header';
 import Updates from '../components/updates';
 import strings from '../assets/strings/strings';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {SocialIcon} from 'react-native-elements';
 import globalStyles from '../styles/global';
+import { useFonts } from '@use-expo/font';
+import * as Font from 'expo-font';
+import { AppLoading } from 'expo';
 
 export default function Home({navigation}) {
+  const fetchFonts = () => {
+    return Font.loadAsync({
+      'Montserrat-Regular': require('../assets/fonts/Montserrat/Montserrat-Regular.otf'),
+      'Montserrat-Black': require('../assets/fonts/Montserrat/Montserrat-Black.otf'),
+    });
+  };
+
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  if (!dataLoaded) {
+    return (
+      <AppLoading
+        startAsync={fetchFonts}
+        onFinish={() => setDataLoaded(true)}
+      />
+    );
+  };
+
   // App layout
   return (
     <>
@@ -144,9 +164,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 15,
     color: 'white',
-    fontSize: 45,
+    fontSize: 40,
     textAlign: 'center',
-    fontWeight: 'bold',
+    fontFamily: 'Montserrat-Black',
   },
   menu: {
     paddingTop: 50,
@@ -154,13 +174,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   body: {
-    backgroundColor: Colors.white,
+    backgroundColor: 'white',
     paddingVertical: 20,
     marginBottom: 40,
   },
   sectionContainer: {
     marginTop: 24,
     paddingHorizontal: 24,
+    marginBottom: 10,
   },
   socialMediaContainer: {
     flex: 1,
@@ -172,14 +193,15 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '700',
     textAlign: 'center',
-    color: Colors.black,
+    color: 'black',
     marginBottom: 12,
+    fontFamily: 'Montserrat-Regular',
   },
   sectionDescription: {
     marginTop: 0,
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '400',
-    color: Colors.dark,
+    color: 'black',
   },
   logo: {
     marginVertical: 10,
