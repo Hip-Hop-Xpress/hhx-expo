@@ -9,21 +9,17 @@ import {
   StatusBar,
   Image,
   Dimensions,
-  Button,
   Linking,
 } from 'react-native';
 
 import Header from '../components/header';
+import Updates from '../components/updates';
+import strings from '../assets/strings/strings';
+
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {SocialIcon} from 'react-native-elements';
 
 export default function Home({navigation}) {
-  // Projects button
-  const projectNavButton = () => {
-    // Finds the screen name component called 'Projects'
-    navigation.navigate('Projects');
-  };
-
   // App layout
   return (
     <>
@@ -53,70 +49,27 @@ export default function Home({navigation}) {
           {/* Updates section */}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Latest Updates</Text>
-              <Text style={styles.sectionDescription}>
-                Learn more about the Double Dutch Boom Bus Project, the history
-                behind the Hip Hop Xpress, and what we're doing to help local
-                communities.
+              <Text style={styles.sectionTitle}>
+                {strings.home.updatesInfo.title}
               </Text>
-
-              {/* List updates here: */}
-              <View style={styles.updateContainer}>
-                <Text style={styles.updateTitle}>
-                  IMPORTANT: COVID-19 Update
-                </Text>
-                <Text style={styles.updateDescription}>
-                  Find out how the Hip Hop Xpress can help you and your
-                  community during the COVID-19 global pandemic.
-                </Text>
-              </View>
-              <View style={styles.updateContainer}>
-                <Text style={styles.updateTitle}>
-                  HipHopXpress: Connecting School to Students
-                </Text>
-                <Text style={styles.updateDescription}>
-                  The HipHopXpress is working to provide internet access to
-                  local communities that lack internet connection. Stay updated
-                  with us and our bus location through the app!
-                </Text>
-              </View>
-              <View style={styles.updateContainer}>
-                <Text style={styles.updateTitle}>
-                  The Double Dutch Boom Bus is here!
-                </Text>
-                <Text style={styles.updateDescription}>
-                  With the generosity of Sally K. Carter, our team was able to
-                  purchase a school bus at an affordable price!{'\n\n'}The bus
-                  been customized by It’s a Wrap and it is now ready for
-                  University of Illinois students to begin work on the interior.
-                  Artist John Jennings designed the graphics, and artist Stacey
-                  Robinson is helping out with more imagery.{'\n\n'}We are
-                  collaborating with the School of Architecture and the School
-                  of Music to design and build the inside during a class
-                  co-taught by Professors Erickson (Architecture), Kruse (Music)
-                  and Patterson (Music and Engineering).
-                </Text>
-              </View>
-              {/* End updates: */}
+              <Text style={styles.sectionDescription}>
+                {strings.home.updatesInfo.description}
+              </Text>
+              <Updates navigation={navigation} />
             </View>
 
             {/* History Section */}
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Our Goal</Text>
+              <Text style={styles.sectionTitle}>
+                {strings.home.history.title}
+              </Text>
               <Text style={styles.sectionDescription}>
-                The HipHop Xpress is an internet-connected mobile classroom and
-                and sound studio, a means to collect oral histories, a
-                cross-generational catalyst for music sharing and production,
-                and a method to link communities across the state through music,
-                dance, visual arts, and history.
+                {strings.home.history.description}
               </Text>
             </View>
 
-            {/* <Button title="Projects" onPress={projectNavButton} />*/}
-
             {/* Social Media Section */}
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Follow us on Social Media</Text>
               <View style={styles.socialMediaContainer}>
                 <SocialIcon
                   type="instagram"
@@ -133,7 +86,7 @@ export default function Home({navigation}) {
                   style={styles.socialMediaButton}
                   iconSize={24}
                   onPress={() => {
-                    Linking.openURL('https://www.instagram.com/uiuchhx/');
+                    Linking.openURL('https://www.facebook.com/uiuchhx/');
                   }}
                 />
                 <SocialIcon
@@ -142,7 +95,7 @@ export default function Home({navigation}) {
                   style={styles.socialMediaButton}
                   iconSize={24}
                   onPress={() => {
-                    Linking.openURL('https://www.instagram.com/uiuchhx/');
+                    Linking.openURL('https://soundcloud.com/user-255537652');
                   }}
                 />
                 <SocialIcon
@@ -151,7 +104,7 @@ export default function Home({navigation}) {
                   style={styles.socialMediaButton}
                   iconSize={24}
                   onPress={() => {
-                    Linking.openURL('https://www.instagram.com/uiuchhx/');
+                    Linking.openURL('https://twitter.com/UIUChhx');
                   }}
                 />
               </View>
@@ -163,10 +116,10 @@ export default function Home({navigation}) {
   );
 }
 
-const imageWidth = 1077;
-const imageHeight = 129;
+// const imageWidth = 1077;
+// const imageHeight = 129;
 const win = Dimensions.get('window');
-const ratio = win.width / imageWidth;
+// const ratio = win.width / imageWidth;
 
 const styles = StyleSheet.create({
   header: {
@@ -197,14 +150,13 @@ const styles = StyleSheet.create({
   illiniBlueBackground: {
     backgroundColor: 'rgba(19, 41, 75, 1.0)',
   },
+  illiniOrangeBackground: {
+    backgroundColor: 'rgba(232, 74, 39, 1.0)',
+  },
   menu: {
     paddingTop: 50,
     flexDirection: 'row',
     justifyContent: 'center',
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
   },
   body: {
     backgroundColor: Colors.white,
@@ -214,24 +166,6 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 24,
     paddingHorizontal: 24,
-  },
-  updateContainer: {
-    marginVertical: 12,
-    paddingHorizontal: 12,
-    paddingVertical: 12,
-    backgroundColor: 'rgba(232, 74, 39, 0.95)',
-  },
-  updateTitle: {
-    fontSize: 19,
-    fontWeight: '700',
-    textAlign: 'left',
-    color: Colors.white,
-  },
-  updateDescription: {
-    marginTop: 0,
-    fontSize: 17,
-    fontWeight: '400',
-    color: Colors.white,
   },
   socialMediaContainer: {
     flex: 1,
@@ -244,6 +178,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     textAlign: 'center',
     color: Colors.black,
+    marginBottom: 12,
   },
   sectionDescription: {
     marginTop: 0,
