@@ -23,23 +23,6 @@ import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 
 export default function Home({navigation}) {
-  const fetchFonts = () => {
-    return Font.loadAsync({
-      'Montserrat-Regular': require('../assets/fonts/Montserrat/Montserrat-Regular.otf'),
-      'Montserrat-Black': require('../assets/fonts/Montserrat/Montserrat-Black.otf'),
-    });
-  };
-
-  const [dataLoaded, setDataLoaded] = useState(false);
-
-  if (!dataLoaded) {
-    return (
-      <AppLoading
-        startAsync={fetchFonts}
-        onFinish={() => setDataLoaded(true)}
-      />
-    );
-  };
 
   // App layout
   return (
@@ -137,10 +120,7 @@ export default function Home({navigation}) {
   );
 }
 
-// const imageWidth = 1077;
-// const imageHeight = 129;
 const win = Dimensions.get('window');
-// const ratio = win.width / imageWidth;
 
 const styles = StyleSheet.create({
   header: {

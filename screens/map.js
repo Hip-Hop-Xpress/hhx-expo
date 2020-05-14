@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
   introText: {
     textAlign: 'center',
     marginHorizontal: 30,
-    fontSize: 24,
+    fontSize: 16,
     marginBottom: 30,
   },
   body: {

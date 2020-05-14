@@ -17,6 +17,7 @@ const Project = props => {
       {/* Body text */}
       {props.isSelected ? (
         <View style={styles.projectInfo}>
+          <Text style={styles.title}>{props.topText}</Text>
           <Text style={styles.members}>{props.members}</Text>
           <Text style={styles.projectText}>{props.bottomText} </Text>
         </View>
@@ -48,12 +49,19 @@ const styles = StyleSheet.create({
     marginVertical: 15,
     marginHorizontal: 20,
   },
+  title: {
+    fontSize: 22,
+    fontWeight: '900',
+    textAlign: 'center',
+    marginBottom: 15,
+  },
   members: {
-    fontSize: 19,
+    fontSize: 18,
     fontWeight: 'bold',
+    marginBottom: 10,
   },
   projectText: {
-    fontSize: 18,
+    fontSize: 16,
   },
 });
 

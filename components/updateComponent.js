@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   updateDescription: {
     marginTop: 0,
-    fontSize: 17,
+    fontSize: 16,
     fontWeight: '400',
     color: Colors.white,
   },
