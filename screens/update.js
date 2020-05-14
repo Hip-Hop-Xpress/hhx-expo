@@ -6,20 +6,13 @@ import {
   View,
   Text,
   StatusBar,
-  TouchableOpacity,
-  Dimensions,
 } from 'react-native';
 
-import Header from '../components/header';
-
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
-const iconSize = 40;
+import globalStyles from '../styles/global';
 
 const Update = props => {
   const {title} = props.route.params;
   const {body} = props.route.params;
-  const {navigation} = props.route.params;
 
   return (
     <>
@@ -27,27 +20,18 @@ const Update = props => {
       <SafeAreaView style={styles.screen}>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.illiniBlueBackground}>
+          style={globalStyles.illiniBlue}>
           {/* Screen body */}
-          <View style={[styles.body, styles.illiniBlueBackground]}>
+          <View style={[styles.body, globalStyles.illiniBlue]}>
             {/* Title */}
             <View style={styles.title}>
               <Text style={styles.titleText}>{title}</Text>
             </View>
 
             {/* Text body */}
-            <View style={[styles.body, styles.illiniBlueBackground]}>
+            <View style={[styles.body, globalStyles.illiniBlue]}>
               <Text style={styles.bodyText}>{body}</Text>
             </View>
-
-            <TouchableOpacity onPress={() => navigation.goBack()}>
-              <MaterialCommunityIcons
-                name="arrow-left"
-                color="lightgray"
-                size={iconSize}
-                style={styles.backButton}
-              />
-            </TouchableOpacity>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -77,16 +61,6 @@ const styles = StyleSheet.create({
   body: {
     paddingBottom: 40,
     paddingHorizontal: 12,
-  },
-  backButton: {
-    backgroundColor: 'rgba(232, 74, 39, 0.5)',
-    justifyContent: 'center',
-    alignContent: 'center',
-    borderRadius: 15,
-    marginBottom: 40,
-  },
-  illiniBlueBackground: {
-    backgroundColor: 'rgba(19, 41, 75, 1.0)',
   },
 });
 

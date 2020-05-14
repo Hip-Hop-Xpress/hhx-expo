@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-export const globalStyles = StyleSheet.create({
+const globalStyles = StyleSheet.create({
   illiniOrange: {
     backgroundColor: 'rgba(232, 74, 39, 1.0)',
   },
@@ -8,3 +8,5 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: 'rgba(19, 41, 75, 1.0)',
   },
 });
+
+export default globalStyles;

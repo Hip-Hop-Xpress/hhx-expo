@@ -2,7 +2,6 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/home';
 import Update from '../screens/update';
-import GlobalStyles from '../styles/global';
 
 const Stack = createStackNavigator();
 

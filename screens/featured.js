@@ -12,6 +12,7 @@ import {
 
 import Header from '../components/header';
 import strings from '../assets/strings/strings';
+import globalStyles from '../styles/global';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {SocialIcon} from 'react-native-elements';
@@ -20,11 +21,11 @@ export default function Featured() {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={[styles.illiniBlueBackground]}>
+      <SafeAreaView style={[globalStyles.illiniBlue]}>
         <Header />
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           {/* Body */}
-          <View style={[styles.body, styles.illiniBlueBackground]}>
+          <View style={[styles.body, globalStyles.illiniBlue]}>
             {/* Title */}
             <View style={styles.title}>
               <Text style={styles.titleText}>{strings.featured.title}</Text>
@@ -49,7 +50,7 @@ export default function Featured() {
             <View
               style={[
                 styles.socialMediaContainer,
-                styles.illiniBlueBackground,
+                globalStyles.illiniBlue,
               ]}>
               <SocialIcon
                 type="instagram"
@@ -90,7 +91,7 @@ export default function Featured() {
             </View>
 
             {/* Bio */}
-            <View style={[styles.illiniBlueBackground, styles.bioContainer]}>
+            <View style={[globalStyles.illiniBlue, styles.bioContainer]}>
               <Text style={styles.bioTitle}>{strings.featured.bioTitle}</Text>
               <Text style={styles.bioBody}>{strings.featured.bioBody}</Text>
             </View>
@@ -141,9 +142,6 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     marginBottom: 40,
     paddingBottom: 40,
-  },
-  illiniBlueBackground: {
-    backgroundColor: 'rgba(19, 41, 75, 1.0)',
   },
   socialMediaContainer: {
     flex: 1,

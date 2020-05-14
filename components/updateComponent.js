@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import globalStyles from '../styles/global';
 
 const UpdateComponent = props => {
   const update = (
@@ -15,7 +16,7 @@ const UpdateComponent = props => {
             //navigation: props.navigation,
           })
       }>
-      <View style={styles.updateContainer}>
+      <View style={[styles.updateContainer, globalStyles.illiniOrange]}>
         <Text style={styles.updateTitle}>{props.title}</Text>
       </View>
     </TouchableOpacity>
@@ -30,7 +31,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingTop: 12,
     paddingBottom: 20,
-    backgroundColor: 'rgba(232, 74, 39, 0.95)',
     borderRadius: 10,
   },
   updateTitle: {

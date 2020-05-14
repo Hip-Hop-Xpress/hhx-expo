@@ -13,12 +13,13 @@ import ProjectsList from '../components/projectsList';
 import strings from '../assets/strings/strings';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import globalStyles from '../styles/global';
 
 export default function Projects() {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={styles.illiniBlueBackground}>
+      <SafeAreaView style={globalStyles.illiniBlue}>
         <Header />
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           {/* Body */}
@@ -61,8 +62,5 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     marginBottom: 40,
     paddingBottom: 40,
-  },
-  illiniBlueBackground: {
-    backgroundColor: 'rgba(19, 41, 75, 1.0)',
   },
 });

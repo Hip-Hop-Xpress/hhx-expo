@@ -1,9 +1,10 @@
 import React from 'react';
 import {StyleSheet, Image, View, Dimensions} from 'react-native';
+import globalStyles from '../styles/global';
 
 export default function Header() {
   return (
-    <View style={styles.illiniBlueBackground}>
+    <View style={globalStyles.illiniBlue}>
       <Image
         style={styles.logo}
         resizeMode="cover"
@@ -16,9 +17,6 @@ export default function Header() {
 const win = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-  illiniBlueBackground: {
-    backgroundColor: 'rgba(19, 41, 75, 1.0)',
-  },
   logo: {
     marginVertical: 10,
     marginHorizontal: win.width / 3.9,

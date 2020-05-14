@@ -17,6 +17,7 @@ import coords from '../assets/coords';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {SocialIcon} from 'react-native-elements';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import globalStyles from '../styles/global';
 
 let {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
@@ -35,7 +36,7 @@ export default function Map() {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={styles.illiniBlueBackground}>
+      <SafeAreaView style={globalStyles.illiniBlue}>
         <Header />
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           {/* Body */}
@@ -135,9 +136,6 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     marginBottom: 40,
     paddingBottom: 40,
-  },
-  illiniBlueBackground: {
-    backgroundColor: 'rgba(19, 41, 75, 1.0)',
   },
   mapContainer: {
     top: 0,

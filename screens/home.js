@@ -18,17 +18,18 @@ import strings from '../assets/strings/strings';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {SocialIcon} from 'react-native-elements';
+import globalStyles from '../styles/global';
 
 export default function Home({navigation}) {
   // App layout
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={styles.illiniBlueBackground}>
+      <SafeAreaView style={globalStyles.illiniBlue}>
         <Header />
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.illiniBlueBackground}>
+          style={globalStyles.illiniBlue}>
           <View>
             {/* Bus image */}
             <Image
@@ -146,12 +147,6 @@ const styles = StyleSheet.create({
     fontSize: 45,
     textAlign: 'center',
     fontWeight: 'bold',
-  },
-  illiniBlueBackground: {
-    backgroundColor: 'rgba(19, 41, 75, 1.0)',
-  },
-  illiniOrangeBackground: {
-    backgroundColor: 'rgba(232, 74, 39, 1.0)',
   },
   menu: {
     paddingTop: 50,
