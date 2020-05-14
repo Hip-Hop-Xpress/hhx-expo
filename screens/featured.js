@@ -14,7 +14,6 @@ import Header from '../components/header';
 import strings from '../assets/strings/strings';
 import globalStyles from '../styles/global';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {SocialIcon} from 'react-native-elements';
 
 export default function Featured() {
@@ -133,7 +132,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   body: {
-    backgroundColor: Colors.white,
+    backgroundColor: 'white',
     marginBottom: 40,
     paddingBottom: 40,
   },
