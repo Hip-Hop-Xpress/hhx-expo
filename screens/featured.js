@@ -40,7 +40,7 @@ export default function Featured() {
               />
               {/* Text over bus image */}
               <View style={styles.imageCard}>
-                <Text style={styles.imageCardText}>
+                <Text style={styles.artistNameText}>
                   {strings.featured.artistName}
                 </Text>
               </View>
@@ -108,18 +108,12 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
   },
   titleText: {
+    fontFamily: 'Montserrat-Black',
     marginTop: 5,
     marginBottom: 10,
     fontSize: 32,
     textAlign: 'center',
-    fontWeight: 'bold',
     color: 'lightgray',
-  },
-  introText: {
-    textAlign: 'center',
-    marginHorizontal: 30,
-    fontSize: 18,
-    marginBottom: 30,
   },
   imageCard: {
     position: 'absolute',
@@ -130,13 +124,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  imageCardText: {
+  artistNameText: {
+    fontFamily: 'Montserrat-Regular',
     marginTop: 10,
     marginBottom: 15,
     color: 'white',
     fontSize: 45,
     textAlign: 'center',
-    fontWeight: 'bold',
   },
   body: {
     backgroundColor: Colors.white,
@@ -160,13 +154,14 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
   },
   bioTitle: {
+    fontFamily: 'Montserrat-Black',
     fontSize: 30,
     textAlign: 'center',
-    fontWeight: 'bold',
     color: 'rgba(232, 74, 39, 1.0)',
     marginBottom: 10,
   },
   bioBody: {
+    fontFamily: 'Karla-Regular',
     fontSize: 18,
     color: 'lightgray',
     lineHeight: 30,
