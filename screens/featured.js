@@ -35,7 +35,7 @@ export default function Featured() {
               {/* Bus image */}
               <Image
                 style={styles.busImage}
-                source={require('../assets/featured/marcelo_champion/marcelo_champion_header_blurred.jpg')}
+                source={require('../assets/featured/default/default_header_blurred.jpg')}
               />
               {/* Text over bus image */}
               <View style={styles.imageCard}>
