@@ -2,6 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/home';
 import Update from '../screens/update';
+import Courses from '../screens/history/courses';
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,8 @@ const UpdateStack = props => {
           height: 55,
         },
       }}>
+
+      {/* Home Screen */}
       <Stack.Screen
         name="Home"
         component={Home}
@@ -32,9 +35,23 @@ const UpdateStack = props => {
           headerShown: false,
         }}
       />
+
+      {/* Update Screens */}
       <Stack.Screen
         name="Update"
         component={Update}
+        options={{
+          gestureDirection: 'horizontal',
+          gestureResponseDistance: 100,
+          gestureEnabled: true,
+          headerTitle: null,
+        }}
+      />
+
+      {/* Courses Screen */}
+      <Stack.Screen
+        name="Courses"
+        component={Courses}
         options={{
           gestureDirection: 'horizontal',
           gestureResponseDistance: 100,

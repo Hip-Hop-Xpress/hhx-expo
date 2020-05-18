@@ -18,6 +18,8 @@ import strings from '../assets/strings/strings';
 
 import {SocialIcon} from 'react-native-elements';
 import globalStyles from '../styles/global';
+import { Button } from 'react-native-paper';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Home({navigation}) {
   // App layout
@@ -67,6 +69,11 @@ export default function Home({navigation}) {
                 {strings.home.history.description}
               </Text>
             </View>
+            <TouchableOpacity
+              style={[styles.coursesButton, globalStyles.illiniBlue]}
+              onPress={() => {navigation.navigate('Courses')}}>
+                <Text style={styles.coursesButtonText}>{strings.courses.title}</Text>
+            </TouchableOpacity>
 
             {/* Social Media Section */}
             <View style={styles.sectionContainer}>
@@ -188,6 +195,16 @@ const styles = StyleSheet.create({
   busImage: {
     height: 250,
     flex: 1,
+  },
+  coursesButton: {
+    marginVertical: 20,
+    paddingVertical: 15,
+  },
+  coursesButtonText: {
+    fontFamily: 'Montserrat-Black',
+    fontSize: 20,
+    textAlign: 'center',
+    color: 'white',
   },
   socialMediaButton: {
     borderRadius: 50,
