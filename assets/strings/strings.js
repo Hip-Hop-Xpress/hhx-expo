@@ -102,6 +102,10 @@ const strings = {
       },
     ],
   },
+  voting: {
+    title: 'Voting',
+    subtitle: 'Coming soon!',
+  },
   featured: {
     title: 'Featured Artist',
     artistName: 'ARTIST NAME HERE',

@@ -5,6 +5,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Home from '../screens/home';
 import UpdateStack from './updateStack';
 import Projects from '../screens/projects';
+import Voting from '../screens/voting';
 import Featured from '../screens/featured';
 import Map from '../screens/map';
 import globalStyles from '../styles/global';
@@ -21,6 +22,7 @@ function AppTabs() {
       inactiveColor="#FFCC96"
       labeled={true}
       barStyle={[styles.navigator, globalStyles.illiniBlue]}>
+
       {/* Home Screen */}
       <Tab.Screen
         name="Home"
@@ -48,6 +50,18 @@ function AppTabs() {
           ),
         }}
       />
+
+      {/* Voting Screen */}
+      <Tab.Screen
+        name="Voting"
+        component={Voting}
+        options={{
+          tabBarLabel: 'Voting',
+          tabBarIcon: ({color}) => (
+            <MaterialCommunityIcons name="check" color={color} size={iconSize} />
+          ),
+        }}
+      />    
 
       {/* Featured Screen */}
       <Tab.Screen
@@ -84,7 +98,7 @@ const styles = StyleSheet.create({
   navigator: {
     fontFamily: 'Montserrat-Black',
     paddingBottom: 0,
-    height: 50,
+    height: 52,
   },
 });
 
