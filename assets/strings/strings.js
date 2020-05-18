@@ -7,6 +7,12 @@ const strings = {
     },
     updates: [
       {
+        title: 'Double Dutch Boom Bus Playlists',
+        date: 'May 2020',
+        body:
+          'As UIUC students wrap up their final exams of the semester, we want to wish everyone a joyous and prosperous summer! We have cultivated a Double Dutch Boom Bus playlist for you to enjoy consisting of artists that are featured on the images of the bus. Check them out on our Instagram!',
+      },
+      {
         title: 'IMPORTANT: COVID-19 Update',
         date: 'May 2020',
         body:
