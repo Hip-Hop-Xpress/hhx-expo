@@ -28,7 +28,8 @@ const Project = props => {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 10,
+    marginHorizontal: 0,
+    marginVertical: 15,
     padding: 10,
     paddingBottom: 20,
     flex: 1,
@@ -36,7 +37,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#E84A27',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    borderRadius: 10,
   },
   projectName: {
     fontFamily: 'Karla-Regular',

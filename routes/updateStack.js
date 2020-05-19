@@ -18,7 +18,7 @@ const UpdateStack = props => {
       screenOptions={{
         headerTintColor: 'white',
         headerStyle: {
-          backgroundColor: 'rgba(232, 74, 39, 1.0)',
+          backgroundColor: 'rgba(19, 41, 75, 1.0)',
           height: 55,
         },
       }}>

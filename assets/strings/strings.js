@@ -122,6 +122,25 @@ const strings = {
     title: 'Past Courses and Camps',
     subtitle: 'Past Courses and Camps',
   },
+  participants: {
+    list: [
+      {
+        name: 'Joe Bolton',
+        description: 
+          'Joe Bolton grew up in Champaign, IL, and participated in activities at the Don Moyer Boys & Girls Club as a youth. He and Will (Dr. Patterson) have collaborated for years on music and audio production projects. Further, Mr. Bolton is a maker of extraordinary talent and has served as project engineer for Street College and various courses. He has deep experience in automotive diagnostics, repair and fabrication, neon and sheet-metal fabrication, and audio engineering and DJing.\nSome of his work is featured in an exhibit (through March 20, 2020) at the University Y, “Our Stories, Our Places, Our Resilient Selves.” ',
+        images: [
+          {
+            url: 'https://publish.illinois.edu/hiphopxpress/files/2018/09/WillJoeBoomBoxBuild-300x225.jpg',
+            caption: 'Joe Bolton on the right, showing a youth how to build a speaker in 2018.',
+          },
+          {
+            url: 'https://publish.illinois.edu/hiphopxpress/files/2020/02/JoeBolton_YFeb2020-300x225.jpeg',
+            caption: 'Display of Joe Bolton’s work, Art @ the Y'
+          }
+        ],
+      },
+    ]
+  },
 };
 
 export default strings;
