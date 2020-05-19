@@ -190,11 +190,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     textAlign: 'center',
     color: 'black',
-    marginBottom: 12,
+    marginBottom: 18,
   },
   sectionDescription: {
     fontFamily: 'Karla-Regular',
     marginTop: 0,
+    marginBottom: 25,
     fontSize: 16,
     fontWeight: '400',
     color: 'black',

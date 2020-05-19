@@ -29,13 +29,13 @@ const Project = props => {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 0,
-    marginVertical: 15,
+    marginVertical: 1,
     padding: 10,
     paddingBottom: 20,
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#E84A27',
-    flexDirection: 'row',
+    flexDirection: "column",
     justifyContent: 'space-evenly',
   },
   projectName: {

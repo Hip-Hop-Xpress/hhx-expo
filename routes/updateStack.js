@@ -9,18 +9,20 @@ const Stack = createStackNavigator();
 
 // https://reactnavigation.org/docs/stack-navigator/
 const UpdateStack = props => {
+  const responseDistance = 500;
+
   return (
     <Stack.Navigator
       initialRouteName="Home"
       headerMode="screen"
       mode="card"
       gesturesEnabled={true}
-      gestureResponseDistance={100}
+      gestureResponseDistance={responseDistance}
       screenOptions={{
         headerTintColor: 'white',
         headerStyle: {
           backgroundColor: 'rgba(19, 41, 75, 1.0)',
-          height: 55,
+          height: 58,
         },
       }}>
 
@@ -29,9 +31,9 @@ const UpdateStack = props => {
         name="Home"
         component={Home}
         options={{
-          gestureDirection: 'horizontal-inverted',
+          gestureDirection: 'horizontal',
           gestureEnabled: true,
-          gestureResponseDistance: 100,
+          gestureResponseDistance: responseDistance,
           title: null,
           headerShown: false,
         }}
@@ -43,7 +45,7 @@ const UpdateStack = props => {
         component={Update}
         options={{
           gestureDirection: 'horizontal',
-          gestureResponseDistance: 100,
+          gestureResponseDistance: responseDistance,
           gestureEnabled: true,
           headerTitle: null,
         }}
@@ -55,7 +57,7 @@ const UpdateStack = props => {
         component={Courses}
         options={{
           gestureDirection: 'horizontal',
-          gestureResponseDistance: 100,
+          gestureResponseDistance: responseDistance,
           gestureEnabled: true,
           headerTitle: null,
         }}
@@ -67,7 +69,7 @@ const UpdateStack = props => {
         component={Participants}
         options={{
           gestureDirection: 'horizontal',
-          gestureResponseDistance: 100,
+          gestureResponseDistance: responseDistance,
           gestureEnabled: true,
           headerTitle: null,
         }}

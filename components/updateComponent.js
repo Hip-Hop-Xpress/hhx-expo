@@ -27,11 +27,10 @@ const UpdateComponent = props => {
 
 const styles = StyleSheet.create({
   updateContainer: {
-    marginVertical: 12,
+    marginVertical: 1,
     paddingHorizontal: 12,
     paddingTop: 12,
     paddingBottom: 20,
-    borderRadius: 10,
   },
   updateTitle: {
     fontFamily: 'Karla-Regular',
