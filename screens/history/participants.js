@@ -6,6 +6,7 @@ import {
   View,
   Text,
   StatusBar,
+  Image,
 } from 'react-native';
 
 import Header from '../../components/header';
@@ -19,15 +20,23 @@ export default function Participants() {
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={globalStyles.illiniBlue}>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
+          <View>
+            {/* Bus image */}
+            <Image
+              style={styles.topImage}
+              source={require('../../assets/hhx_team.jpg')}
+            />
+            {/* Text over bus image */}
+            <View style={styles.topView}>
+              <Text style={[styles.topText, globalStyles.illiniBlue]}>{strings.participants.title}</Text>
+            </View>
+          </View>
+
           {/* Body */}
           <View style={[styles.body]}>
-            {/* Title */}
-            <View style={styles.title}>
-              <Text style={styles.titleText}>{strings.courses.title}</Text>
-            </View>
 
             {/* Subtitle */}
-            <Text style={styles.introText}>{strings.courses.subtitle}</Text>
+            <Text style={styles.introText}>{strings.participants.subtitle}</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -36,22 +45,32 @@ export default function Participants() {
 }
 
 const styles = StyleSheet.create({
-  title: {
-    paddingTop: 20,
-    paddingBottom: 15,
+  topView: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  titleText: {
+  topImage: {
+    height: 250,
+    flex: 1,
+  },
+  topText: {
     fontFamily: 'Montserrat-Black',
-    marginTop: 5,
-    marginBottom: 10,
+    color: 'white',
+    padding: 15,
     fontSize: 32,
     textAlign: 'center',
   },
   introText: {
-    fontFamily: 'Karla-BoldItalic',
+    fontFamily: 'Montserrat-Regular',
     textAlign: 'center',
-    marginHorizontal: 30,
-    fontSize: 16,
+    marginVertical: 20,
+    marginHorizontal: 10,
+    fontSize: 24,
     marginBottom: 30,
   },
   body: {
@@ -59,5 +78,4 @@ const styles = StyleSheet.create({
     marginBottom: 40,
     paddingBottom: 40,
   },
-
 });

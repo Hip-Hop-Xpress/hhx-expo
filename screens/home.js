@@ -18,7 +18,6 @@ import strings from '../assets/strings/strings';
 
 import {SocialIcon} from 'react-native-elements';
 import globalStyles from '../styles/global';
-import { Button } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Home({navigation}) {
@@ -69,11 +68,25 @@ export default function Home({navigation}) {
                 {strings.home.history.description}
               </Text>
             </View>
-            <TouchableOpacity
-              style={[styles.coursesButton, globalStyles.illiniBlue]}
-              onPress={() => {navigation.navigate('Courses')}}>
-                <Text style={styles.coursesButtonText}>{strings.courses.title}</Text>
-            </TouchableOpacity>
+
+            {/* Navigation to history modules*/}
+            <View style={styles.navigationSection}>
+              {/* Courses Navigation */}
+              <TouchableOpacity
+                style={[styles.navButton, globalStyles.illiniBlue]}
+                activeOpacity={0.75}
+                onPress={() => {navigation.navigate('Courses')}}>
+                  <Text style={styles.navButtontext}>{strings.courses.title}</Text>
+              </TouchableOpacity>
+
+              {/* Participants Navigation */}
+              <TouchableOpacity
+                style={[styles.navButton, globalStyles.illiniBlue]}
+                activeOpacity={0.75}
+                onPress={() => {navigation.navigate('Participants')}}>
+                  <Text style={styles.navButtontext}>{strings.participants.title}</Text>
+              </TouchableOpacity>
+            </View>
 
             {/* Social Media Section */}
             <View style={styles.sectionContainer}>
@@ -196,11 +209,14 @@ const styles = StyleSheet.create({
     height: 250,
     flex: 1,
   },
-  coursesButton: {
+  navigationSection: {
     marginVertical: 20,
-    paddingVertical: 15,
   },
-  coursesButtonText: {
+  navButton: {
+    paddingVertical: 15,
+    marginVertical: -1,
+  },
+  navButtontext: {
     fontFamily: 'Montserrat-Black',
     fontSize: 20,
     textAlign: 'center',
