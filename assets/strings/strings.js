@@ -123,6 +123,9 @@ const strings = {
     subtitle: 'Past Courses and Camps',
   },
   participants: {
+    title: 'Our Participants',
+    subtitle: 
+      'These are the people that make the Hip Hop Xpress possible.',
     list: [
       {
         name: 'Joe Bolton',

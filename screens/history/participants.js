@@ -13,7 +13,7 @@ import strings from '../../assets/strings/strings';
 
 import globalStyles from '../../styles/global';
 
-export default function Courses() {
+export default function Participants() {
   return (
     <>
       <StatusBar barStyle="light-content" />
