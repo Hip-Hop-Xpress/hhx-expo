@@ -34,7 +34,7 @@ export default function Home({navigation}) {
             {/* Bus image */}
             <Image
               style={styles.busImage}
-              source={require('../assets/hhx_bus_blur_orange.jpg')}
+              source={require('../assets/images/hhx_bus_blur_orange.jpg')}
             />
             {/* Text over bus image */}
             <View style={styles.topImage}>

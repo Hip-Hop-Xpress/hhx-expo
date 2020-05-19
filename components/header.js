@@ -8,7 +8,7 @@ export default function Header() {
       <Image
         style={styles.logo}
         resizeMode="cover"
-        source={require('../assets/hhx_logo_transparent.png')}
+        source={require('../assets/images/hhx_logo_transparent.png')}
       />
     </View>
   );

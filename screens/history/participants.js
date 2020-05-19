@@ -9,7 +9,6 @@ import {
   Image,
 } from 'react-native';
 
-import Header from '../../components/header';
 import strings from '../../assets/strings/strings';
 
 import globalStyles from '../../styles/global';
@@ -24,7 +23,7 @@ export default function Participants() {
             {/* Bus image */}
             <Image
               style={styles.topImage}
-              source={require('../../assets/hhx_team.jpg')}
+              source={require('../../assets/images/hhx_team.jpg')}
             />
             {/* Text over bus image */}
             <View style={styles.topView}>
