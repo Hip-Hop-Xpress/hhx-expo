@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
   SafeAreaView,
@@ -9,14 +9,13 @@ import {
   StatusBar,
   Image,
   Dimensions,
-  Linking,
 } from 'react-native';
 
 import Header from '../components/header';
 import Updates from '../components/updates';
+import SocialMedia from '../components/socialMedia';
 import strings from '../assets/strings/strings';
 
-import {SocialIcon} from 'react-native-elements';
 import globalStyles from '../styles/global';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -98,44 +97,7 @@ export default function Home({navigation}) {
 
             {/* Social Media Section */}
             <View style={styles.sectionContainer}>
-              <View style={styles.socialMediaContainer}>
-                <SocialIcon
-                  type="instagram"
-                  button={true}
-                  style={styles.socialMediaButton}
-                  iconSize={24}
-                  onPress={() => {
-                    Linking.openURL('https://www.instagram.com/uiuchhx/');
-                  }}
-                />
-                <SocialIcon
-                  type="facebook"
-                  button={true}
-                  style={styles.socialMediaButton}
-                  iconSize={24}
-                  onPress={() => {
-                    Linking.openURL('https://www.facebook.com/uiuchhx/');
-                  }}
-                />
-                <SocialIcon
-                  type="soundcloud"
-                  button={true}
-                  style={styles.socialMediaButton}
-                  iconSize={24}
-                  onPress={() => {
-                    Linking.openURL('https://soundcloud.com/user-255537652');
-                  }}
-                />
-                <SocialIcon
-                  type="twitter"
-                  button={true}
-                  style={styles.socialMediaButton}
-                  iconSize={24}
-                  onPress={() => {
-                    Linking.openURL('https://twitter.com/UIUChhx');
-                  }}
-                />
-              </View>
+              <SocialMedia />
             </View>
           </View>
         </ScrollView>
