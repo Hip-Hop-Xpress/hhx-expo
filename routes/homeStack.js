@@ -4,6 +4,7 @@ import Home from '../screens/home';
 import Update from '../screens/update';
 import Courses from '../screens/history/courses';
 import Participants from '../screens/history/participantsScreen';
+import Participant from '../screens/history/participant'
 
 const Stack = createStackNavigator();
 
@@ -74,6 +75,19 @@ const UpdateStack = props => {
           headerTitle: null,
         }}
       />
+
+      {/* Participant Individual Screen */}
+      <Stack.Screen
+        name="Participant"
+        component={Participant}
+        options={{
+          gestureDirection: 'horizontal',
+          gestureResponseDistance: responseDistance,
+          gestureEnabled: true,
+          headerTitle: null,
+        }}
+      />
+
     </Stack.Navigator>
   );
 };

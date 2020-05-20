@@ -9,8 +9,9 @@ import {
   Image,
 } from 'react-native';
 
-import strings from '../../assets/strings/strings';
+import ParticipantsList from '../../components/participants';
 
+import strings from '../../assets/strings/strings';
 import globalStyles from '../../styles/global';
 
 export default function Participants() {
@@ -36,6 +37,9 @@ export default function Participants() {
 
             {/* Subtitle */}
             <Text style={styles.introText}>{strings.participants.subtitle}</Text>
+
+            {/* Participant Components */}
+            <ParticipantsList />
           </View>
 
         </ScrollView>
