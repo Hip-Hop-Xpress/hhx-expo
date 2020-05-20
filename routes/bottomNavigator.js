@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from '../screens/home';
-import UpdateStack from './updateStack';
+import HomeStack from './homeStack';
 import Projects from '../screens/projects';
 import Voting from '../screens/voting';
 import Featured from '../screens/featured';
@@ -26,7 +26,7 @@ function AppTabs() {
       {/* Home Screen */}
       <Tab.Screen
         name="Home"
-        component={UpdateStack}
+        component={HomeStack}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color}) => (

@@ -3,7 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/home';
 import Update from '../screens/update';
 import Courses from '../screens/history/courses';
-import Participants from '../screens/history/participants';
+import Participants from '../screens/history/participantsScreen';
 
 const Stack = createStackNavigator();
 
