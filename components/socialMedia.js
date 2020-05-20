@@ -10,6 +10,8 @@ import {SocialIcon} from 'react-native-elements';
 
 const iconSize = 24;
 
+// TODO: use an array and .map to make the social media buttons
+
 const SocialMedia = () => {
   return (
     <View style={styles.socialMediaContainer}>
