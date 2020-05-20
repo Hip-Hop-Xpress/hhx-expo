@@ -20,12 +20,12 @@ export default function Participants() {
       <SafeAreaView style={globalStyles.illiniBlue}>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <View>
-            {/* Bus image */}
+            {/* Top image */}
             <Image
               style={styles.topImage}
               source={require('../../assets/images/hhx_team.jpg')}
             />
-            {/* Text over bus image */}
+            {/* Text over top image */}
             <View style={styles.topView}>
               <Text style={[styles.topText, globalStyles.illiniBlue]}>{strings.participants.title}</Text>
             </View>
@@ -37,6 +37,7 @@ export default function Participants() {
             {/* Subtitle */}
             <Text style={styles.introText}>{strings.participants.subtitle}</Text>
           </View>
+
         </ScrollView>
       </SafeAreaView>
     </>
