@@ -26,7 +26,7 @@ const Participant = props => {
           <View style={[styles.body, globalStyles.illiniBlue]}>
             {/* Title (name) */}
             <View style={styles.title}>
-              <Text style={styles.titleText}>{/* name/title goes here */}</Text>
+              <Text style={styles.titleText}>{title}</Text>
             </View>
 
             {/* Subtitle */}

@@ -13,6 +13,7 @@ const Participants = props => {
       title={participant.name}
       paragraphs={participant.description}
       images={participant.images}
+      navigation={props.navigation}
       key={key++}
     />
   ));

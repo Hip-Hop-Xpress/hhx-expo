@@ -75,7 +75,11 @@ export default function Home({navigation}) {
               <TouchableOpacity
                 style={[styles.navButton, globalStyles.illiniBlue]}
                 activeOpacity={0.75}
-                onPress={() => {navigation.navigate('Courses')}}>
+                onPress={
+                  () => {navigation.navigate('Courses', {
+                    navigation: navigation,  // TODO: this might not be allowed lol
+                  })}
+                }>
                   <Text style={styles.navButtontext}>{strings.courses.title}</Text>
               </TouchableOpacity>
 
@@ -83,7 +87,11 @@ export default function Home({navigation}) {
               <TouchableOpacity
                 style={[styles.navButton, globalStyles.illiniBlue]}
                 activeOpacity={0.75}
-                onPress={() => {navigation.navigate('Participants')}}>
+                onPress={
+                  () => {navigation.navigate('Participants', {
+                    navigation: navigation,  // TODO: this might not be allowed lol
+                  })}
+                }>
                   <Text style={styles.navButtontext}>{strings.participants.title}</Text>
               </TouchableOpacity>
             </View>
