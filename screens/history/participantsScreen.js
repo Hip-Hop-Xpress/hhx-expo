@@ -14,6 +14,12 @@ import ParticipantsList from '../../components/participants';
 import strings from '../../assets/strings/strings';
 import globalStyles from '../../styles/global';
 
+import { YellowBox } from 'react-native';
+
+YellowBox.ignoreWarnings([
+  'Non-serializable values were found in the navigation state',
+]);
+
 export default function Participants(props) {
   return (
     <>
