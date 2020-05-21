@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity, Dimensions} from 'react-native';
 import globalStyles from '../styles/global';
 
 const ParticipantComponent = props => {
@@ -24,17 +24,23 @@ const ParticipantComponent = props => {
   return participant;
 };
 
+const screen = Dimensions.get('screen');
+const width = screen.width;
+const height = screen.height;
+
 const styles = StyleSheet.create({
   participantContainer: {
-    marginVertical: 1,
-    paddingHorizontal: 12,
-    paddingTop: 12,
-    paddingBottom: 20,
+    paddingHorizontal: 15,
+    paddingVertical: 15,
+    margin: 2,
+    width: width / 2 - 8,
+    height: height / 6,
   },
   participantTitle: {
     fontFamily: 'Karla-Regular',
-    fontSize: 19,
+    fontSize: 21,
     textAlign: 'left',
+    textAlignVertical: "bottom",
     color: 'white',
     marginBottom: 10,
   },

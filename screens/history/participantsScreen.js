@@ -7,14 +7,13 @@ import {
   Text,
   StatusBar,
   Image,
+  YellowBox
 } from 'react-native';
 
 import ParticipantsList from '../../components/participants';
 
 import strings from '../../assets/strings/strings';
 import globalStyles from '../../styles/global';
-
-import { YellowBox } from 'react-native';
 
 YellowBox.ignoreWarnings([
   'Non-serializable values were found in the navigation state',
@@ -45,7 +44,9 @@ export default function Participants(props) {
             <Text style={styles.introText}>{strings.participants.subtitle}</Text>
 
             {/* Participant Components */}
-            <ParticipantsList navigation={props.navigation} />
+            <View style={styles.participantsListContainer}>
+              <ParticipantsList navigation={props.navigation} />
+            </View>
           </View>
 
         </ScrollView>
@@ -87,5 +88,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     marginBottom: 40,
     paddingBottom: 40,
+  },
+  participantsListContainer: {
+    flex: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignContent: "stretch",
+    alignItems: "center",
+    paddingHorizontal: 2,
   },
 });
