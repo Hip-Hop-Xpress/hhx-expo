@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import globalStyles from '../../styles/global';
+import Description from '../../components/participantDescription';
 
 const Participant = props => {
   const {title} = props.route.params;
@@ -36,7 +37,7 @@ const Participant = props => {
 
             {/* Body */}
             <View style={[styles.body, globalStyles.illiniBlue]}>
-              {/* body goes here */}
+              <Description paragraphs={paragraphs} />
             </View>
           </View>
         </ScrollView>
