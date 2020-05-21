@@ -1,13 +1,14 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Dimensions} from 'react-native';
 import {TouchableOpacity} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import globalStyles from '../styles/global';
 
 const Project = props => {
   return (
     <>
       <TouchableOpacity
-        style={styles.container}
+        style={[styles.container, globalStyles.illiniOrange]}
         onPress={props.setSelected}
         activeOpacity={0.75}>
         <MaterialCommunityIcons name={props.icon} color={'white'} size={65} />
@@ -26,17 +27,17 @@ const Project = props => {
   );
 };
 
+const screen = Dimensions.get('screen');
+const width = screen.width;
+const height = screen.height;
+
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 0,
-    marginVertical: 1,
-    padding: 10,
-    paddingBottom: 20,
-    flex: 1,
+    marginHorizontal: 28,
+    marginVertical: 2,
+    paddingHorizontal: 10,
+    paddingVertical: 20,
     alignItems: 'center',
-    backgroundColor: '#E84A27',
-    flexDirection: "column",
-    justifyContent: 'space-evenly',
   },
   projectName: {
     fontFamily: 'Karla-Regular',

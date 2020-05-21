@@ -30,7 +30,9 @@ export default function Projects() {
             {/* Subtitle */}
             <Text style={styles.introText}>{strings.projects.subtitle}</Text>
             {/* Projects list */}
-            <ProjectsList />
+            <View styles={styles.projectsContainer}>
+              <ProjectsList />
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -62,5 +64,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     marginBottom: 40,
     paddingBottom: 40,
+  },
+  projectsContainer: {
+    flexDirection: 'column',
   },
 });
