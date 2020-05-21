@@ -10,6 +10,7 @@ import {
 
 import globalStyles from '../../styles/global';
 import Description from '../../components/participantDescription';
+import ParticipantImages from '../../components/participantImages';
 
 const Participant = props => {
   const {title} = props.route.params;
@@ -37,6 +38,7 @@ const Participant = props => {
 
             {/* Body */}
             <View style={[styles.body, globalStyles.illiniBlue]}>
+              <ParticipantImages images={images} />
               <Description paragraphs={paragraphs} />
             </View>
           </View>
