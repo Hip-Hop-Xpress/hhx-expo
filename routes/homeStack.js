@@ -48,7 +48,6 @@ const UpdateStack = props => {
           gestureDirection: 'horizontal',
           gestureResponseDistance: responseDistance,
           gestureEnabled: true,
-          headerTitle: null,
         }}
       />
 
@@ -60,7 +59,6 @@ const UpdateStack = props => {
           gestureDirection: 'horizontal',
           gestureResponseDistance: responseDistance,
           gestureEnabled: true,
-          headerTitle: null,
         }}
       />
 
@@ -72,7 +70,6 @@ const UpdateStack = props => {
           gestureDirection: 'horizontal',
           gestureResponseDistance: responseDistance,
           gestureEnabled: true,
-          headerTitle: null,
         }}
       />
 
@@ -84,7 +81,6 @@ const UpdateStack = props => {
           gestureDirection: 'horizontal',
           gestureResponseDistance: responseDistance,
           gestureEnabled: true,
-          headerTitle: null,
         }}
       />
 
