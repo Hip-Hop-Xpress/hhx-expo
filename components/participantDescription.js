@@ -9,31 +9,35 @@ import {
 } from 'react-native';
 
 const Description = (props) => {
-  const description = props.description;
+  let description = props.paragraphs;
+  let key = 0;
 
-  const Paragraphs = description.map(paragraph => {
+  const Paragraphs = description.map(paragraph => (
     <Paragraph
-      paragraph={paragraph}
+      text={paragraph}
+      key={key++}
     />
-  });
+  ));
 
   return <>{Paragraphs}</>;
 }
 
-const Paragraph = (props) => {
+const Paragraph = props => {
   return (
     <View style={styles.paragraph}>
-      <Text style={styles.paragraphText}>{props.paragraph}</Text>
+      <Text style={styles.paragraphText}>{props.text}</Text>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   paragraph: {
-    backgroundColor: 'red',
+    marginVertical: 15,
   },
   paragraphText: {
+    color: 'lightgray',
     fontFamily: 'Karla-Regular',
+    fontSize: 19,
   },
 })
 
