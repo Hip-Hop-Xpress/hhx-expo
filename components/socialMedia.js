@@ -7,52 +7,35 @@ import {
 } from 'react-native';
 
 import {SocialIcon} from 'react-native-elements';
-
-const iconSize = 24;
-
-// TODO: use an array and .map to make the social media buttons
+import strings from '../assets/strings/strings';
 
 const SocialMedia = () => {
   return (
     <View style={styles.socialMediaContainer}>
-      <SocialIcon
-        type="instagram"
-        button={true}
-        style={styles.socialMediaButton}
-        iconSize={iconSize}
-        onPress={() => {
-          Linking.openURL('https://www.instagram.com/uiuchhx/');
-        }}
-      />
-      <SocialIcon
-        type="facebook"
-        button={true}
-        style={styles.socialMediaButton}
-        iconSize={iconSize}
-        onPress={() => {
-          Linking.openURL('https://www.facebook.com/uiuchhx/');
-        }}
-      />
-      <SocialIcon
-        type="soundcloud"
-        button={true}
-        style={styles.socialMediaButton}
-        iconSize={iconSize}
-        onPress={() => {
-          Linking.openURL('https://soundcloud.com/user-255537652');
-        }}
-      />
-      <SocialIcon
-        type="twitter"
-        button={true}
-        style={styles.socialMediaButton}
-        iconSize={iconSize}
-        onPress={() => {
-          Linking.openURL('https://twitter.com/UIUChhx');
-        }}
-      />
+      <SocialMediaIcons />
     </View>
   );
+}
+
+const SocialMediaIcons = () => {
+  const platforms = strings.socialMedia.platforms;
+  const iconSize = 24;
+  let key = 0;
+
+  const Icons = platforms.map(platform => (
+    <SocialIcon
+      type={platform.type}
+      button={true}
+      style={styles.socialMediaButton}
+      iconSize={iconSize}
+      onPress={() => {
+        Linking.openURL(platform.link);
+      }}
+      key={key++}
+    />
+  ));
+
+  return <>{Icons}</>;
 }
 
 const styles = StyleSheet.create({
