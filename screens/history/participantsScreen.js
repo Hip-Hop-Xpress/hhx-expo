@@ -29,7 +29,7 @@ export default function Participants(props) {
             {/* Top image */}
             <Image
               style={styles.topImage}
-              source={require('../../assets/images/hhx_team.jpg')}
+              source={require('../../assets/images/hhx_team_blurred.jpg')}
             />
             {/* Text over top image */}
             <View style={styles.topView}>
