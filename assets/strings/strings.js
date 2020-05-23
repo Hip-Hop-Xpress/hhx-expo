@@ -199,6 +199,26 @@ const strings = {
       },
     ]
   },
+  socialMedia: {
+    platforms: [
+      {
+        type: 'instagram',
+        link: 'https://www.instagram.com/uiuchhx/',
+      },
+      {
+        type: 'facebook',
+        link: 'https://www.facebook.com/uiuchhx/',
+      },
+      {
+        type: 'soundcloud',
+        link: 'https://soundcloud.com/user-255537652',
+      },
+      {
+        type: 'twitter',
+        link: 'https://twitter.com/UIUChhx',
+      },
+    ],
+  },
 };
 
 export default strings;
