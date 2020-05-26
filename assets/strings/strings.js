@@ -109,9 +109,29 @@ const strings = {
   featured: {
     title: 'Featured Artist',
     artistName: 'ARTIST NAME HERE',
+    date: 'Spring 2020',
     bioTitle: 'About',
     bioBody:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu massa id ligula tempus mollis. Praesent bibendum vitae purus ut euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas eu augue non erat sollicitudin scelerisque. Cras maximus nulla quis ante pellentesque, ac pellentesque eros vulputate. Suspendisse potenti. Duis eleifend felis non est tristique porta.',
+    pastArtists: [
+      {
+        /*
+          Artist object layout
+
+          artistName: [string]
+          date: [string]
+          bioTitle: [string]
+          bioBody: [string]
+          current: [boolean]
+          socialMedia: [
+            {
+              platform: ['instagram', 'twitter', etc.]
+              url: [url in the form of string]
+            },
+          ],
+        */
+      }
+    ],
   },
   maps: {
     title: 'Where are we now?',

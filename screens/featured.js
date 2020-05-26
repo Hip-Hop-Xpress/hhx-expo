@@ -25,24 +25,28 @@ export default function Featured() {
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           {/* Body */}
           <View style={[styles.body, globalStyles.illiniBlue]}>
-            {/* Title */}
-            <View style={styles.title}>
-              <Text style={styles.titleText}>{strings.featured.title}</Text>
-            </View>
-
             {/* Top image/title card */}
             <View>
-              {/* Bus image */}
+              {/* Artist's image */}
               <Image
-                style={styles.busImage}
                 source={require('../assets/featured/default/default_header_blurred.jpg')}
               />
-              {/* Text over bus image */}
+              {/* Text over artist image */}
               <View style={styles.imageCard}>
                 <Text style={styles.artistNameText}>
                   {strings.featured.artistName}
                 </Text>
               </View>
+            </View>
+
+            {/* Title */}
+            <View style={styles.title}>
+              <Text style={styles.titleText}>
+                {strings.featured.title}
+              </Text>
+              <Text style={styles.dateText}>
+                {strings.featured.date}
+              </Text>
             </View>
 
             {/* Social Media Container */}
@@ -94,6 +98,8 @@ export default function Featured() {
               <Text style={styles.bioTitle}>{strings.featured.bioTitle}</Text>
               <Text style={styles.bioBody}>{strings.featured.bioBody}</Text>
             </View>
+
+            {/* TODO: add past artists */}
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -110,7 +116,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Black',
     marginTop: 5,
     marginBottom: 10,
-    fontSize: 32,
+    fontSize: 29,
     textAlign: 'center',
     color: 'lightgray',
   },
@@ -130,6 +136,12 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 45,
     textAlign: 'center',
+  },
+  dateText: {
+    fontFamily: 'Karla-BoldItalic',
+    textAlign: 'center',
+    fontSize: 20,
+    color: 'lightgray',
   },
   body: {
     backgroundColor: 'white',

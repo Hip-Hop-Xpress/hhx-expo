@@ -10,7 +10,7 @@ import {
 
 import globalStyles from '../../styles/global';
 
-const Participant = props => {
+const Artist = props => {
   // Get variables using props.route.params, like below:
 
   // const {title} = props.route.params;
@@ -41,4 +41,4 @@ const styles = StyleSheet.create({
   body: {},
 });
 
-export default Participant;
+export default Artist;
