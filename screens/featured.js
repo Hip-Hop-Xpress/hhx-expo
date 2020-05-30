@@ -44,6 +44,11 @@ export default function Featured() {
               <Text style={styles.titleText}>
                 {strings.featured.title}
               </Text>
+              {/* Artist image */}
+              <Image
+                style={styles.artistImage}
+                source={require('../assets/featured/default/default_header.jpeg')}
+              />
               <Text style={styles.dateText}>
                 {strings.featured.date}
               </Text>
@@ -119,6 +124,13 @@ const styles = StyleSheet.create({
     fontSize: 29,
     textAlign: 'center',
     color: 'lightgray',
+  },
+  artistImage: {
+    width: 200,
+    height: 200,
+    alignSelf: "center",
+    borderRadius: 100,
+    marginVertical: 20,
   },
   imageCard: {
     position: 'absolute',

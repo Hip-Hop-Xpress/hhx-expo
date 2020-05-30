@@ -113,27 +113,60 @@ const strings = {
     bioTitle: 'About',
     bioBody:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu massa id ligula tempus mollis. Praesent bibendum vitae purus ut euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas eu augue non erat sollicitudin scelerisque. Cras maximus nulla quis ante pellentesque, ac pellentesque eros vulputate. Suspendisse potenti. Duis eleifend felis non est tristique porta.',
-    pastArtists: [
-      /*
-        Artist object layout
-
-        artistName: [string]
-        date: [string]
-        bioTitle: [string]
-        bioBody: [string]
-        current: [boolean]
+    artistList: [
+      {
+        artistName: 'ARTIST NAME HERE',
+        date: 'Spring 2020',
+        bioTitle: 'About',
+        bioBody:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu massa id ligula tempus mollis. Praesent bibendum vitae purus ut euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas eu augue non erat sollicitudin scelerisque. Cras maximus nulla quis ante pellentesque, ac pellentesque eros vulputate. Suspendisse potenti. Duis eleifend felis non est tristique porta.',
+        current: true,
         socialMedia: [
           {
-            platform: ['instagram', 'twitter', etc.]
-            url: [url in the form of string]
+            platform: 'instagram',
+            url: 'https://www.instagram.com/uiuchhx/',
           },
-        ],
-      */
+          {
+            platform: 'facebook',
+            url: 'https://www.facebook.com/uiuchhx/',
+          },
+          {
+            platform: 'soundcoud',
+            url: 'https://soundcloud.com/user-255537652',
+          },
+        ]
+      },
       {
         artistName: 'Some Dude',
         date: 'August Whenever',
         bioTitle: 'About',
         bioBody: 'This is the body',
+        current: false,
+        socialMedia: [
+          {
+            platform: 'facebook',
+            url: 'http://www.facebook.com',
+          }
+        ]
+      },
+      {
+        artistName: 'Some person 2',
+        date: 'September Whenever',
+        bioTitle: 'About',
+        bioBody: 'This is the body 2',
+        current: false,
+        socialMedia: [
+          {
+            platform: 'facebook',
+            url: 'http://www.facebook.com',
+          }
+        ]
+      },
+      {
+        artistName: 'Someone',
+        date: 'time is a social construct',
+        bioTitle: 'About',
+        bioBody: 'test etst test test test',
         current: false,
         socialMedia: [
           {
