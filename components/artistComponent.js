@@ -6,9 +6,11 @@ const ArtistComponent = props => {
   const artist = (
     <TouchableOpacity
       activeOpacity={0.75}
-      onPress={}>
+      // onPress={}
+    >
       <View style={[styles.artistContainer]}>
-        <Text style={styles.artistTitle}>{props.title}</Text>
+        <Text style={styles.artistName}>{props.name}</Text>
+        <Text >{props.date}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -21,8 +23,14 @@ const width = screen.width;
 const height = screen.height;
 
 const styles = StyleSheet.create({
-  artistContainer: {},
-  artistTitle: {},
+  artistContainer: {
+    width: width,
+    padding: 10,
+  },
+  artistName: {
+    color: 'white',
+    fontSize: 15,
+  },
 });
 
 export default ArtistComponent;

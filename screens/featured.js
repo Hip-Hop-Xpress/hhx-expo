@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 
 import Header from '../components/header';
+import Artists from '../components/artists';
 import strings from '../assets/strings/strings';
 import globalStyles from '../styles/global';
 
@@ -105,6 +106,10 @@ export default function Featured() {
             </View>
 
             {/* TODO: add past artists */}
+            <View style={styles.pastArtistsBody}>
+              <Text style={styles.pastArtistsTitle}>{strings.featured.pastArtists}</Text>
+              <Artists />
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -188,5 +193,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: 'lightgray',
     lineHeight: 30,
+  },
+  pastArtistsBody: {
+    backgroundColor: 'black',
+    marginVertical: 20,
+  },
+  pastArtistsTitle: {
+    color: 'lightgray',
+    fontSize: 30,
+    fontFamily: 'Montserrat-Black',
+    textAlign: 'center',
   },
 });
