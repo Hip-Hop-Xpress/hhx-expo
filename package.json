@@ -14,7 +14,7 @@
     "@react-navigation/stack": "^5.3.3",
     "@use-expo/font": "^2.0.0",
     "eslint": "^7.1.0",
-    "expo": "~37.0.3",
+    "expo": "^37.0.12",
     "expo-font": "~8.1.0",
     "font": "0.0.4",
     "mem": "^6.1.0",
