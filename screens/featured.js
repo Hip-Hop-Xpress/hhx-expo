@@ -205,6 +205,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontFamily: 'Montserrat-Black',
     textAlign: 'center',
+    marginVertical: 20,
   },
   artistsContainer: {
     flex: 1,

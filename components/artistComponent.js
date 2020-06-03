@@ -25,14 +25,18 @@ const height = screen.height;
 const styles = StyleSheet.create({
   artistContainer: {
     width: width / 2 - 1,
-    padding: 10,
+    padding: 40,
   },
   artistName: {
     color: 'white',
     fontSize: 16,
+    textAlign: 'center',
+    textAlignVertical: 'bottom',
   },
   artistDate: {
     color: 'lightgray',
+    textAlign: 'center',
+    textAlignVertical: 'bottom',
   },
 });
 
