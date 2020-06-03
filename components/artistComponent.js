@@ -10,7 +10,7 @@ const ArtistComponent = props => {
     >
       <View style={[styles.artistContainer]}>
         <Text style={styles.artistName}>{props.name}</Text>
-        <Text >{props.date}</Text>
+        <Text style={styles.artistDate}>{props.date}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -29,7 +29,11 @@ const styles = StyleSheet.create({
   },
   artistName: {
     color: 'white',
-    fontSize: 15,
+    fontSize: 16,
+  },
+  artistDate: {
+    color: 'lightgray',
+    textAlign: 'left',
   },
 });
 

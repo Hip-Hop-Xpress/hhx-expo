@@ -105,7 +105,7 @@ export default function Featured() {
               <Text style={styles.bioBody}>{strings.featured.bioBody}</Text>
             </View>
 
-            {/* TODO: add past artists */}
+            {/* Part artists */}
             <View style={styles.pastArtistsBody}>
               <Text style={styles.pastArtistsTitle}>{strings.featured.pastArtists}</Text>
               <Artists />
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     lineHeight: 30,
   },
   pastArtistsBody: {
-    backgroundColor: 'black',
+    backgroundColor: '#121212',
     marginVertical: 20,
   },
   pastArtistsTitle: {

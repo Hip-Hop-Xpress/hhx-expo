@@ -9,7 +9,7 @@ const Artists = props => {
   let artistsList = strings.featured.artistList;
   let key = 0;
   
-  const ArtistsList = artistsList.map(artist => {
+  const ArtistsList = artistsList.map(artist => (
     artist.current ? null : (
     <ArtistComponent
       name={artist.artistName}
@@ -20,7 +20,7 @@ const Artists = props => {
       navigation={props.navigation}
       key={key++}
     />
-  )});
+  )));
 
   return (
     <>
