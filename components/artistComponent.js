@@ -24,7 +24,7 @@ const height = screen.height;
 
 const styles = StyleSheet.create({
   artistContainer: {
-    width: width,
+    width: width / 2 - 1,
     padding: 10,
   },
   artistName: {
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   },
   artistDate: {
     color: 'lightgray',
-    textAlign: 'left',
   },
 });
 

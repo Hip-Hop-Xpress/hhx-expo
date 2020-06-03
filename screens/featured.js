@@ -105,10 +105,12 @@ export default function Featured() {
               <Text style={styles.bioBody}>{strings.featured.bioBody}</Text>
             </View>
 
-            {/* Part artists */}
+            {/* Past artists */}
             <View style={styles.pastArtistsBody}>
               <Text style={styles.pastArtistsTitle}>{strings.featured.pastArtists}</Text>
-              <Artists />
+              <View style={styles.artistsContainer}>
+                <Artists />
+              </View>
             </View>
           </View>
         </ScrollView>
@@ -203,5 +205,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontFamily: 'Montserrat-Black',
     textAlign: 'center',
+  },
+  artistsContainer: {
+    flex: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignContent: "stretch",
+    alignItems: "center",
   },
 });

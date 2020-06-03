@@ -176,6 +176,19 @@ const strings = {
           }
         ]
       },
+      {
+        artistName: 'Someone 2',
+        date: 'time is a social construct 2',
+        bioTitle: 'About',
+        bioBody: 'test etst test test test',
+        current: false,
+        socialMedia: [
+          {
+            platform: 'facebook',
+            url: 'http://www.facebook.com',
+          }
+        ]
+      },
     ],
   },
   maps: {
