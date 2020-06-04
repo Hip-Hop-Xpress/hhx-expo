@@ -25,7 +25,8 @@ const UpdateStack = props => {
           backgroundColor: 'rgba(19, 41, 75, 1.0)',
           height: 58,
         },
-      }}>
+      }}
+    >
 
       {/* Home Screen */}
       <Stack.Screen
