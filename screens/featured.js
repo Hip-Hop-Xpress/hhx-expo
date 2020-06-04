@@ -10,6 +10,8 @@ import {
   Linking,
 } from 'react-native';
 
+import {SocialIcon} from 'react-native-elements';
+
 import Header from '../components/header';
 import Artists from '../components/artists';
 import strings from '../assets/strings/strings';
@@ -18,7 +20,6 @@ import strings from '../assets/strings/strings';
 import globalStyles from '../styles/global';
 import featuredStyles from '../styles/featuredStyles';
 
-import {SocialIcon} from 'react-native-elements';
 
 const Featured = ({navigation}) => {
   return (
