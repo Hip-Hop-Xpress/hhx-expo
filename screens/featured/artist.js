@@ -15,6 +15,7 @@ const Artist = props => {
   const {date} = props.route.params;
   const {title} = props.route.params;
   const {bio} = props.route.params;
+  // TODO: figure out how to get social media icons
 
   return (
     <>
