@@ -138,8 +138,8 @@ const strings = {
         ]
       },
       {
-        artistName: 'Some Dude',
-        date: 'August Whenever',
+        artistName: 'Featured Artist 1',
+        date: 'December 2019',
         bioTitle: 'About',
         bioBody: 'This is the body',
         current: false,
@@ -151,8 +151,8 @@ const strings = {
         ]
       },
       {
-        artistName: 'Some person 2',
-        date: 'September Whenever',
+        artistName: 'Featured Artist 2',
+        date: 'January 2020',
         bioTitle: 'About',
         bioBody: 'This is the body 2',
         current: false,
@@ -164,10 +164,10 @@ const strings = {
         ]
       },
       {
-        artistName: 'Someone',
-        date: 'time is a social construct',
+        artistName: 'Featured Artist 3',
+        date: 'February 2020',
         bioTitle: 'About',
-        bioBody: 'test etst test test test',
+        bioBody: 'This is the body 3',
         current: false,
         socialMedia: [
           {
@@ -177,10 +177,10 @@ const strings = {
         ]
       },
       {
-        artistName: 'Someone 2',
-        date: 'time is a social construct 2',
+        artistName: 'Featured Artist 4',
+        date: 'March 2020',
         bioTitle: 'About',
-        bioBody: 'test etst test test test',
+        bioBody: 'This is the body 4',
         current: false,
         socialMedia: [
           {
