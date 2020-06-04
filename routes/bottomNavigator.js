@@ -5,7 +5,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import HomeStack from './homeStack';
 import Projects from '../screens/projects';
 import Voting from '../screens/voting';
-import Featured from '../screens/featured';
+import FeaturedStack from './featuredStack';
 import Map from '../screens/map';
 import globalStyles from '../styles/global';
 
@@ -65,7 +65,7 @@ function AppTabs() {
       {/* Featured Screen */}
       <Tab.Screen
         name="Featured"
-        component={Featured}
+        component={FeaturedStack}
         options={{
           tabBarLabel: 'Featured',
           tabBarIcon: ({color}) => (

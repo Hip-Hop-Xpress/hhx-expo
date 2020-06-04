@@ -6,8 +6,16 @@ const ArtistComponent = props => {
   const artist = (
     <TouchableOpacity
       activeOpacity={0.75}
-      // onPress={}
       style={styles.touchable}
+      onPress={
+        () => 
+          props.navigation.navigate('Past Featured Artist', {
+            name: props.name,
+            date: props.date,
+            title: props.title,
+            bio: props.bio,
+          })
+      }
     >
       <View style={[styles.artistContainer]}>
         <Image

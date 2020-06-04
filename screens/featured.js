@@ -17,7 +17,7 @@ import globalStyles from '../styles/global';
 
 import {SocialIcon} from 'react-native-elements';
 
-export default function Featured() {
+const Featured = ({navigation}) => {
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -109,7 +109,7 @@ export default function Featured() {
             <View style={styles.pastArtistsBody}>
               <Text style={styles.pastArtistsTitle}>{strings.featured.pastArtists}</Text>
               <View style={styles.artistsContainer}>
-                <Artists />
+                <Artists navigation={navigation}/>
               </View>
             </View>
           </View>
@@ -215,3 +215,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
+export default Featured;

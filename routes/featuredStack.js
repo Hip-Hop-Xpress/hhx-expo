@@ -51,3 +51,5 @@ const FeaturedStack = props => {
     </Stack.Navigator>
   )
 }
+
+export default FeaturedStack;

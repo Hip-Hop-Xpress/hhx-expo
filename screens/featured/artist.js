@@ -11,11 +11,10 @@ import {
 import globalStyles from '../../styles/global';
 
 const Artist = props => {
-  // Get variables using props.route.params, like below:
-
-  // const {title} = props.route.params;
-  // const {paragraphs} = props.route.params;
-  // const {images} = props.route.params;
+  const {name} = props.route.params;
+  const {date} = props.route.params;
+  const {title} = props.route.params;
+  const {bio} = props.route.params;
 
   return (
     <>
@@ -26,7 +25,10 @@ const Artist = props => {
           style={globalStyles.illiniBlue}>
           {/* Screen body */}
           <View style={[styles.body, globalStyles.illiniBlue]}>
-            {/* Content goes here */}
+            <Text>{name}</Text>
+            <Text>{date}</Text>
+            <Text>{title}</Text>
+            <Text>{bio}</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
