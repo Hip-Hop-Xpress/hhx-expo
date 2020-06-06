@@ -113,31 +113,94 @@ const strings = {
     bioTitle: 'About',
     bioBody:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu massa id ligula tempus mollis. Praesent bibendum vitae purus ut euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas eu augue non erat sollicitudin scelerisque. Cras maximus nulla quis ante pellentesque, ac pellentesque eros vulputate. Suspendisse potenti. Duis eleifend felis non est tristique porta.',
-    pastArtists: [
-      /*
-        Artist object layout
-
-        artistName: [string]
-        date: [string]
-        bioTitle: [string]
-        bioBody: [string]
-        current: [boolean]
+    pastArtists: 'All Featured Artists',
+    artistList: [
+      {
+        artistName: 'ARTIST NAME HERE',
+        date: 'Spring 2020',
+        bioTitle: 'About',
+        bioBody:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu massa id ligula tempus mollis. Praesent bibendum vitae purus ut euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas eu augue non erat sollicitudin scelerisque. Cras maximus nulla quis ante pellentesque, ac pellentesque eros vulputate. Suspendisse potenti. Duis eleifend felis non est tristique porta.',
+        current: true,
         socialMedia: [
           {
-            platform: ['instagram', 'twitter', etc.]
-            url: [url in the form of string]
+            type: 'instagram',
+            url: 'https://www.instagram.com/uiuchhx/',
           },
-        ],
-      */
+          {
+            type: 'facebook',
+            url: 'https://www.facebook.com/uiuchhx/',
+          },
+          {
+            type: 'soundcloud',
+            url: 'https://soundcloud.com/user-255537652',
+          },
+        ]
+      },
       {
-        artistName: 'Some Dude',
-        date: 'August Whenever',
+        artistName: 'Featured Artist 1',
+        date: 'December 2019',
         bioTitle: 'About',
         bioBody: 'This is the body',
         current: false,
         socialMedia: [
           {
-            platform: 'facebook',
+            type: 'instagram',
+            url: 'https://www.instagram.com/uiuchhx/',
+          },
+          {
+            type: 'facebook',
+            url: 'http://www.facebook.com',
+          },
+          {
+            type: 'soundcloud',
+            url: 'https://soundcloud.com/user-255537652',
+          },
+        ]
+      },
+      {
+        artistName: 'Featured Artist 2',
+        date: 'January 2020',
+        bioTitle: 'About',
+        bioBody: 'This is the body 2',
+        current: false,
+        socialMedia: [
+          {
+            type: 'facebook',
+            url: 'http://www.facebook.com',
+          },
+          {
+            type: 'instagram',
+            url: 'https://www.instagram.com/uiuchhx/',
+          },
+        ]
+      },
+      {
+        artistName: 'Featured Artist 3',
+        date: 'February 2020',
+        bioTitle: 'About',
+        bioBody: 'This is the body 3',
+        current: false,
+        socialMedia: [
+          {
+            type: 'facebook',
+            url: 'http://www.facebook.com',
+          },
+          {
+            type: 'soundcloud',
+            url: 'https://soundcloud.com/user-255537652',
+          },
+        ]
+      },
+      {
+        artistName: 'Featured Artist 4',
+        date: 'March 2020',
+        bioTitle: 'About',
+        bioBody: 'This is the body 4',
+        current: false,
+        socialMedia: [
+          {
+            type: 'facebook',
             url: 'http://www.facebook.com',
           }
         ]
@@ -148,6 +211,24 @@ const strings = {
     title: 'Where are we now?',
     subtitle: 'Find out where the Double Dutch Boom Bus is right now!',
     request: 'Want to bring the bus to your community? Contact us!',
+    socialMediaPlatforms: [
+      {
+        type: 'instagram',
+        url: 'https://www.instagram.com/uiuchhx/',
+      },
+      {
+        type: 'facebook',
+        url: 'https://www.facebook.com/uiuchhx/',
+      },
+      {
+        type: 'envelope',
+        url: 'mailto:wmpatter@illinois.edu',
+      },
+      {
+        type: 'twitter',
+        url: 'https://twitter.com/UIUChhx',
+      }
+    ]
   },
   courses: {
     title: 'Past Courses and Camps',
@@ -234,19 +315,19 @@ const strings = {
     platforms: [
       {
         type: 'instagram',
-        link: 'https://www.instagram.com/uiuchhx/',
+        url: 'https://www.instagram.com/uiuchhx/',
       },
       {
         type: 'facebook',
-        link: 'https://www.facebook.com/uiuchhx/',
+        url: 'https://www.facebook.com/uiuchhx/',
       },
       {
         type: 'soundcloud',
-        link: 'https://soundcloud.com/user-255537652',
+        url: 'https://soundcloud.com/user-255537652',
       },
       {
         type: 'twitter',
-        link: 'https://twitter.com/UIUChhx',
+        url: 'https://twitter.com/UIUChhx',
       },
     ],
   },

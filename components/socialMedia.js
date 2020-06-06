@@ -7,18 +7,14 @@ import {
 } from 'react-native';
 
 import {SocialIcon} from 'react-native-elements';
-import strings from '../assets/strings/strings';
 
-const SocialMedia = () => {
-  return (
-    <View style={styles.socialMediaContainer}>
-      <SocialMediaIcons />
-    </View>
-  );
-}
-
-const SocialMediaIcons = () => {
-  const platforms = strings.socialMedia.platforms;
+/**
+ * Generates individual social media icons from list of platforms
+ * @param {Array}  platforms     list of social media platforms
+ * @param {string} platform.type specific type ('facebook', 'twitter', etc.)
+ * @param {string} platform.url  url linking to social media
+ */
+const SocialMediaIcons = ({platforms}) => {
   const iconSize = 24;
   let key = 0;
 
@@ -29,13 +25,25 @@ const SocialMediaIcons = () => {
       style={styles.socialMediaButton}
       iconSize={iconSize}
       onPress={() => {
-        Linking.openURL(platform.link);
+        Linking.openURL(platform.url);
       }}
       key={key++}
     />
   ));
 
   return <>{Icons}</>;
+}
+
+/**
+ * Renders a list of social media buttons
+ * @param {Array} platforms list of social media platforms
+ */
+const SocialMedia = ({platforms}) => {
+  return (
+    <View style={styles.socialMediaContainer}>
+      <SocialMediaIcons platforms={platforms}/>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

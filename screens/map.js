@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 
 import Header from '../components/header';
+import SocialMedia from '../components/socialMedia';
 import strings from '../assets/strings/strings';
 import coords from '../assets/coords';
 
@@ -68,44 +69,7 @@ export default function Map() {
             <Text style={styles.introText}>{strings.maps.request}</Text>
 
             {/* Contacts */}
-            <View style={styles.socialMediaContainer}>
-              <SocialIcon
-                type="instagram"
-                button={true}
-                style={styles.socialMediaButton}
-                iconSize={24}
-                onPress={() => {
-                  Linking.openURL('https://www.instagram.com/uiuchhx/');
-                }}
-              />
-              <SocialIcon
-                type="facebook"
-                button={true}
-                style={styles.socialMediaButton}
-                iconSize={24}
-                onPress={() => {
-                  Linking.openURL('https://www.facebook.com/uiuchhx/');
-                }}
-              />
-              <SocialIcon
-                type="envelope"
-                button={true}
-                style={styles.socialMediaButton}
-                iconSize={24}
-                onPress={() => {
-                  Linking.openURL('mailto:wmpatter@illinois.edu');
-                }}
-              />
-              <SocialIcon
-                type="twitter"
-                button={true}
-                style={styles.socialMediaButton}
-                iconSize={24}
-                onPress={() => {
-                  Linking.openURL('https://twitter.com/UIUChhx');
-                }}
-              />
-            </View>
+            <SocialMedia platforms={strings.maps.socialMediaPlatforms} />
           </View>
         </ScrollView>
       </SafeAreaView>

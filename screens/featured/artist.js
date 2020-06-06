@@ -1,44 +1,41 @@
 import React from 'react';
 import {
   SafeAreaView,
-  StyleSheet,
   ScrollView,
-  View,
-  Text,
   StatusBar,
 } from 'react-native';
 
+import ArtistBody from '../../components/artistBodyContent';
+
 import globalStyles from '../../styles/global';
+import featuredStyles from '../../styles/featuredStyles';
 
 const Artist = props => {
-  // Get variables using props.route.params, like below:
-
-  // const {title} = props.route.params;
-  // const {paragraphs} = props.route.params;
-  // const {images} = props.route.params;
+  const {name} = props.route.params;
+  const {date} = props.route.params;
+  const {title} = props.route.params;
+  const {bio} = props.route.params;
+  const {socialMedia} = props.route.params;
 
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={styles.screen}>
+      <SafeAreaView style={featuredStyles.screen}>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={globalStyles.illiniBlue}>
           {/* Screen body */}
-          <View style={[styles.body, globalStyles.illiniBlue]}>
-            {/* Content goes here */}
-          </View>
+          <ArtistBody
+            name={name}
+            date={date}
+            title={title}
+            bio={bio}
+            socialMedia={socialMedia}
+          />
         </ScrollView>
       </SafeAreaView>
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  screen: {},
-  titleText: {},
-  title: {},
-  body: {},
-});
 
 export default Artist;

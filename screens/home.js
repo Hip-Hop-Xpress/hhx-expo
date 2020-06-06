@@ -11,15 +11,18 @@ import {
   Dimensions,
 } from 'react-native';
 
+// Components
 import Header from '../components/header';
 import Updates from '../components/updates';
 import SocialMedia from '../components/socialMedia';
-import strings from '../assets/strings/strings';
 
+// Global constants
+import strings from '../assets/strings/strings';
 import globalStyles from '../styles/global';
+
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default function Home({navigation}) {
+const Home = ({navigation}) => {
   // App layout
   return (
     <>
@@ -97,7 +100,7 @@ export default function Home({navigation}) {
 
             {/* Social Media Section */}
             <View style={styles.sectionContainer}>
-              <SocialMedia />
+              <SocialMedia platforms={strings.socialMedia.platforms} />
             </View>
           </View>
         </ScrollView>
@@ -198,3 +201,5 @@ const styles = StyleSheet.create({
     width: 55,
   },
 });
+
+export default Home;
