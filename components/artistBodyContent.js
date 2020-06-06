@@ -25,7 +25,6 @@ import strings from '../assets/strings/strings';
  * @param {Array}  socialMedia holds all artist's social media platforms
  */
 const ArtistBodyContent = ({name, date, bio, title, socialMedia}) => {
-  // todo: give each artist an individual image
   let key = 0;
   return (
     <View style={[featuredStyles.body, globalStyles.illiniBlue]}>
@@ -51,7 +50,7 @@ const ArtistBodyContent = ({name, date, bio, title, socialMedia}) => {
         {/* Artist image */}
         <Image
           style={featuredStyles.artistImage}
-          source={require('../assets/featured/default/default_header.jpeg')}
+          source={require('../assets/featured/default/default_profile.jpg')}
         />
         <Text style={featuredStyles.dateText}>
           {date}

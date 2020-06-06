@@ -34,7 +34,7 @@ const ArtistComponent = ({navigation, name, date, title, bio, socialMedia}) => {
         <Image
           style={styles.artistImage}
           // TODO: give each artist a separate image
-          source={require('../assets/featured/default/default_header.jpeg')}
+          source={require('../assets/featured/default/default_profile.jpg')}
         />
         <Text style={styles.artistName}>{name}</Text>
         <Text style={styles.artistDate}>{date}</Text>
