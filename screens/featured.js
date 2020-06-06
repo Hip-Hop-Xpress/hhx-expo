@@ -20,7 +20,6 @@ import strings from '../assets/strings/strings';
 import globalStyles from '../styles/global';
 import featuredStyles from '../styles/featuredStyles';
 
-
 const Featured = ({navigation}) => {
   return (
     <>

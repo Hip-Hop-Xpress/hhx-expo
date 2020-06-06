@@ -1,12 +1,12 @@
 import React from 'react';
 import {
   SafeAreaView,
-  StyleSheet,
   ScrollView,
   View,
   Text,
   StatusBar,
   Image,
+  Linking,
 } from 'react-native';
 
 import {SocialIcon} from 'react-native-elements';
@@ -21,8 +21,10 @@ const Artist = props => {
   const {date} = props.route.params;
   const {title} = props.route.params;
   const {bio} = props.route.params;
+  const {socialMedia} = props.route.params;
   // TODO: figure out how to get social media icons
 
+  let key = 0;
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -68,6 +70,16 @@ const Artist = props => {
                 globalStyles.illiniBlue,
               ]}>
                 {/* TODO: Social media icons go here */}
+                {socialMedia.map(link => (
+                  <SocialIcon
+                    type={link.platform}
+                    button={false}
+                    onPress={() => {
+                      Linking.openURL(link.url);
+                    }}
+                    key={key++}
+                  />
+                ))}
             </View>
 
             {/* Bio */}

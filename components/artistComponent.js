@@ -14,6 +14,7 @@ const ArtistComponent = props => {
             date: props.date,
             title: props.title,
             bio: props.bio,
+            socialMedia: props.socialMedia,
           })
       }
     >

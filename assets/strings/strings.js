@@ -132,7 +132,7 @@ const strings = {
             url: 'https://www.facebook.com/uiuchhx/',
           },
           {
-            platform: 'soundcoud',
+            platform: 'soundcloud',
             url: 'https://soundcloud.com/user-255537652',
           },
         ]
@@ -145,9 +145,17 @@ const strings = {
         current: false,
         socialMedia: [
           {
+            platform: 'instagram',
+            url: 'https://www.instagram.com/uiuchhx/',
+          },
+          {
             platform: 'facebook',
             url: 'http://www.facebook.com',
-          }
+          },
+          {
+            platform: 'soundcloud',
+            url: 'https://soundcloud.com/user-255537652',
+          },
         ]
       },
       {
@@ -160,7 +168,11 @@ const strings = {
           {
             platform: 'facebook',
             url: 'http://www.facebook.com',
-          }
+          },
+          {
+            platform: 'instagram',
+            url: 'https://www.instagram.com/uiuchhx/',
+          },
         ]
       },
       {
@@ -173,7 +185,11 @@ const strings = {
           {
             platform: 'facebook',
             url: 'http://www.facebook.com',
-          }
+          },
+          {
+            platform: 'soundcloud',
+            url: 'https://soundcloud.com/user-255537652',
+          },
         ]
       },
       {
