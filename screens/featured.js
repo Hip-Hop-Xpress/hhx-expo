@@ -1,16 +1,12 @@
 import React from 'react';
+
 import {
   SafeAreaView,
-  StyleSheet,
   ScrollView,
-  Image,
   View,
   Text,
   StatusBar,
-  Linking,
 } from 'react-native';
-
-import {SocialIcon} from 'react-native-elements';
 
 import Header from '../components/header';
 import ArtistBody from '../components/artistBodyContent';

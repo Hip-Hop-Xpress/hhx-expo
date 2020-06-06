@@ -14,7 +14,16 @@ import featuredStyles from '../styles/featuredStyles';
 
 import strings from '../assets/strings/strings';
 
+/**
+ * Shows a featured artist's information
+ * @param {string} name        name of artist
+ * @param {string} date        date the artist was featured
+ * @param {string} bio         body paragraphs describing the artist
+ * @param {string} title       title of the artist's bio
+ * @param {Array}  socialMedia hold's all artist's social media platforms
+ */
 const ArtistBodyContent = ({name, date, bio, title, socialMedia}) => {
+  // todo: give each artist an individual image
   let key = 0;
   return (
     <View style={[featuredStyles.body, globalStyles.illiniBlue]}>

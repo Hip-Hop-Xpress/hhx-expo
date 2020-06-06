@@ -1,11 +1,15 @@
 import React from 'react';
-import {Text} from 'react-native';
 
 import ArtistComponent from './artistComponent';
 
 import strings from '../assets/strings/strings';
 
-const Artists = props => {
+/**
+ * List of all artists previously featured by HHX.
+ * 
+ * @param {Object} navigation navigation object from Featured Stack, lets user click to artist page 
+ */
+const Artists = ({navigation}) => {
   let artistsList = strings.featured.artistList;
   let key = 0;
   
@@ -17,7 +21,7 @@ const Artists = props => {
       title={artist.bioTitle}
       bio={artist.bioBody}
       socialMedia={artist.socialMedia}
-      navigation={props.navigation}
+      navigation={navigation}
       key={key++}
     />
   )));
