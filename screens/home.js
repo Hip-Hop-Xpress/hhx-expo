@@ -100,7 +100,7 @@ const Home = ({navigation}) => {
 
             {/* Social Media Section */}
             <View style={styles.sectionContainer}>
-              <SocialMedia />
+              <SocialMedia platforms={strings.socialMedia.platforms} />
             </View>
           </View>
         </ScrollView>

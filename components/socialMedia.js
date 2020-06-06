@@ -7,18 +7,8 @@ import {
 } from 'react-native';
 
 import {SocialIcon} from 'react-native-elements';
-import strings from '../assets/strings/strings';
 
-const SocialMedia = () => {
-  return (
-    <View style={styles.socialMediaContainer}>
-      <SocialMediaIcons />
-    </View>
-  );
-}
-
-const SocialMediaIcons = () => {
-  const platforms = strings.socialMedia.platforms;
+const SocialMediaIcons = ({platforms}) => {
   const iconSize = 24;
   let key = 0;
 
@@ -37,6 +27,15 @@ const SocialMediaIcons = () => {
 
   return <>{Icons}</>;
 }
+
+const SocialMedia = ({platforms}) => {
+  return (
+    <View style={styles.socialMediaContainer}>
+      <SocialMediaIcons platforms={platforms}/>
+    </View>
+  );
+}
+
 
 const styles = StyleSheet.create({
   socialMediaContainer: {

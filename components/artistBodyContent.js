@@ -9,6 +9,8 @@ import {
 
 import {SocialIcon} from 'react-native-elements';
 
+import SocialMedia from './socialMedia';
+
 import globalStyles from '../styles/global';
 import featuredStyles from '../styles/featuredStyles';
 
@@ -20,7 +22,7 @@ import strings from '../assets/strings/strings';
  * @param {string} date        date the artist was featured
  * @param {string} bio         body paragraphs describing the artist
  * @param {string} title       title of the artist's bio
- * @param {Array}  socialMedia hold's all artist's social media platforms
+ * @param {Array}  socialMedia holds all artist's social media platforms
  */
 const ArtistBodyContent = ({name, date, bio, title, socialMedia}) => {
   // todo: give each artist an individual image
@@ -57,21 +59,8 @@ const ArtistBodyContent = ({name, date, bio, title, socialMedia}) => {
       </View>
 
       {/* Social Media Container */}
-      <View
-        style={[
-          featuredStyles.socialMediaContainer,
-          globalStyles.illiniBlue,
-        ]}>
-          {socialMedia.map(link => (
-            <SocialIcon
-              type={link.platform}
-              button={false}
-              onPress={() => {
-                Linking.openURL(link.url);
-              }}
-              key={key++}
-            />
-          ))}
+      <View style={globalStyles.illiniBlue}>
+          <SocialMedia platforms={socialMedia} />
       </View>
 
       {/* Bio */}

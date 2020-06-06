@@ -124,15 +124,15 @@ const strings = {
         current: true,
         socialMedia: [
           {
-            platform: 'instagram',
+            type: 'instagram',
             url: 'https://www.instagram.com/uiuchhx/',
           },
           {
-            platform: 'facebook',
+            type: 'facebook',
             url: 'https://www.facebook.com/uiuchhx/',
           },
           {
-            platform: 'soundcloud',
+            type: 'soundcloud',
             url: 'https://soundcloud.com/user-255537652',
           },
         ]
@@ -145,15 +145,15 @@ const strings = {
         current: false,
         socialMedia: [
           {
-            platform: 'instagram',
+            type: 'instagram',
             url: 'https://www.instagram.com/uiuchhx/',
           },
           {
-            platform: 'facebook',
+            type: 'facebook',
             url: 'http://www.facebook.com',
           },
           {
-            platform: 'soundcloud',
+            type: 'soundcloud',
             url: 'https://soundcloud.com/user-255537652',
           },
         ]
@@ -166,11 +166,11 @@ const strings = {
         current: false,
         socialMedia: [
           {
-            platform: 'facebook',
+            type: 'facebook',
             url: 'http://www.facebook.com',
           },
           {
-            platform: 'instagram',
+            type: 'instagram',
             url: 'https://www.instagram.com/uiuchhx/',
           },
         ]
@@ -183,11 +183,11 @@ const strings = {
         current: false,
         socialMedia: [
           {
-            platform: 'facebook',
+            type: 'facebook',
             url: 'http://www.facebook.com',
           },
           {
-            platform: 'soundcloud',
+            type: 'soundcloud',
             url: 'https://soundcloud.com/user-255537652',
           },
         ]
@@ -200,7 +200,7 @@ const strings = {
         current: false,
         socialMedia: [
           {
-            platform: 'facebook',
+            type: 'facebook',
             url: 'http://www.facebook.com',
           }
         ]
