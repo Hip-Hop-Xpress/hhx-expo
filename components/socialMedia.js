@@ -25,7 +25,7 @@ const SocialMediaIcons = ({platforms}) => {
       style={styles.socialMediaButton}
       iconSize={iconSize}
       onPress={() => {
-        Linking.openURL(platform.link);
+        Linking.openURL(platform.url);
       }}
       key={key++}
     />
