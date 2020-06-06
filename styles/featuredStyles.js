@@ -79,7 +79,7 @@ const featuredStyles = StyleSheet.create({
   },
   pastArtistsBody: {
     backgroundColor: '#121212',
-    marginVertical: 20,
+    marginBottom: 40,
   },
   pastArtistsTitle: {
     color: 'lightgray',
