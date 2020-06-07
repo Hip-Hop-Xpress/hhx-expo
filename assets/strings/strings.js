@@ -151,6 +151,57 @@ const strings = {
   },
   artistHistories: {
     title: 'Artist Histories',
+    subtitle: 'Here are the stories of influential artists depicted on the Double Dutch Boom Bus',
+    list: [
+      {
+        name:'Michael Jackson',
+      },
+      {
+        name: 'Public Enemy',
+      },
+      {
+        name: 'Prince',
+      },
+      {
+        name: 'B.B. King',
+      },
+      {
+        name: 'George Edward Clinton',
+      },
+      {
+        name: 'Kool Moe Dee',
+      },
+      {
+        name: 'Ray Charles',
+      },
+      {
+        name: 'Grandmaster Flash',
+      },
+      {
+        name: 'Afrika Bambaataa',
+      },
+      {
+        name: 'Diana Ross',
+      },
+      {
+        name: 'Miles Davis',
+      },
+      {
+        name: 'Muddy Waters',
+      },
+      {
+        name: 'Kurtis Blow',
+      },
+      {
+        name: 'MC Lyte',
+      },
+      {
+        name: 'James Brown',
+      },
+      {
+        name: 'KRS-One',
+      },
+    ]
   },
   courses: {
     title: 'Past Courses and Camps',
