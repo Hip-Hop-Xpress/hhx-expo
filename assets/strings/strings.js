@@ -155,51 +155,71 @@ const strings = {
     list: [
       {
         name:'Michael Jackson',
+        description: 'Michael Jackson’s career started from his family music group, the Jackson 5, which arose at a time of post-Motown America. Once he began his solo career in the 1980s, his career ascended to new heights. He was known for his pop hits like “Beat it”, “Billie Jean”, and “Thriller”, all accompanied with music videos the pushed and progressed the genre. He popularized and created dances that lasted generations like the moonwalk, as his following continued to grow. He is featured on the drivers side of the bus. ',
       },
       {
         name: 'Public Enemy',
+        description: 'Public Enemy, comprised of Chuck D and DJ Lord, formed in Long Island, New York, in 1985. Notorious for bringing political messages and hard-hitting opinions to the forefront of hip-hop, the group criticized the negative image that the media within American had created around African-Americans and the environments that raised them. Public Enemy interwove the complexities of politics within their music, creating a sound that captivated audiences across the east coast.',
       },
       {
         name: 'Prince',
+        description: 'Prince Rogers Nelson was an American singer, songwriter, musician, record producer, dancer, actor and filmmaker. A guitar virtuoso and multi-instrumentalist, Prince created eclectic genre-crossing work. He filled arenas with his flamboyant persona and wide-ranging singing voice, in particular his far reaching falsetto and high-pitched screams. Prince is regarded as one of the greatest musicians in the history of popular music. Most notably, Prince pioneered the late 1970s Minneapolis sound, a funk rock subgenre drawing from synth-pop and new wave.',
       },
       {
         name: 'B.B. King',
+        description: 'Riley B. King, B.B. King, was an American singer-songwriter, guitarist, and record producer. King introduced a sophisticated style of soloing to the genre of blues and soul. His sound was based on fluid string bending and shimmering vibrato that influenced many later blues electric guitar players. King is one of the most influential blues musicians of all time, earning the nickname "The King of the Blues", and is considered one of the "Three Kings of the Blues Guitar" (along with Albert and Freddie King). King was a dedicated performer, appearing on average at more than 200 concerts per year into his 70s. In 1956 alone, he appeared at 342 shows]',
       },
       {
         name: 'George Edward Clinton',
+        description: 'George Edward Clinton is an American singer, songwriter, bandleader, and record producer.[5] His Parliament-Funkadelic collective developed an influential and eclectic form of funk music during the 1970s that drew on science fiction, outlandish fashion, psychedelic culture, and surreal humor. Clinton launched his solo career with the 1982 album Computer Games and would later on influence hip-hop and G-funk within the 1990’s.',
       },
       {
         name: 'Kool Moe Dee',
+        description: 'Mohandas Dewese better known by his stage name Kool Moe Dee, is an American hip hop MC prominent during the late 1970s through the early 1990s. Kool Moe Dee was a member of the rap group Treacherous Three, and also one of the first rappers to earn a Grammy Award and was the first rapper to perform at the Grammys. Later in his life he cooperated with young producers at ROOFTOP records that would contribute to the new jack swing movement.',
       },
       {
         name: 'Ray Charles',
+        description: 'Ray Charles was a legendary musician often called the "Genius,” who pioneered the genre of soul music during the 1950s. Charles combined blues, gospel, R&B, rock, country music and jazz to create groundbreaking hits such as “Unchain My Heart,” “I’ve Got A Woman” and “What I’d Say.” His impressive multi-award winning 50-year career left an indelible mark on contemporary music all over the world.',
       },
       {
         name: 'Grandmaster Flash',
+        description: 'Grandmaster Flash is widely considered to be one of the best pioneers of DJing; cutting, scratching and remixing tracks. In 2007 Grandmaster Flash and the Furious Five were the first hip hop group inducted into the Rock and Roll Hall of Fame. Flash is also known for his major contributions to the art, which include DJing techniques such as backspinning, punch phrasing and scratching.',
       },
       {
         name: 'Afrika Bambaataa',
+        description: 'Afrika Bambaataa is a rapper, producer and songwriter from the South Bronx. He introduced the hip hop world to electro tracks in the 1980’s that further developed the culture. By incorporating himself and others into the music and culture-oriented Universal Zulu Nation, Mambaataa helped better spread hip hop throughout the world.',
       },
       {
         name: 'Diana Ross',
+        description: 'Diana Ross is an American singer, actress, and record producer. Born and raised in Detroit, Michigan, Ross rose to fame as the lead singer of the vocal group The Supremes, who during the 1960s became Motown\'s most successful act, and are the best-charting female group in US history,as well as one of the world\'s best-selling girl groups of all time.',
       },
       {
         name: 'Miles Davis',
+        description: 'Miles Davis was an American jazz trumpeter, bandleader, and composer. He is among the most influential and acclaimed figures in the history of jazz and 20th-century music. Davis adopted a variety of musical directions in a five-decade career that kept him at the forefront of many major stylistic developments in jazz.',
       },
       {
         name: 'Muddy Waters',
+        description: 'Muddy Waters was born McKinley Morganfield on April 4, 1915, in Issaquena County, Mississippi. Waters grew up immersed in the Delta blues, and was first recorded by archivist Alan Lomax. In 1943, he moved to Chicago and began playing in clubs. A record deal followed, and hits like "I\'m Your Hoochie Coochie Man" and "Rollin\' Stone" made him an iconic Chicago blues man.',
+      },
+      {
+        name: 'Nina Simone',
+        description: 'Legendary performer Nina Simone sang a mix of jazz, blues and folk music in the 1950s and \'60s, later enjoying a career resurgence in the \'80s. A staunch Civil Rights activist, she was known for tunes like "Mississippi Goddam," "Young, Gifted and Black" and "Four Women."',
       },
       {
         name: 'Kurtis Blow',
+        description: 'Professionally known by his stage name Kurtis Blow, is an American rapper, singer, songwriter, record/film producer, b-boy, DJ, public speaker and minister. He is the first commercially successful rapper and the first to sign with a major record label.',
       },
       {
         name: 'MC Lyte',
+        description: 'MC Lyte better known by her stage name MC Lyte, is an American rapper who first gained fame in the late 1980s, becoming the first solo female rapper to release a full album with 1988\'s critically acclaimed Lyte as a Rock.',
       },
       {
         name: 'James Brown',
+        description: 'James Brown was an American singer, songwriter, dancer, musician, record producer and bandleader. A progenitor of funk music and a major figure of 20th century music and dance, he is often referred to as the "Godfather of Soul" and "Soul Brother No. 1".',
       },
       {
         name: 'KRS-One',
+        description: 'KRS-One, better known by his stage names KRS-One, and Teacha, is an American rapper and occasional producer from The Bronx, New York. He rose to prominence as part of the hip hop music group Boogie Down Productions, which he formed with DJ Scott La Rock in the mid-1980s.',
       },
     ]
   },
