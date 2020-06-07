@@ -63,6 +63,17 @@ const UpdateStack = props => {
         }}
       />
 
+      {/* Artist Histories Screen */}
+      <Stack.Screen
+        name="ArtistHistories"
+        component={ArtistHistories}
+        options={{
+          gestureDirection: 'horizontal',
+          gestureResponseDistance: responseDistance,
+          gestureEnabled: true,
+        }}
+      />
+
       {/* Participants Screen */}
       <Stack.Screen
         name="Participants"
