@@ -4,7 +4,8 @@ import Home from '../screens/home';
 import Update from '../screens/update';
 import Courses from '../screens/history/courses';
 import Participants from '../screens/history/participantsScreen';
-import Participant from '../screens/history/participant'
+import Participant from '../screens/history/participant';
+import ArtistHistories from '../screens/history/artistHistoryScreen';
 
 const Stack = createStackNavigator();
 

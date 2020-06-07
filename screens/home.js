@@ -106,7 +106,7 @@ const Home = ({navigation}) => {
                     navigation: navigation,  // TODO: this might not be allowed lol
                   })}
                 }>
-                  <Text style={styles.navButtontext}>{strings.participants.title}</Text>
+                  <Text style={styles.navButtontext}>{strings.artistHistories.title}</Text>
               </TouchableOpacity>
             </View>
 

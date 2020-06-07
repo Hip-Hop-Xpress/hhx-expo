@@ -43,7 +43,7 @@ export default function ArtistHistories(props) {
             {/* Subtitle */}
             <Text style={styles.introText}>{strings.artistHistories.subtitle}</Text>
 
-            {/* Participant Components */}
+            {/* Artist History Components Components */}
             <View style={styles.participantsListContainer}>
               <ParticipantsList navigation={props.navigation} />
             </View>
