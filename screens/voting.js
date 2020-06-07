@@ -20,7 +20,7 @@ export default function Voting() {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={globalStyles.illiniBlue}>
+      <SafeAreaView style={globalStyles.sampleRed}>
         <Header />
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           {/* Body */}

@@ -149,6 +149,9 @@ const strings = {
     subtitle: 'Find out where the Double Dutch Boom Bus is right now!',
     request: 'Want to bring the bus to your community? Contact us!',
   },
+  artistHistories: {
+    title: 'Artist Histories',
+  },
   courses: {
     title: 'Past Courses and Camps',
     subtitle: 'Past Courses and Camps',
