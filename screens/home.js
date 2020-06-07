@@ -98,7 +98,7 @@ export default function Home({navigation}) {
                 style={[styles.navButton, globalStyles.illiniBlue]}
                 activeOpacity={0.75}
                 onPress={
-                  () => {navigation.navigate('Artist Histories', {
+                  () => {navigation.navigate('ArtistHistories', {
                     navigation: navigation,  // TODO: this might not be allowed lol
                   })}
                 }>

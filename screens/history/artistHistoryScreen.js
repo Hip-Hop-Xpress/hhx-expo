@@ -33,7 +33,7 @@ export default function ArtistHistories(props) {
             />
             {/* Text over top image */}
             <View style={styles.topView}>
-              <Text style={[styles.topText, globalStyles.illiniBlue]}>{strings.participants.title}</Text>
+              <Text style={[styles.topText, globalStyles.illiniBlue]}>{strings.artistHistories.title}</Text>
             </View>
           </View>
 
@@ -41,7 +41,7 @@ export default function ArtistHistories(props) {
           <View style={[styles.body]}>
 
             {/* Subtitle */}
-            <Text style={styles.introText}>{strings.participants.subtitle}</Text>
+            <Text style={styles.introText}>{strings.artistHistories.subtitle}</Text>
 
             {/* Participant Components */}
             <View style={styles.participantsListContainer}>
