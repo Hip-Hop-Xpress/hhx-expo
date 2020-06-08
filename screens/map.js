@@ -17,7 +17,7 @@ import SocialMedia from '../components/socialMedia';
 
 // Strings/data
 import strings from '../assets/strings';
-import coords from '../assets/coords';
+import {COORDS} from '../api/constants';
 
 // Styles
 import globalStyles from '../styles/global';
@@ -31,8 +31,8 @@ const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
 export default function Map() {
   const locateBus = {
-    latitude: coords.busLocation.latitude,
-    longitude: coords.busLocation.longitude,
+    latitude: COORDS.busLocation.latitude,
+    longitude: COORDS.busLocation.longitude,
     latitudeDelta: LATITUDE_DELTA,
     longitudeDelta: LONGITUDE_DELTA,
   };
@@ -60,8 +60,8 @@ export default function Map() {
                 provide={PROVIDER_GOOGLE}
                 showsUserLocation={true}
                 initialRegion={{
-                  latitude: coords.mapStartLat,
-                  longitude: coords.mapStartLong,
+                  latitude: COORDS.mapStartLat,
+                  longitude: COORDS.mapStartLong,
                   latitudeDelta: LATITUDE_DELTA,
                   longitudeDelta: LONGITUDE_DELTA,
                 }}>
