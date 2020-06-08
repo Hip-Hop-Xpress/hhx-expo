@@ -1,5 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
+
+// Screens
 import Home from '../screens/home';
 import Update from '../screens/update';
 import Courses from '../screens/history/courses';
@@ -8,6 +10,7 @@ import Participant from '../screens/history/participant';
 import ArtistHistories from '../screens/history/artistHistoryScreen';
 import ArtistHistory from '../screens/history/artistHistory';
 
+import * as Colors from '../styles/colors';
 
 const Stack = createStackNavigator();
 
@@ -25,7 +28,7 @@ const UpdateStack = props => {
       screenOptions={{
         headerTintColor: 'white',
         headerStyle: {
-          backgroundColor: 'rgba(19, 41, 75, 1.0)',
+          backgroundColor: Colors.ILLINI_BLUE,
           height: 58,
         },
       }}
