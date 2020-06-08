@@ -10,9 +10,10 @@ import {
 
 import Header from '../components/header';
 import ProjectsList from '../components/projectsList';
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 
 import globalStyles from '../styles/global';
+import * as Fonts from '../styles/fonts';
 
 export default function Projects() {
   return (
@@ -47,14 +48,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   titleText: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     marginTop: 5,
     marginBottom: 10,
     fontSize: 32,
     textAlign: 'center',
   },
   introText: {
-    fontFamily: 'Karla-Regular',
+    fontFamily: Fonts.KARLA_REGULAR,
     textAlign: 'center',
     marginHorizontal: 30,
     fontSize: 16,

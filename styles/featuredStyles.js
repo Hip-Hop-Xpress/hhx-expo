@@ -1,4 +1,6 @@
 import {StyleSheet} from 'react-native';
+import * as Fonts from './fonts';
+import * as Colors from './colors';
 
 const featuredStyles = StyleSheet.create({
   title: {
@@ -6,7 +8,7 @@ const featuredStyles = StyleSheet.create({
     paddingBottom: 15,
   },
   titleText: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     marginTop: 5,
     marginBottom: 10,
     fontSize: 29,
@@ -30,7 +32,7 @@ const featuredStyles = StyleSheet.create({
     alignItems: 'center',
   },
   artistNameText: {
-    fontFamily: 'Montserrat-Regular',
+    fontFamily: Fonts.MONTSERRAT_REGULAR,
     marginTop: 10,
     marginBottom: 15,
     color: 'white',
@@ -38,7 +40,7 @@ const featuredStyles = StyleSheet.create({
     textAlign: 'center',
   },
   dateText: {
-    fontFamily: 'Karla-BoldItalic',
+    fontFamily: Fonts.KARLA_REGULAR,
     textAlign: 'center',
     fontSize: 20,
     color: 'lightgray',
@@ -65,14 +67,14 @@ const featuredStyles = StyleSheet.create({
     paddingVertical: 15,
   },
   bioTitle: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     fontSize: 30,
     textAlign: 'center',
-    color: 'rgba(232, 74, 39, 1.0)',
+    color: Colors.ILLINI_ORANGE,
     marginBottom: 10,
   },
   bioBody: {
-    fontFamily: 'Karla-Regular',
+    fontFamily: Fonts.KARLA_REGULAR,
     fontSize: 18,
     color: 'lightgray',
     lineHeight: 30,
@@ -84,16 +86,16 @@ const featuredStyles = StyleSheet.create({
   pastArtistsTitle: {
     color: 'lightgray',
     fontSize: 30,
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     textAlign: 'center',
     marginVertical: 20,
   },
   artistsContainer: {
     flex: 1,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignContent: "stretch",
-    alignItems: "center",
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignContent: 'stretch',
+    alignItems: 'center',
   },
 });
 

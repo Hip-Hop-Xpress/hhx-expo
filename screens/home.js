@@ -17,8 +17,10 @@ import Updates from '../components/updates';
 import SocialMedia from '../components/socialMedia';
 
 // Global constants
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 import globalStyles from '../styles/global';
+import * as Fonts from '../styles/fonts';
+import * as Colors from '../styles/colors';
 
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -125,7 +127,7 @@ const win = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: 'rgba(19, 41, 75, 1.0)',
+    backgroundColor: Colors.ILLINI_BLUE,
   },
   topImage: {
     position: 'absolute',
@@ -139,7 +141,7 @@ const styles = StyleSheet.create({
   topIntroText: {
     color: 'white',
     fontSize: 20,
-    fontFamily: 'Montserrat-Regular',
+    fontFamily: Fonts.MONTSERRAT_REGULAR,
   },
   topTitleText: {
     marginTop: 10,
@@ -147,7 +149,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 40,
     textAlign: 'center',
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
   },
   menu: {
     paddingTop: 50,
@@ -171,14 +173,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   sectionTitle: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     fontSize: 24,
     textAlign: 'center',
     color: 'black',
     marginBottom: 18,
   },
   sectionDescription: {
-    fontFamily: 'Karla-Regular',
+    fontFamily: Fonts.KARLA_REGULAR,
     marginTop: 0,
     marginBottom: 25,
     fontSize: 16,
@@ -203,7 +205,7 @@ const styles = StyleSheet.create({
     marginVertical: -1,
   },
   navButtontext: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     fontSize: 20,
     textAlign: 'center',
     color: 'white',

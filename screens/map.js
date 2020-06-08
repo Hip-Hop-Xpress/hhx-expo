@@ -7,17 +7,21 @@ import {
   Text,
   StatusBar,
   Dimensions,
-  Linking,
 } from 'react-native';
 
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+
+// Components
 import Header from '../components/header';
 import SocialMedia from '../components/socialMedia';
-import strings from '../assets/strings/strings';
-import coords from '../assets/coords';
 
-import {SocialIcon} from 'react-native-elements';
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+// Strings/data
+import strings from '../assets/strings';
+import {COORDS} from '../api/constants';
+
+// Styles
 import globalStyles from '../styles/global';
+import * as Fonts from '../styles/fonts';
 
 let {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
@@ -27,8 +31,8 @@ const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
 export default function Map() {
   const locateBus = {
-    latitude: coords.busLocation.latitude,
-    longitude: coords.busLocation.longitude,
+    latitude: COORDS.busLocation.latitude,
+    longitude: COORDS.busLocation.longitude,
     latitudeDelta: LATITUDE_DELTA,
     longitudeDelta: LONGITUDE_DELTA,
   };
@@ -56,8 +60,8 @@ export default function Map() {
                 provide={PROVIDER_GOOGLE}
                 showsUserLocation={true}
                 initialRegion={{
-                  latitude: coords.mapStartLat,
-                  longitude: coords.mapStartLong,
+                  latitude: COORDS.mapStartLat,
+                  longitude: COORDS.mapStartLong,
                   latitudeDelta: LATITUDE_DELTA,
                   longitudeDelta: LONGITUDE_DELTA,
                 }}>
@@ -83,14 +87,14 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
   },
   titleText: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     marginTop: 5,
     marginBottom: 10,
     fontSize: 32,
     textAlign: 'center',
   },
   introText: {
-    fontFamily: 'Karla-BoldItalic',
+    fontFamily: Fonts.KARLA_REGULAR,
     textAlign: 'center',
     marginHorizontal: 30,
     fontSize: 16,

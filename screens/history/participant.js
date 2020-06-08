@@ -8,9 +8,12 @@ import {
   StatusBar,
 } from 'react-native';
 
-import globalStyles from '../../styles/global';
 import Description from '../../components/participantDescription';
 import ParticipantImages from '../../components/participantImages';
+
+import globalStyles from '../../styles/global';
+import * as Fonts from '../../styles/fonts';
+import * as Colors from '../../styles/colors';
 
 const Participant = props => {
   const {title} = props.route.params;
@@ -53,13 +56,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleText: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     fontSize: 30,
     textAlign: 'center',
-    color: 'rgba(232, 74, 39, 1.0)',
+    color: Colors.ILLINI_ORANGE,
   },
   title: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     paddingTop: 20,
     paddingBottom: 15,
     paddingHorizontal: 20,

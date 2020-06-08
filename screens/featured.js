@@ -11,7 +11,7 @@ import {
 import Header from '../components/header';
 import ArtistBody from '../components/artistBodyContent';
 import Artists from '../components/artists';
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 
 // Styles
 import globalStyles from '../styles/global';

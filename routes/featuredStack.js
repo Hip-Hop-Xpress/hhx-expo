@@ -2,6 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Featured from '../screens/featured';
 import Artist from '../screens/featured/artist';
+import * as Colors from '../styles/colors';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +19,7 @@ const FeaturedStack = props => {
       screenOptions={{
         headerTintColor: 'white',
         headerStyle: {
-          backgroundColor: 'rgba(19, 41, 75, 1.0)',
+          backgroundColor: Colors.ILLINI_BLUE,
           height: 58,
         },
       }}

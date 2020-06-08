@@ -2,7 +2,7 @@ import React from 'react';
 
 import UpdateComponent from './updateComponent';
 
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 
 const Updates = props => {
   let updates = strings.home.updates;

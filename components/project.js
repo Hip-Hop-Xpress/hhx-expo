@@ -1,8 +1,10 @@
 import React from 'react';
-import {StyleSheet, View, Text, Dimensions} from 'react-native';
-import {TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, Dimensions, TouchableOpacity} from 'react-native';
+
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import globalStyles from '../styles/global';
+import * as Fonts from '../styles/fonts';
 
 const Project = props => {
   return (
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   projectName: {
-    fontFamily: 'Karla-Regular',
+    fontFamily: Fonts.KARLA_REGULAR,
     fontSize: 27,
     textAlign: 'center',
     margin: 10,
@@ -51,18 +53,18 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   projectTitle: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     fontSize: 22,
     textAlign: 'center',
     marginBottom: 15,
   },
   members: {
-    fontFamily: 'Karla-BoldItalic',
+    fontFamily: Fonts.KARLA_BOLDITALIC,
     fontSize: 18,
     marginBottom: 10,
   },
   projectText: {
-    fontFamily: 'Karla-Regular',
+    fontFamily: Fonts.KARLA_REGULAR,
     fontSize: 16,
   },
 });

@@ -2,7 +2,7 @@ import React from 'react';
 
 import ArtistHistoryComponent from './artistHistoryComponent';
 
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 
 const ArtistHistories = props => {
   let artistHistories = strings.artistHistories.list;

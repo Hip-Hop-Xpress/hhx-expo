@@ -2,7 +2,7 @@ import React from 'react';
 
 import ArtistComponent from './artistComponent';
 
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 
 /**
  * List of all artists previously featured by HHX.
