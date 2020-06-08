@@ -7,15 +7,13 @@ import {
   Text,
   StatusBar,
   Dimensions,
-  Linking,
 } from 'react-native';
 
 import Header from '../components/header';
 import SocialMedia from '../components/socialMedia';
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 import coords from '../assets/coords';
 
-import {SocialIcon} from 'react-native-elements';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import globalStyles from '../styles/global';
 

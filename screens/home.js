@@ -17,7 +17,7 @@ import Updates from '../components/updates';
 import SocialMedia from '../components/socialMedia';
 
 // Global constants
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 import * as Colors from '../styles/colors';

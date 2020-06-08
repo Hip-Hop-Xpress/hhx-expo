@@ -2,7 +2,7 @@ import React from 'react';
 
 import ParticipantComponent from './participantComponent';
 
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 
 const Participants = props => {
   let participants = strings.participants.list;

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import Header from '../../components/header';
-import strings from '../../assets/strings/strings';
+import strings from '../../assets/strings';
 
 import globalStyles from '../../styles/global';
 

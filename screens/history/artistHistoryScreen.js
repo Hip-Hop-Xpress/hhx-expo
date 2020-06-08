@@ -12,7 +12,7 @@ import {
 
 import ArtistHistoriesList from '../../components/artistHistories';
 
-import strings from '../../assets/strings/strings';
+import strings from '../../assets/strings';
 import globalStyles from '../../styles/global';
 
 YellowBox.ignoreWarnings([

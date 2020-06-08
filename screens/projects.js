@@ -10,7 +10,7 @@ import {
 
 import Header from '../components/header';
 import ProjectsList from '../components/projectsList';
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 
 import globalStyles from '../styles/global';
 
