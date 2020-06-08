@@ -5,6 +5,8 @@ import {
   Text,
 } from 'react-native';
 
+import * as Fonts from '../styles/fonts';
+
 const Description = (props) => {
   let description = props.paragraphs;
   let key = 0;
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
   },
   paragraphText: {
     color: 'lightgray',
-    fontFamily: 'Karla-Regular',
+    fontFamily: Fonts.KARLA_REGULAR,
     fontSize: 19,
   },
 })

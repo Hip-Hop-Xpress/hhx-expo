@@ -2,12 +2,18 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+// Screens/stacks
 import HomeStack from './homeStack';
 import Projects from '../screens/projects';
 import Voting from '../screens/voting';
 import FeaturedStack from './featuredStack';
 import Map from '../screens/map';
+
+// Styles
 import globalStyles from '../styles/global';
+import * as Fonts from '../styles/fonts';
+import * as Colors from '../styles/colors';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -17,8 +23,8 @@ function AppTabs() {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      activeColor="#E84A27"
-      inactiveColor="#FFCC96"
+      activeColor={Colors.ILLINI_ORANGE}
+      inactiveColor={Colors.BOTTOM_NAVIGATOR_INACTIVE}
       labeled={true}
       barStyle={[styles.navigator, globalStyles.illiniBlue]}>
 
@@ -95,7 +101,7 @@ function AppTabs() {
 
 const styles = StyleSheet.create({
   navigator: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     paddingBottom: 0,
     height: 52,
   },

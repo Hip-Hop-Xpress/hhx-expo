@@ -1,13 +1,13 @@
 import React from 'react';
 
 import {
-  Dimensions,
   StyleSheet,
   View,
   Text,
   Image,
-  Linking,
 } from 'react-native';
+
+import * as Fonts from '../styles/fonts';
 
 const ParticipantImages = props => {
   let images = props.images;
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
   },
   image: {
     marginTop: 25,
+    marginBottom: 10,
     width: imageSize,
     height: imageSize,
     borderRadius: 0,
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: 'center',
     color: 'lightgray',
-    fontFamily: 'Karla-BoldItalic',
+    fontFamily: Fonts.KARLA_BOLDITALIC,
   },
 })
 

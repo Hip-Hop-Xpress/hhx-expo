@@ -74,7 +74,7 @@ const featuredStyles = StyleSheet.create({
     marginBottom: 10,
   },
   bioBody: {
-    fontFamily: 'Karla-Regular',
+    fontFamily: Fonts.KARLA_REGULAR,
     fontSize: 18,
     color: 'lightgray',
     lineHeight: 30,

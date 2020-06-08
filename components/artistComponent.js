@@ -1,6 +1,8 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity, Dimensions, Image} from 'react-native';
 
+import * as Fonts from '../styles/fonts';
+
 /**
  * A single component linking to an individual artist's page 
  * that was previously featured in HHX.
@@ -74,13 +76,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     textAlignVertical: 'bottom',
     marginVertical: 5,
-    fontFamily: 'Karla-Regular',
+    fontFamily: Fonts.KARLA_REGULAR,
   },
   artistDate: {
     color: 'lightgray',
     textAlign: 'center',
     textAlignVertical: 'bottom',
-    fontFamily: 'Karla-BoldItalic',
+    fontFamily: Fonts.KARLA_BOLDITALIC,
   },
   touchable: {
     backgroundColor: 'black',
