@@ -29,7 +29,7 @@ export default function ArtistHistories(props) {
             {/* Top image */}
             <Image
               style={styles.topImage}
-              source={require('../../assets/images/hhx_team_blurred.jpg')}
+              source={require('../../assets/images/hhx-bus-art.jpeg')}
             />
             {/* Text over top image */}
             <View style={styles.topView}>
