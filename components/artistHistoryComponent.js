@@ -12,6 +12,7 @@ const ArtistHistoryComponent = props => {
           props.navigation.navigate('ArtistHistory', {
             title: props.title,
             paragraphs: props.paragraphs,
+            images: props.images,
           })
       }>
       <View style={[styles.artistHistoryContainer, globalStyles.illiniOrange]}>

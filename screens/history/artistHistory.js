@@ -10,10 +10,12 @@ import {
 
 import globalStyles from '../../styles/global';
 import Description from '../../components/artistHistoryDescription';
+import ArtistHistoryImages from '../../components/artistHistoryImages';
 
 const ArtistHistory = props => {
   const {title} = props.route.params;
   const {paragraphs} = props.route.params;
+  const {images} = props.route.params;
 
   return (
     <>
@@ -36,6 +38,7 @@ const ArtistHistory = props => {
 
             {/* Body */}
             <View style={[styles.body, globalStyles.illiniBlue]}>
+              <ArtistHistoryImages images={images} />
               <Description paragraphs={paragraphs} />
             </View>
           </View>

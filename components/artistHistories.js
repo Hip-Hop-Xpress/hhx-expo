@@ -12,6 +12,7 @@ const ArtistHistories = props => {
     <ArtistHistoryComponent
       title={artistHistory.name}
       paragraphs={artistHistory.description}
+      images={artistHistory.images}
       navigation={props.navigation}
       key={key++}
     />
