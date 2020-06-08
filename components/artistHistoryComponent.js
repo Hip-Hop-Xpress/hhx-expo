@@ -15,7 +15,7 @@ const ArtistHistoryComponent = props => {
             images: props.images,
           })
       }>
-      <View style={[styles.artistHistoryContainer, globalStyles.illiniOrange]}>
+      <View style={[styles.artistHistoryContainer, globalStyles.illiniBlue]}>
         <Text style={styles.artistHistoryTitle}>{props.title}</Text>
       </View>
     </TouchableOpacity>

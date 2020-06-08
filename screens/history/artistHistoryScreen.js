@@ -23,7 +23,7 @@ export default function ArtistHistories(props) {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={globalStyles.illiniBlue}>
+      <SafeAreaView style={globalStyles.illiniOrange}>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <View>
             {/* Top image */}
@@ -33,7 +33,7 @@ export default function ArtistHistories(props) {
             />
             {/* Text over top image */}
             <View style={styles.topView}>
-              <Text style={[styles.topText, globalStyles.illiniBlue]}>{strings.artistHistories.title}</Text>
+              <Text style={[styles.topText, globalStyles.illiniOrange]}>{strings.artistHistories.title}</Text>
             </View>
           </View>
 
