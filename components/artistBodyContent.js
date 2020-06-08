@@ -7,8 +7,6 @@ import {
   Linking,
 } from 'react-native';
 
-import {SocialIcon} from 'react-native-elements';
-
 import SocialMedia from './socialMedia';
 
 import globalStyles from '../styles/global';

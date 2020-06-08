@@ -9,13 +9,19 @@ import {
   Dimensions,
 } from 'react-native';
 
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+
+// Components
 import Header from '../components/header';
 import SocialMedia from '../components/socialMedia';
+
+// Strings/data
 import strings from '../assets/strings';
 import coords from '../assets/coords';
 
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+// Styles
 import globalStyles from '../styles/global';
+import * as Fonts from '../styles/fonts';
 
 let {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
@@ -81,14 +87,14 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
   },
   titleText: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     marginTop: 5,
     marginBottom: 10,
     fontSize: 32,
     textAlign: 'center',
   },
   introText: {
-    fontFamily: 'Karla-BoldItalic',
+    fontFamily: Fonts.KARLA_REGULAR,
     textAlign: 'center',
     marginHorizontal: 30,
     fontSize: 16,

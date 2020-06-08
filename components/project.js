@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, View, Text, Dimensions} from 'react-native';
-import {TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, Dimensions, TouchableOpacity} from 'react-native';
+
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import globalStyles from '../styles/global';
 
 const Project = props => {
