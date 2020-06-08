@@ -7,14 +7,12 @@ import {
   Linking,
 } from 'react-native';
 
-import {SocialIcon} from 'react-native-elements';
-
 import SocialMedia from './socialMedia';
 
 import globalStyles from '../styles/global';
 import featuredStyles from '../styles/featuredStyles';
 
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 
 /**
  * Shows a featured artist's information

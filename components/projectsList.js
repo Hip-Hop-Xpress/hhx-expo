@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import Project from '../components/project';
 
-import strings from '../assets/strings/strings';
+import strings from '../assets/strings';
 
 export default function ProjectsList() {
   const [selectedProject, setSelectedProject] = useState('');

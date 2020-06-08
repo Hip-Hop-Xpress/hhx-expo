@@ -1,6 +1,8 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+
 import globalStyles from '../styles/global';
+import * as Fonts from '../styles/fonts';
 
 const UpdateComponent = props => {
   const update = (
@@ -33,14 +35,14 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   updateTitle: {
-    fontFamily: 'Karla-Regular',
+    fontFamily: Fonts.KARLA_REGULAR,
     fontSize: 19,
     textAlign: 'left',
     color: 'white',
     marginBottom: 10,
   },
   updateDate: {
-    fontFamily: 'Karla-BoldItalic',
+    fontFamily: Fonts.KARLA_BOLDITALIC,
     fontSize: 17,
     textAlign: 'right',
     color: 'white',

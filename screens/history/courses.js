@@ -10,10 +10,10 @@ import {
 } from 'react-native';
 import Timeline from 'react-native-timeline-flatlist'
 
-import Header from '../../components/header';
-import strings from '../../assets/strings/strings';
+import strings from '../../assets/strings';
 
 import globalStyles from '../../styles/global';
+import * as Fonts from '../../styles/fonts';
 
 export default class Courses extends Component {
   constructor(){
@@ -114,14 +114,14 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
   },
   titleText: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     marginTop: 5,
     marginBottom: 10,
     fontSize: 32,
     textAlign: 'center',
   },
   introText: {
-    fontFamily: 'Karla-BoldItalic',
+    fontFamily: Fonts.KARLA_BOLDITALIC,
     textAlign: 'center',
     marginHorizontal: 30,
     fontSize: 16,

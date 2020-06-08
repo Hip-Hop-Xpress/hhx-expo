@@ -1,11 +1,12 @@
 import {StyleSheet} from 'react-native';
+import * as Colors from './colors';
 
 const globalStyles = StyleSheet.create({
   illiniOrange: {
-    backgroundColor: 'rgba(232, 74, 39, 0.85)',
+    backgroundColor: Colors.ILLINI_ORANGE,
   },
   illiniBlue: {
-    backgroundColor: 'rgba(19, 41, 75, 1.0)',
+    backgroundColor: Colors.ILLINI_BLUE,
   },
 });
 

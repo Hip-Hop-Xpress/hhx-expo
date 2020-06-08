@@ -1,6 +1,8 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity, Dimensions} from 'react-native';
+
 import globalStyles from '../styles/global';
+import * as Fonts from '../styles/fonts';
 
 const ArtistHistoryComponent = props => {
   const artistHistory = (
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
     height: height / 6,
   },
   artistHistoryTitle: {
-    fontFamily: 'Karla-Regular',
+    fontFamily: Fonts.KARLA_REGULAR,
     fontSize: 21,
     textAlign: 'left',
     textAlignVertical: "bottom",
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   artistHistorySubtitle: {
-    fontFamily: 'Karla-BoldItalic',
+    fontFamily: Fonts.KARLA_BOLDITALIC,
     fontSize: 17,
     textAlign: 'right',
     color: 'white',

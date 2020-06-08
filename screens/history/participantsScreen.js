@@ -12,8 +12,9 @@ import {
 
 import ParticipantsList from '../../components/participants';
 
-import strings from '../../assets/strings/strings';
+import strings from '../../assets/strings';
 import globalStyles from '../../styles/global';
+import * as Fonts from '../../styles/fonts';
 
 YellowBox.ignoreWarnings([
   'Non-serializable values were found in the navigation state',
@@ -70,14 +71,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   topText: {
-    fontFamily: 'Montserrat-Black',
+    fontFamily: Fonts.MONTSERRAT_BLACK,
     color: 'white',
     padding: 15,
     fontSize: 32,
     textAlign: 'center',
   },
   introText: {
-    fontFamily: 'Montserrat-Regular',
+    fontFamily: Fonts.MONTSERRAT_REGULAR,
     textAlign: 'center',
     marginVertical: 20,
     marginHorizontal: 10,
@@ -91,10 +92,10 @@ const styles = StyleSheet.create({
   },
   participantsListContainer: {
     flex: 1,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignContent: "stretch",
-    alignItems: "center",
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignContent: 'stretch',
+    alignItems: 'center',
     paddingHorizontal: 2,
   },
 });
