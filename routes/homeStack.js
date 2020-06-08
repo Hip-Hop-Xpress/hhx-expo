@@ -4,7 +4,10 @@ import Home from '../screens/home';
 import Update from '../screens/update';
 import Courses from '../screens/history/courses';
 import Participants from '../screens/history/participantsScreen';
-import Participant from '../screens/history/participant'
+import Participant from '../screens/history/participant';
+import ArtistHistories from '../screens/history/artistHistoryScreen';
+import ArtistHistory from '../screens/history/artistHistory';
+
 
 const Stack = createStackNavigator();
 
@@ -56,6 +59,28 @@ const UpdateStack = props => {
       <Stack.Screen
         name="Courses"
         component={Courses}
+        options={{
+          gestureDirection: 'horizontal',
+          gestureResponseDistance: responseDistance,
+          gestureEnabled: true,
+        }}
+      />
+
+      {/* Artist Histories Screen */}
+      <Stack.Screen
+        name="ArtistHistories"
+        component={ArtistHistories}
+        options={{
+          gestureDirection: 'horizontal',
+          gestureResponseDistance: responseDistance,
+          gestureEnabled: true,
+        }}
+      />
+
+      {/* Artist History Individual Screen */}
+      <Stack.Screen
+        name="ArtistHistory"
+        component={ArtistHistory}
         options={{
           gestureDirection: 'horizontal',
           gestureResponseDistance: responseDistance,
