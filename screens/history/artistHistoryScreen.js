@@ -10,7 +10,7 @@ import {
   YellowBox
 } from 'react-native';
 
-import ParticipantsList from '../../components/participants';
+import ArtistHistoriesList from '../../components/artistHistories';
 
 import strings from '../../assets/strings/strings';
 import globalStyles from '../../styles/global';
@@ -44,8 +44,8 @@ export default function ArtistHistories(props) {
             <Text style={styles.introText}>{strings.artistHistories.subtitle}</Text>
 
             {/* Artist History Components Components */}
-            <View style={styles.participantsListContainer}>
-              <ParticipantsList navigation={props.navigation} />
+            <View style={styles.artistHistoriesListContainer}>
+              <ArtistHistoriesList navigation={props.navigation} />
             </View>
           </View>
 
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     marginBottom: 40,
     paddingBottom: 40,
   },
-  participantsListContainer: {
+  artistHistoriesListContainer: {
     flex: 1,
     flexDirection: "row",
     flexWrap: "wrap",

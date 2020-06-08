@@ -5,10 +5,10 @@ import ArtistHistoryComponent from './artistHistoryComponent';
 import strings from '../assets/strings/strings';
 
 const ArtistHistories = props => {
-  let ArtistHistories = strings.artistHistories.list;
+  let artistHistories = strings.artistHistories.list;
   let key = 0;
 
-  const ArtistHistoriesList = ArtistHistories.map(artistHistory => (
+  const ArtistHistoriesList = artistHistories.map(artistHistory => (
     <ArtistHistoryComponent
       title={artistHistory.name}
       paragraphs={artistHistory.description}
