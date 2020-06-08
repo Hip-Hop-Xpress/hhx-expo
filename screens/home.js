@@ -96,6 +96,18 @@ const Home = ({navigation}) => {
                 }>
                   <Text style={styles.navButtontext}>{strings.participants.title}</Text>
               </TouchableOpacity>
+
+              {/* Artist Histories Navigation */}
+              <TouchableOpacity
+                style={[styles.navButton, globalStyles.illiniBlue]}
+                activeOpacity={0.75}
+                onPress={
+                  () => {navigation.navigate('ArtistHistories', {
+                    navigation: navigation,  // TODO: this might not be allowed lol
+                  })}
+                }>
+                  <Text style={styles.navButtontext}>{strings.artistHistories.title}</Text>
+              </TouchableOpacity>
             </View>
 
             {/* Social Media Section */}
