@@ -43,10 +43,8 @@ const Home = ({navigation}) => {
             />
             {/* Text over bus image */}
             <View style={styles.topImage}>
-              <Text style={styles.topIntroText}>WELCOME TO THE</Text>
-              <Text style={styles.topTitleText}>
-                DOUBLE DUTCH{'\n'}BOOM BUS
-              </Text>
+              <Text style={styles.topIntroText}>{strings.home.upperTitle}</Text>
+              <Text style={styles.topTitleText}>{strings.home.lowerTitle}</Text>
             </View>
           </View>
 
