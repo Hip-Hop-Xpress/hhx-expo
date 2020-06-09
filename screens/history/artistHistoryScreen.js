@@ -49,6 +49,7 @@ export default function ArtistHistories(props) {
             <View style={styles.artistHistoriesListContainer}>
               <ArtistHistoriesList navigation={props.navigation} />
             </View>
+            
           </View>
 
         </ScrollView>

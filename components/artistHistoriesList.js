@@ -1,14 +1,17 @@
 import React from 'react';
-
 import ArtistHistoryComponent from './artistHistoryComponent';
+import ARTIST_HISTORIES from '../api/constants/artistHistories';
 
-import strings from '../assets/strings';
-
-const ArtistHistories = props => {
-  let artistHistories = strings.artistHistories.list;
+/**
+ * List of all artists featured on the Double Dutch Boom Bus
+ * Comprised of ArtistHistoryComponents
+ * 
+ * @param {Object} props data to be passed to artist history components and screen
+ */
+const ArtistHistoriesList = props => {
   let key = 0;
 
-  const ArtistHistoriesList = artistHistories.map(artistHistory => (
+  const ArtistHistories = ARTIST_HISTORIES.map(artistHistory => (
     <ArtistHistoryComponent
       title={artistHistory.name}
       paragraphs={artistHistory.description}
@@ -18,7 +21,7 @@ const ArtistHistories = props => {
     />
   ));
 
-  return <>{ArtistHistoriesList}</>;
+  return <>{ArtistHistories}</>;
 };
 
-export default ArtistHistories;
+export default ArtistHistoriesList;
