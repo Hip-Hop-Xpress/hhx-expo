@@ -18,8 +18,11 @@ import Header from '../components/header';
 import Updates from '../components/updates';
 import SocialMedia from '../components/socialMedia';
 
-// Global constants
+// Text/data imports
 import strings from '../assets/strings';
+import PLATFORMS from '../api/constants/socialMedia';
+
+// Styles
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 import * as Colors from '../styles/colors';
@@ -113,7 +116,7 @@ const Home = ({navigation}) => {
 
             {/* Social Media Section */}
             <View style={styles.sectionContainer}>
-              <SocialMedia platforms={strings.socialMedia.platforms} />
+              <SocialMedia platforms={PLATFORMS} />
             </View>
           </View>
         </ScrollView>
