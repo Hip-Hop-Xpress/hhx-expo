@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-
 import Project from '../components/project';
+import PROJECTS from '../api/constants/projects';
 
-import strings from '../assets/strings';
-
-export default function ProjectsList() {
+/**
+ * List of projects made of project components
+ */
+const ProjectsList = () => {
   const [selectedProject, setSelectedProject] = useState('');
 
   const makeSelectToggleHandler = title => {
@@ -17,10 +18,9 @@ export default function ProjectsList() {
     };
   };
 
-  let list = strings.projects.list;
   let key = 0;
 
-  const Projects = list.map(project => (
+  const Projects = PROJECTS.map(project => (
     <Project
       topText={project.title}
       bottomText={project.body}
@@ -34,3 +34,5 @@ export default function ProjectsList() {
 
   return <>{Projects}</>;
 }
+
+export default ProjectsList;
