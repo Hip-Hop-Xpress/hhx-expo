@@ -6,7 +6,7 @@ import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 
 /**
- * HHX app
+ * Mobile app for the Hip Hop Xpress
  */
 export default function App() {
   const fetchFonts = () => {
