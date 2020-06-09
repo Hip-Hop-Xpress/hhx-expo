@@ -8,14 +8,19 @@ import {
   StatusBar,
 } from 'react-native';
 
+// Components and text
 import Header from '../components/header';
 import ProjectsList from '../components/projectsList';
 import strings from '../assets/strings';
 
+// Styles
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 
-export default function Projects() {
+/**
+ * Screen showcasing all Hip Hop Xpress Projects
+ */
+const Projects = () => {
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -70,3 +75,5 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
 });
+
+export default Projects;

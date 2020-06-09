@@ -10,7 +10,7 @@ import {
   YellowBox
 } from 'react-native';
 
-import ArtistHistoriesList from '../../components/artistHistories';
+import ArtistHistoriesList from '../../components/artistHistoriesList';
 
 import strings from '../../assets/strings';
 
@@ -49,6 +49,7 @@ export default function ArtistHistories(props) {
             <View style={styles.artistHistoriesListContainer}>
               <ArtistHistoriesList navigation={props.navigation} />
             </View>
+            
           </View>
 
         </ScrollView>

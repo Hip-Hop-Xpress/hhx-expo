@@ -17,7 +17,7 @@ import SocialMedia from '../components/socialMedia';
 
 // Strings/data
 import strings from '../assets/strings';
-import {COORDS} from '../api/constants';
+import {COORDS, CONTACTS} from '../api/constants/mapConstants';
 
 // Styles
 import globalStyles from '../styles/global';
@@ -73,7 +73,7 @@ export default function Map() {
             <Text style={styles.introText}>{strings.maps.request}</Text>
 
             {/* Contacts */}
-            <SocialMedia platforms={strings.maps.socialMediaPlatforms} />
+            <SocialMedia platforms={CONTACTS} />
           </View>
         </ScrollView>
       </SafeAreaView>

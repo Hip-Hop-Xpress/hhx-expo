@@ -1,14 +1,12 @@
 import React from 'react';
 
 import UpdateComponent from './updateComponent';
+import updates from '../api/constants/updates';
 
-import strings from '../assets/strings';
-
-const Updates = props => {
-  let updates = strings.home.updates;
+const UpdatesList = props => {
   let key = 0;
 
-  const UpdatesList = updates.map(update => (
+  const Updates = updates.map(update => (
     <UpdateComponent
       title={update.title}
       body={update.body}
@@ -18,7 +16,7 @@ const Updates = props => {
     />
   ));
 
-  return <>{UpdatesList}</>;
+  return <>{Updates}</>;
 };
 
-export default Updates;
+export default UpdatesList;

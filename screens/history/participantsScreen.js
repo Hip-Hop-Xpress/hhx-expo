@@ -10,17 +10,26 @@ import {
   YellowBox
 } from 'react-native';
 
-import ParticipantsList from '../../components/participants';
+// Components
+import ParticipantsList from '../../components/participantsList';
 
+// Text/styles
 import strings from '../../assets/strings';
 import globalStyles from '../../styles/global';
 import * as Fonts from '../../styles/fonts';
 
+// Supresses visual warnings
 YellowBox.ignoreWarnings([
   'Non-serializable values were found in the navigation state',
 ]);
 
-export default function Participants(props) {
+/**
+ * Screen showcasing all participants who founded and helped build the Hip Hop Xpress
+ * 
+ * @param {Object} navigation object from StackNavigation allowing users 
+ *                            to navigate to individual participant screens
+ */
+const Participants = ({navigation}) => {
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -46,7 +55,7 @@ export default function Participants(props) {
 
             {/* Participant Components */}
             <View style={styles.participantsListContainer}>
-              <ParticipantsList navigation={props.navigation} />
+              <ParticipantsList navigation={navigation} />
             </View>
           </View>
 
@@ -99,3 +108,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 2,
   },
 });
+
+export default Participants;

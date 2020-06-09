@@ -11,18 +11,22 @@ import {
   Dimensions,
 } from 'react-native';
 
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
 // Components
 import Header from '../components/header';
-import Updates from '../components/updates';
+import Updates from '../components/updatesList';
 import SocialMedia from '../components/socialMedia';
 
-// Global constants
+// Text/data imports
 import strings from '../assets/strings';
+import PLATFORMS from '../api/constants/socialMedia';
+
+// Styles
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 import * as Colors from '../styles/colors';
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Home = ({navigation}) => {
   // App layout
@@ -42,10 +46,8 @@ const Home = ({navigation}) => {
             />
             {/* Text over bus image */}
             <View style={styles.topImage}>
-              <Text style={styles.topIntroText}>WELCOME TO THE</Text>
-              <Text style={styles.topTitleText}>
-                DOUBLE DUTCH{'\n'}BOOM BUS
-              </Text>
+              <Text style={styles.topIntroText}>{strings.home.upperTitle}</Text>
+              <Text style={styles.topTitleText}>{strings.home.lowerTitle}</Text>
             </View>
           </View>
 
@@ -114,7 +116,7 @@ const Home = ({navigation}) => {
 
             {/* Social Media Section */}
             <View style={styles.sectionContainer}>
-              <SocialMedia platforms={strings.socialMedia.platforms} />
+              <SocialMedia platforms={PLATFORMS} />
             </View>
           </View>
         </ScrollView>
