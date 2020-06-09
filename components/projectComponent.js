@@ -7,25 +7,32 @@ import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 
 /**
+ * Clickable icon showing project information
  * 
+ * @param {string} title name of the project
+ * @param {string} body description of the project
+ * @param {string} members string repr of all members
+ * @param {string} icon type of icon from MaterialCommunityIcons
+ * @param {boolean} isSelected whether the project component is selected
+ * @param {Function} setSelected notifies ProjectList that current project has been selected
  */
-const ProjectComponent = props => {
+const ProjectComponent = ({title, body, members, icon, isSelected, setSelected}) => {
   return (
     <>
       <TouchableOpacity
         style={[styles.container, globalStyles.illiniOrange]}
-        onPress={props.setSelected}
+        onPress={setSelected}
         activeOpacity={0.75}>
-        <MaterialCommunityIcons name={props.icon} color={'white'} size={65} />
-        <Text style={styles.projectName}>{props.topText} </Text>
+        <MaterialCommunityIcons name={icon} color={'white'} size={65} />
+        <Text style={styles.projectName}>{title}</Text>
       </TouchableOpacity>
 
       {/* Body text */}
-      {props.isSelected ? (
+      {isSelected ? (
         <View style={styles.projectInfo}>
-          <Text style={styles.projectTitle}>{props.topText}</Text>
-          <Text style={styles.members}>{props.members}</Text>
-          <Text style={styles.projectText}>{props.bottomText} </Text>
+          <Text style={styles.projectTitle}>{title}</Text>
+          <Text style={styles.members}>{members}</Text>
+          <Text style={styles.projectText}>{body} </Text>
         </View>
       ) : null}
     </>

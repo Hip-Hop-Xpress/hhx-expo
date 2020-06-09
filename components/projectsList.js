@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Project from '../components/projectComponent';
+import ProjectComponent from '../components/projectComponent';
 import PROJECTS from '../api/constants/projects';
 
 /**
@@ -21,9 +21,9 @@ const ProjectsList = () => {
   let key = 0;
 
   const Projects = PROJECTS.map(project => (
-    <Project
-      topText={project.title}
-      bottomText={project.body}
+    <ProjectComponent
+      title={project.title}
+      body={project.body}
       members={project.members}
       icon={project.icon}
       key={key++}
