@@ -17,7 +17,7 @@ import SocialMedia from '../components/socialMedia';
 
 // Strings/data
 import strings from '../assets/strings';
-import {COORDS} from '../api/constants';
+import {COORDS} from '../api/constants/coords';
 
 // Styles
 import globalStyles from '../styles/global';
