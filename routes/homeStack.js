@@ -9,6 +9,8 @@ import Participants from '../screens/history/participantsScreen';
 import Participant from '../screens/history/participant';
 import ArtistHistories from '../screens/history/artistHistoryScreen';
 import ArtistHistory from '../screens/history/artistHistory';
+import Variations from '../screens/history/variationsScreen';
+import Variation from '../screens/history/variation';
 
 import * as Colors from '../styles/colors';
 
@@ -17,6 +19,12 @@ const Stack = createStackNavigator();
 // https://reactnavigation.org/docs/stack-navigator/
 const UpdateStack = props => {
   const responseDistance = 500;
+
+  const nonLandingScreenOptions = {
+    gestureDirection: 'horizontal',
+    gestureResponseDistance: responseDistance,
+    gestureEnabled: true,
+  };
 
   return (
     <Stack.Navigator
@@ -52,9 +60,8 @@ const UpdateStack = props => {
         name="Update"
         component={Update}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: 'Updates',
         }}
       />
 
@@ -63,31 +70,28 @@ const UpdateStack = props => {
         name="Courses"
         component={Courses}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: 'Courses',
         }}
       />
 
       {/* Artist Histories Screen */}
       <Stack.Screen
-        name="ArtistHistories"
+        name="Artist Histories"
         component={ArtistHistories}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: 'Artist Histories',
         }}
       />
 
       {/* Artist History Individual Screen */}
       <Stack.Screen
-        name="ArtistHistory"
+        name="Artist History"
         component={ArtistHistory}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: 'Artist Histories',
         }}
       />
 
@@ -96,9 +100,8 @@ const UpdateStack = props => {
         name="Participants"
         component={Participants}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: 'Participants',
         }}
       />
 
@@ -107,9 +110,28 @@ const UpdateStack = props => {
         name="Participant"
         component={Participant}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: 'Participants',
+        }}
+      />
+
+      {/* Variations List Screen */}
+      <Stack.Screen
+        name="Variations"
+        component={Variations}
+        options={{
+          ...nonLandingScreenOptions,
+          headerTitle: 'Variations on the Hip Hop Xpress',
+        }}
+      />
+
+      {/* Variations Individual Screen */}
+      <Stack.Screen
+        name="Variation"
+        component={Variation}
+        options={{
+          ...nonLandingScreenOptions,
+          headerTitle: 'Variations on the Hip Hop Xpress',
         }}
       />
 
