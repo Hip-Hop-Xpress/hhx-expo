@@ -1,21 +1,18 @@
 import React from 'react';
-
-import ArtistComponent from './artistComponent';
-
-import strings from '../assets/strings';
+import FeaturedArtistComponent from './featuredArtistComponent';
+import FEATURED_ARTISTS from '../api/constants/featuredArtists';
 
 /**
  * List of all artists previously featured by HHX.
  * 
  * @param {Object} navigation navigation object from Featured Stack, lets user click to artist page 
  */
-const Artists = ({navigation}) => {
-  let artistsList = strings.featured.artistList;
+const FeaturedArtistsList = ({navigation}) => {
   let key = 0;
   
-  const ArtistsList = artistsList.map(artist => (
+  const Artists = FEATURED_ARTISTS.map(artist => (
     artist.current ? null : (
-    <ArtistComponent
+    <FeaturedArtistComponent
       name={artist.artistName}
       date={artist.date}
       title={artist.bioTitle}
@@ -28,8 +25,8 @@ const Artists = ({navigation}) => {
 
   return (
     <>
-      {ArtistsList}
+      {Artists}
     </>);
 };
 
-export default Artists;
+export default FeaturedArtistsList;

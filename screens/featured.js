@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 
 import Header from '../components/header';
-import ArtistBody from '../components/artistBodyContent';
-import Artists from '../components/artists';
+import ArtistBody from '../components/featuredArtistBody';
+import FeaturedArtistsList from '../components/featuredArtistsList';
 import strings from '../assets/strings';
 
 // Styles
@@ -39,7 +39,7 @@ const Featured = ({navigation}) => {
           <View style={featuredStyles.pastArtistsBody}>
               <Text style={featuredStyles.pastArtistsTitle}>{strings.featured.pastArtists}</Text>
               <View style={featuredStyles.artistsContainer}>
-                <Artists navigation={navigation}/>
+                <FeaturedArtistsList navigation={navigation}/>
               </View>
             </View>
         </ScrollView>

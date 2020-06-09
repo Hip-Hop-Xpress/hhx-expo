@@ -1,11 +1,5 @@
 import React from 'react';
-
-import {
-  View,
-  Text,
-  Image,
-  Linking,
-} from 'react-native';
+import {View, Text, Image} from 'react-native';
 
 import SocialMedia from './socialMedia';
 
@@ -23,7 +17,6 @@ import strings from '../assets/strings';
  * @param {Array}  socialMedia holds all artist's social media platforms
  */
 const ArtistBodyContent = ({name, date, bio, title, socialMedia}) => {
-  let key = 0;
   return (
     <View style={[featuredStyles.body, globalStyles.illiniBlue]}>
       {/* Top image/title card */}
