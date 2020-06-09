@@ -5,6 +5,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 
+/**
+ * HHX app
+ */
 export default function App() {
   const fetchFonts = () => {
     return Font.loadAsync({
