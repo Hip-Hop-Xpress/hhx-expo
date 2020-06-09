@@ -11,6 +11,8 @@ import {
   Dimensions,
 } from 'react-native';
 
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
 // Components
 import Header from '../components/header';
 import Updates from '../components/updates';
@@ -22,7 +24,6 @@ import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 import * as Colors from '../styles/colors';
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Home = ({navigation}) => {
   // App layout

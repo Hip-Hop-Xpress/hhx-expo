@@ -1,11 +1,9 @@
 import React from 'react';
 
 import UpdateComponent from './updateComponent';
-
-import strings from '../assets/strings';
+import updates from '../api/constants/updates';
 
 const Updates = props => {
-  let updates = strings.home.updates;
   let key = 0;
 
   const UpdatesList = updates.map(update => (
