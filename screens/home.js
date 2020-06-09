@@ -15,7 +15,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 // Components
 import Header from '../components/header';
-import Updates from '../components/updates';
+import Updates from '../components/updatesList';
 import SocialMedia from '../components/socialMedia';
 
 // Text/data imports

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Project from '../components/project';
+import Project from '../components/projectComponent';
 import PROJECTS from '../api/constants/projects';
 
 /**

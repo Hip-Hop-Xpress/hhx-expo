@@ -10,7 +10,7 @@ import {
   YellowBox
 } from 'react-native';
 
-import ArtistHistoriesList from '../../components/artistHistories';
+import ArtistHistoriesList from '../../components/artistHistoriesList';
 
 import strings from '../../assets/strings';
 
