@@ -30,24 +30,6 @@ const strings = {
     title: 'Where are we now?',
     subtitle: 'Find out where the Double Dutch Boom Bus is right now!',
     request: 'Want to bring the bus to your community? Contact us!',
-    socialMediaPlatforms: [
-      {
-        type: 'instagram',
-        url: 'https://www.instagram.com/uiuchhx/',
-      },
-      {
-        type: 'facebook',
-        url: 'https://www.facebook.com/uiuchhx/',
-      },
-      {
-        type: 'envelope',
-        url: 'mailto:wmpatter@illinois.edu',
-      },
-      {
-        type: 'twitter',
-        url: 'https://twitter.com/UIUChhx',
-      }
-    ]
   },
   courses: {
     title: 'Past Courses and Camps',
