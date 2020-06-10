@@ -36,7 +36,7 @@ const Variations = (props) => {
           </View>
 
           <View style={styles.variationsContainer}>
-            <VariationsList navigation={props.navigation}/>
+            <VariationsList navigation={props.navigation} />
           </View>
 
         </ScrollView>

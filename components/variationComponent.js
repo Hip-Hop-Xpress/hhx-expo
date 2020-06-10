@@ -1,24 +1,27 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity, Dimensions} from 'react-native';
 
+import strings from '../assets/strings';
+
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 
-const VariationComponent = props => {
+const VariationComponent = ({name, date, description, images, navigation}) => {
   return (
     <TouchableOpacity
       activeOpacity={0.75}
       onPress={
         // Send props to screen in stack
         () =>
-          props.navigation.navigate('Variation', {
-            // title: props.title,
-            // paragraphs: props.paragraphs,
-            // images: props.images,
+          navigation.navigate(strings.variations.individualScreenName, {
+            name: name,
+            date: date,
+            description: description,
+            images: images,
           })
       }>
-      <View style={}>
-        <Text style={}>{/* title goes here */}</Text>
+      <View>
+        <Text>{name}</Text>
       </View>
     </TouchableOpacity>
   );
