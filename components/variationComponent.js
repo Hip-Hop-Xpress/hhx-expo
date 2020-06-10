@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity, Dimensions, Image} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity, Image} from 'react-native';
 
 import strings from '../assets/strings';
 
@@ -30,10 +30,6 @@ const VariationComponent = ({name, date, description, images, navigation}) => {
     </TouchableOpacity>
   );
 };
-
-const screen = Dimensions.get('screen');
-const width = screen.width;
-const height = screen.height;
 
 const styles = StyleSheet.create({
   container: {
