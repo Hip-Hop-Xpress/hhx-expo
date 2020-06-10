@@ -8,6 +8,7 @@ import * as Fonts from '../styles/fonts';
 
 /**
  * Clickable component navigating to individual screen
+ * Used in History screens
  * 
  * @param {string} title name or title of event; shown on component
  * @param {Array}  paragraphs list of strings shown on individual screen; passed through navigation

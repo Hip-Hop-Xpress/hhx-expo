@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import Description from '../../components/participantDescription';
-import ParticipantImages from '../../components/participantImages';
+import HistoryImages from '../../components/historyImages';
 
 import globalStyles from '../../styles/global';
 import * as Fonts from '../../styles/fonts';
@@ -26,24 +26,22 @@ const Participant = props => {
       <SafeAreaView style={styles.screen}>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={globalStyles.illiniBlue}>
+          style={globalStyles.illiniBlue}
+        >
           {/* Screen body */}
           <View style={[styles.body, globalStyles.illiniBlue]}>
+
             {/* Title (name) */}
             <View style={styles.title}>
               <Text style={styles.titleText}>{title}</Text>
             </View>
 
-            {/* Subtitle */}
-            <View>
-              {/* subtitle goes here */}
-            </View>
-
             {/* Body */}
             <View style={[styles.body, globalStyles.illiniBlue]}>
-              <ParticipantImages images={images} />
+              <HistoryImages images={images} />
               <Description paragraphs={paragraphs} />
             </View>
+
           </View>
         </ScrollView>
       </SafeAreaView>
