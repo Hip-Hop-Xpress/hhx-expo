@@ -16,6 +16,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 // Components
 import Header from '../components/header';
 import Updates from '../components/updatesList';
+import NavigationButton from '../components/navigationButton';
 import SocialMedia from '../components/socialMedia';
 
 // Text/data imports
@@ -78,40 +79,25 @@ const Home = ({navigation}) => {
             {/* Navigation to history modules*/}
             <View style={styles.navigationSection}>
               {/* Courses Navigation */}
-              <TouchableOpacity
-                style={[styles.navButton, globalStyles.illiniBlue]}
-                activeOpacity={0.75}
-                onPress={
-                  () => {navigation.navigate('Courses', {
-                    navigation: navigation,  // TODO: this might not be allowed lol
-                  })}
-                }>
-                  <Text style={styles.navButtontext}>{strings.courses.title}</Text>
-              </TouchableOpacity>
+              <NavigationButton
+                navigation={navigation}
+                title={strings.courses.title}
+                screenName={'Courses'}
+              />
 
               {/* Participants Navigation */}
-              <TouchableOpacity
-                style={[styles.navButton, globalStyles.illiniBlue]}
-                activeOpacity={0.75}
-                onPress={
-                  () => {navigation.navigate('Participants', {
-                    navigation: navigation,  // TODO: this might not be allowed lol
-                  })}
-                }>
-                  <Text style={styles.navButtontext}>{strings.participants.title}</Text>
-              </TouchableOpacity>
+              <NavigationButton
+                navigation={navigation}
+                title={strings.participants.title}
+                screenName={'Participants'} 
+              />
 
               {/* Artist Histories Navigation */}
-              <TouchableOpacity
-                style={[styles.navButton, globalStyles.illiniBlue]}
-                activeOpacity={0.75}
-                onPress={
-                  () => {navigation.navigate('ArtistHistories', {
-                    navigation: navigation,  // TODO: this might not be allowed lol
-                  })}
-                }>
-                  <Text style={styles.navButtontext}>{strings.artistHistories.title}</Text>
-              </TouchableOpacity>
+              <NavigationButton
+                navigation={navigation}
+                title={strings.artistHistories.title}
+                screenName={'Artist Histories'}
+              />
             </View>
 
             {/* Social Media Section */}
@@ -153,11 +139,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: Fonts.MONTSERRAT_BLACK,
   },
-  menu: {
-    paddingTop: 50,
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
   body: {
     backgroundColor: 'white',
     paddingVertical: 20,
@@ -167,12 +148,6 @@ const styles = StyleSheet.create({
     marginTop: 24,
     paddingHorizontal: 24,
     marginBottom: 10,
-  },
-  socialMediaContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
   },
   sectionTitle: {
     fontFamily: Fonts.MONTSERRAT_BLACK,
