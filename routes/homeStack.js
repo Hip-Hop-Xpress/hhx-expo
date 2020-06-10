@@ -12,6 +12,7 @@ import ArtistHistory from '../screens/history/artistHistory';
 import Variations from '../screens/history/variationsScreen';
 import Variation from '../screens/history/variation';
 
+import strings from '../assets/strings';
 import * as Colors from '../styles/colors';
 
 const Stack = createStackNavigator();
@@ -28,7 +29,7 @@ const UpdateStack = props => {
 
   return (
     <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName={strings.home.screenName}
       headerMode="screen"
       mode="card"
       gesturesEnabled={true}
@@ -44,7 +45,7 @@ const UpdateStack = props => {
 
       {/* Home Screen */}
       <Stack.Screen
-        name="Home"
+        name={strings.home.screenName}
         component={Home}
         options={{
           gestureDirection: 'horizontal',
@@ -57,61 +58,61 @@ const UpdateStack = props => {
 
       {/* Update Screens */}
       <Stack.Screen
-        name="Update"
+        name={strings.home.updatesInfo.screenName}
         component={Update}
         options={{
           ...nonLandingScreenOptions,
-          headerTitle: 'Updates',
+          headerTitle: strings.home.updatesInfo.headerTitle,
         }}
       />
 
       {/* Courses Screen */}
       <Stack.Screen
-        name="Courses"
+        name={strings.courses.screenName}
         component={Courses}
         options={{
           ...nonLandingScreenOptions,
-          headerTitle: 'Courses',
+          headerTitle: strings.courses.title,
         }}
       />
 
       {/* Artist Histories Screen */}
       <Stack.Screen
-        name="Artist Histories"
+        name={strings.artistHistories.screenName}
         component={ArtistHistories}
         options={{
           ...nonLandingScreenOptions,
-          headerTitle: 'Artist Histories',
+          headerTitle: strings.artistHistories.title,
         }}
       />
 
       {/* Artist History Individual Screen */}
       <Stack.Screen
-        name="Artist History"
+        name={strings.artistHistories.individualScreenName}
         component={ArtistHistory}
         options={{
           ...nonLandingScreenOptions,
-          headerTitle: 'Artist Histories',
+          headerTitle: strings.artistHistories.title,
         }}
       />
 
       {/* Participants Screen */}
       <Stack.Screen
-        name="Participants"
+        name={strings.participants.screenName}
         component={Participants}
         options={{
           ...nonLandingScreenOptions,
-          headerTitle: 'Participants',
+          headerTitle: strings.participants.title,
         }}
       />
 
       {/* Participant Individual Screen */}
       <Stack.Screen
-        name="Participant"
+        name={strings.participants.individualScreenName}
         component={Participant}
         options={{
           ...nonLandingScreenOptions,
-          headerTitle: 'Participants',
+          headerTitle: strings.title,
         }}
       />
 
@@ -121,7 +122,7 @@ const UpdateStack = props => {
         component={Variations}
         options={{
           ...nonLandingScreenOptions,
-          headerTitle: 'Variations on the Hip Hop Xpress',
+          headerTitle: strings.variations.title,
         }}
       />
 
@@ -131,7 +132,7 @@ const UpdateStack = props => {
         component={Variation}
         options={{
           ...nonLandingScreenOptions,
-          headerTitle: 'Variations on the Hip Hop Xpress',
+          headerTitle: strings.variations.title,
         }}
       />
 

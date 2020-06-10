@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity, Dimensions} from 'react-native';
 
+import strings from '../assets/strings';
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 
@@ -11,7 +12,7 @@ const ArtistHistoryComponent = props => {
       onPress={
         // Send props to screen in stack
         () =>
-          props.navigation.navigate('ArtistHistory', {
+          props.navigation.navigate(strings.artistHistories.individualScreenName, {
             title: props.title,
             paragraphs: props.paragraphs,
             images: props.images,

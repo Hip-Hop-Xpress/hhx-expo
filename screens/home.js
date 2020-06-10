@@ -11,8 +11,6 @@ import {
   Dimensions,
 } from 'react-native';
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
-
 // Components
 import Header from '../components/header';
 import Updates from '../components/updatesList';

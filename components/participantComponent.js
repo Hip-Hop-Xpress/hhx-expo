@@ -3,6 +3,7 @@ import {StyleSheet, View, Text, TouchableOpacity, Dimensions} from 'react-native
 
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
+import strings from '../assets/strings';
 
 const ParticipantComponent = props => {
   const participant = (
@@ -11,7 +12,7 @@ const ParticipantComponent = props => {
       onPress={
         // Send props to screen in stack
         () =>
-          props.navigation.navigate('Participant', {
+          props.navigation.navigate(strings.participants.individualScreenName, {
             title: props.title,
             paragraphs: props.paragraphs,
             images: props.images,
