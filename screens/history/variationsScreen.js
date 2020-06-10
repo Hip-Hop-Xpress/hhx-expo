@@ -10,11 +10,12 @@ import {
   YellowBox
 } from 'react-native';
 
+import VariationsList from '../../components/variationsList';
+
 import strings from '../../assets/strings';
 
 import * as Fonts from '../../styles/fonts';
 import globalStyles from '../../styles/global';
-
 
 const Variations = (props) => {
   return (
@@ -32,6 +33,10 @@ const Variations = (props) => {
             <View style={styles.topView}>
               <Text style={[styles.topText, globalStyles.illiniOrange]}>{strings.variations.title}</Text>
             </View>
+          </View>
+
+          <View style={styles.variationsContainer}>
+            <VariationsList navigation={props.navigation}/>
           </View>
 
         </ScrollView>
@@ -60,6 +65,9 @@ const styles = StyleSheet.create({
     padding: 15,
     fontSize: 32,
     textAlign: 'center',
+  },
+  variationsContainer: {
+
   },
 });
 
