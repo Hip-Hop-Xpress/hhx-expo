@@ -112,7 +112,7 @@ const UpdateStack = props => {
         component={Participant}
         options={{
           ...nonLandingScreenOptions,
-          headerTitle: strings.title,
+          headerTitle: strings.participants.title,
         }}
       />
 
