@@ -8,8 +8,8 @@ import {
   StatusBar,
 } from 'react-native';
 
-import Description from '../../components/artistHistoryDescription';
-import HistoryImages from '../../components/artistHistoryImages';
+import HistoryDescription from '../../components/historyDescription';
+import HistoryImages from '../../components/historyImages';
 
 import globalStyles from '../../styles/global';
 import * as Fonts from '../../styles/fonts';
@@ -39,7 +39,7 @@ const ArtistHistory = props => {
             {/* Body */}
             <View style={[styles.body, globalStyles.illiniBlue]}>
               <HistoryImages images={images} />
-              <Description paragraphs={paragraphs} />
+              <HistoryDescription paragraphs={paragraphs} />
             </View>
 
           </View>

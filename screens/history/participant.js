@@ -8,7 +8,7 @@ import {
   StatusBar,
 } from 'react-native';
 
-import Description from '../../components/participantDescription';
+import HistoryDescription from '../../components/historyDescription';
 import HistoryImages from '../../components/historyImages';
 
 import globalStyles from '../../styles/global';
@@ -39,7 +39,7 @@ const Participant = props => {
             {/* Body */}
             <View style={[styles.body, globalStyles.illiniBlue]}>
               <HistoryImages images={images} />
-              <Description paragraphs={paragraphs} />
+              <HistoryDescription paragraphs={paragraphs} />
             </View>
 
           </View>
