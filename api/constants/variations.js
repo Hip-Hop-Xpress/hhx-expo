@@ -13,16 +13,24 @@ const VARIATIONS = [
     ],
     images: [
       {
+        url: 'https://publish.illinois.edu/hiphopxpress/files/2018/09/HipHopExpressTrailer_small.jpeg',
+        caption: '',
+        componentImage: true,
+      },
+      {
         url: 'http://publish.illinois.edu/hiphopxpress/files/2018/09/100_2066-1-300x225.jpg',
         caption: '',
+        componentImage: false,
       },
       {
         url: 'http://publish.illinois.edu/hiphopxpress/files/2018/09/100_2064-1-150x150.jpg',
         caption: '',
+        componentImage: false,
       },
       {
         url: 'http://publish.illinois.edu/hiphopxpress/files/2018/09/100_2063-1-150x150.jpg',
         caption: 'Inside the Airstream',
+        componentImage: false,
       }
     ]
   },
@@ -37,11 +45,15 @@ const VARIATIONS = [
       {
         url: 'https://publish.illinois.edu/hiphopxpress/files/2018/09/IPoweredTrailer.jpg',
         caption: '',
+        componentImage: true,
       },
       {
         url: 'https://publish.illinois.edu/hiphopxpress/files/2018/09/HipHopXpressSideViewTrailer-300x225.jpg',
         caption: '',
+        componentImage: false,
       },
     ]
   }
 ];
+
+export default VARIATIONS;
