@@ -10,7 +10,11 @@ import {
   YellowBox
 } from 'react-native';
 
+import strings from '../../assets/strings';
+
 import * as Fonts from '../../styles/fonts';
+import globalStyles from '../../styles/global';
+
 
 const Variations = (props) => {
   return (
@@ -26,7 +30,7 @@ const Variations = (props) => {
             />
             {/* Text over top image */}
             <View style={styles.topView}>
-              <Text style={[styles.topText, globalStyles.illiniOrange]}>{strings.artistHistories.title}</Text>
+              <Text style={[styles.topText, globalStyles.illiniOrange]}>{strings.variations.title}</Text>
             </View>
           </View>
 

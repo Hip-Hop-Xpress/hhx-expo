@@ -96,6 +96,13 @@ const Home = ({navigation}) => {
                 title={strings.artistHistories.title}
                 screenName={'Artist Histories'}
               />
+
+              {/* Variations on the HHX Navigation */}
+              <NavigationButton 
+                navigation={navigation}
+                title={strings.variations.title}
+                screenName={strings.variations.screenName}  
+              />
             </View>
 
             {/* Social Media Section */}
