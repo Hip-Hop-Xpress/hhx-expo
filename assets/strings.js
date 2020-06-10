@@ -53,7 +53,7 @@ const strings = {
     individualScreenName: 'Participant',
   },
   variations: {
-    title: 'Variations on the Hip Hop Xpress',
+    title: 'Variations on the\nHip Hop Xpress',
     subtitle: 'Learn about past iterations of the Hip Hop Xpress.',
     screenName: 'Variations',
     individualScreenName: 'Variation',
