@@ -8,9 +8,8 @@ import {
   StatusBar,
 } from 'react-native';
 
-
-import Description from '../../components/artistHistoryDescription';
-import ArtistHistoryImages from '../../components/artistHistoryImages';
+import HistoryDescription from '../../components/historyDescription';
+import HistoryImages from '../../components/historyImages';
 
 import globalStyles from '../../styles/global';
 import * as Fonts from '../../styles/fonts';
@@ -27,24 +26,22 @@ const ArtistHistory = props => {
       <SafeAreaView style={styles.screen}>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={globalStyles.illiniBlue}>
+          style={globalStyles.illiniBlue}
+        >
           {/* Screen body */}
           <View style={[styles.body, globalStyles.illiniBlue]}>
+
             {/* Title (name) */}
             <View style={styles.title}>
               <Text style={styles.titleText}>{title}</Text>
             </View>
 
-            {/* Subtitle */}
-            <View>
-              {/* subtitle goes here */}
-            </View>
-
             {/* Body */}
             <View style={[styles.body, globalStyles.illiniBlue]}>
-              <ArtistHistoryImages images={images} />
-              <Description paragraphs={paragraphs} />
+              <HistoryImages images={images} />
+              <HistoryDescription paragraphs={paragraphs} />
             </View>
+
           </View>
         </ScrollView>
       </SafeAreaView>

@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-// import Navigator from './routes/homeStack'; // this is for the stack
 import BottomNavigator from './routes/bottomNavigator';
 import {NavigationContainer} from '@react-navigation/native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 
+/**
+ * Mobile app for the Hip Hop Xpress
+ */
 export default function App() {
   const fetchFonts = () => {
     return Font.loadAsync({

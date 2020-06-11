@@ -9,7 +9,10 @@ import Participants from '../screens/history/participantsScreen';
 import Participant from '../screens/history/participant';
 import ArtistHistories from '../screens/history/artistHistoryScreen';
 import ArtistHistory from '../screens/history/artistHistory';
+import Variations from '../screens/history/variationsScreen';
+import Variation from '../screens/history/variation';
 
+import strings from '../assets/strings';
 import * as Colors from '../styles/colors';
 
 const Stack = createStackNavigator();
@@ -18,9 +21,15 @@ const Stack = createStackNavigator();
 const UpdateStack = props => {
   const responseDistance = 500;
 
+  const nonLandingScreenOptions = {
+    gestureDirection: 'horizontal',
+    gestureResponseDistance: responseDistance,
+    gestureEnabled: true,
+  };
+
   return (
     <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName={strings.home.screenName}
       headerMode="screen"
       mode="card"
       gesturesEnabled={true}
@@ -36,7 +45,7 @@ const UpdateStack = props => {
 
       {/* Home Screen */}
       <Stack.Screen
-        name="Home"
+        name={strings.home.screenName}
         component={Home}
         options={{
           gestureDirection: 'horizontal',
@@ -49,67 +58,81 @@ const UpdateStack = props => {
 
       {/* Update Screens */}
       <Stack.Screen
-        name="Update"
+        name={strings.home.updatesInfo.screenName}
         component={Update}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: strings.home.updatesInfo.headerTitle,
         }}
       />
 
       {/* Courses Screen */}
       <Stack.Screen
-        name="Courses"
+        name={strings.courses.screenName}
         component={Courses}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: strings.courses.title,
         }}
       />
 
       {/* Artist Histories Screen */}
       <Stack.Screen
-        name="ArtistHistories"
+        name={strings.artistHistories.screenName}
         component={ArtistHistories}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: strings.artistHistories.title,
         }}
       />
 
       {/* Artist History Individual Screen */}
       <Stack.Screen
-        name="ArtistHistory"
+        name={strings.artistHistories.individualScreenName}
         component={ArtistHistory}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: strings.artistHistories.title,
         }}
       />
 
       {/* Participants Screen */}
       <Stack.Screen
-        name="Participants"
+        name={strings.participants.screenName}
         component={Participants}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: strings.participants.title,
         }}
       />
 
       {/* Participant Individual Screen */}
       <Stack.Screen
-        name="Participant"
+        name={strings.participants.individualScreenName}
         component={Participant}
         options={{
-          gestureDirection: 'horizontal',
-          gestureResponseDistance: responseDistance,
-          gestureEnabled: true,
+          ...nonLandingScreenOptions,
+          headerTitle: strings.participants.title,
+        }}
+      />
+
+      {/* Variations List Screen */}
+      <Stack.Screen
+        name="Variations"
+        component={Variations}
+        options={{
+          ...nonLandingScreenOptions,
+          headerTitle: strings.variations.title,
+        }}
+      />
+
+      {/* Variations Individual Screen */}
+      <Stack.Screen
+        name="Variation"
+        component={Variation}
+        options={{
+          ...nonLandingScreenOptions,
+          headerTitle: strings.variations.title,
         }}
       />
 

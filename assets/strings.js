@@ -1,11 +1,14 @@
 const strings = {
   home: {
+    screenName: 'Home',
     upperTitle: 'WELCOME TO THE',
     lowerTitle: 'DOUBLE DUTCH\nBOOM BUS',
     updatesInfo: {
       title: 'Latest Updates',
       description:
         "Learn more about the Double Dutch Boom Bus Project, the history behind the Hip Hop Xpress, and we're doing to help local communities.",
+      screenName: 'Update',
+      headerTitle: 'Updates'
     },
     history: {
       title: 'Background',
@@ -34,15 +37,26 @@ const strings = {
   courses: {
     title: 'Past Courses and Camps',
     subtitle: 'Past Courses and Camps',
+    screenName: 'Courses',
   },
   artistHistories: {
     title: 'Artist Histories',
     subtitle: 'Here are the stories of influential artists depicted on the Double Dutch Boom Bus',
+    screenName: 'Artist Histories',
+    individualScreenName: 'Artist History',
   },
   participants: {
     title: 'Our Participants',
     subtitle: 
       'These are the people that make the Hip Hop Xpress possible.',
+    screenName: 'Participants',
+    individualScreenName: 'Participant',
+  },
+  variations: {
+    title: 'Variations on the\nHip Hop Xpress',
+    subtitle: 'Learn about past iterations of the Hip Hop Xpress.',
+    screenName: 'Variations',
+    individualScreenName: 'Variation',
   },
 };
 

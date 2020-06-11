@@ -8,16 +8,17 @@ import {
   StatusBar,
 } from 'react-native';
 
-import HistoryDescription from '../../components/historyDescription';
 import HistoryImages from '../../components/historyImages';
+import HistoryDescription from '../../components/historyDescription';
 
 import globalStyles from '../../styles/global';
 import * as Fonts from '../../styles/fonts';
 import * as Colors from '../../styles/colors';
 
-const Participant = props => {
-  const {title} = props.route.params;
-  const {paragraphs} = props.route.params;
+const Variation = props => {
+  const {name} = props.route.params;
+  const {date} = props.route.params;
+  const {description} = props.route.params;
   const {images} = props.route.params;
 
   return (
@@ -26,22 +27,20 @@ const Participant = props => {
       <SafeAreaView style={styles.screen}>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={globalStyles.illiniBlue}
-        >
+          style={globalStyles.illiniBlue}>
           {/* Screen body */}
           <View style={[styles.body, globalStyles.illiniBlue]}>
-
             {/* Title (name) */}
             <View style={styles.title}>
-              <Text style={styles.titleText}>{title}</Text>
+              <Text style={styles.titleText}>{name}</Text>
+              <Text style={styles.date}>{date}</Text>
             </View>
 
             {/* Body */}
             <View style={[styles.body, globalStyles.illiniBlue]}>
               <HistoryImages images={images} />
-              <HistoryDescription paragraphs={paragraphs} />
+              <HistoryDescription paragraphs={description} />
             </View>
-
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -65,10 +64,16 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
     paddingHorizontal: 20,
   },
+  date: {
+    fontFamily: Fonts.KARLA_BOLDITALIC,
+    color: 'lightgray',
+    fontSize: 24,
+    textAlign: 'center',
+  },
   body: {
     paddingBottom: 40,
     paddingHorizontal: 12,
   },
 });
 
-export default Participant;
+export default Variation;
