@@ -42,7 +42,7 @@ const PROJECTS = [
       'Joe'
     ],
     startDate: 'February 2020',
-    endDate: null,
+    endDate: 'May 2020',
     icon: 'chair-school',
   },
   {

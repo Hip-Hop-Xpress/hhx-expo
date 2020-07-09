@@ -8,12 +8,12 @@ import PROJECTS from '../api/constants/projects';
 const ProjectsList = () => {
   const [selectedProject, setSelectedProject] = useState('');
 
-  const makeSelectToggleHandler = title => {
+  const makeSelectToggleHandler = name => {
     return () => {
-      if (selectedProject === title) {
+      if (selectedProject === name) {
         setSelectedProject('');
       } else {
-        setSelectedProject(title);
+        setSelectedProject(name);
       }
     };
   };
@@ -22,13 +22,15 @@ const ProjectsList = () => {
 
   const Projects = PROJECTS.map(project => (
     <ProjectComponent
-      title={project.title}
-      body={project.body}
+      name={project.name}
+      description={project.description}
       members={project.members}
+      startDate={project.startDate}
+      endDate={project.endDate}
       icon={project.icon}
       key={key++}
-      isSelected={selectedProject === project.title}
-      setSelected={makeSelectToggleHandler(project.title)}
+      isSelected={selectedProject === project.name}
+      setSelected={makeSelectToggleHandler(project.name)}
     />
   ));
 
