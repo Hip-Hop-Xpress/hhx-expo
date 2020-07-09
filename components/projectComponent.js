@@ -9,14 +9,17 @@ import * as Fonts from '../styles/fonts';
 /**
  * Clickable icon showing project information
  * 
- * @param {string} title name of the project
- * @param {string} body description of the project
- * @param {string} members string repr of all members
- * @param {string} icon type of icon from MaterialCommunityIcons
+ * @param {String} name name of the project
+ * @param {Array} description description of the project
+ * @param {Array} members array of all members
+ * @param {String} startDate starting date of project
+ * @param {String} endDate ending date of project, or null if still ongoing
+ * @param {String} icon type of icon from MaterialCommunityIcons
  * @param {boolean} isSelected whether the project component is selected
  * @param {Function} setSelected notifies ProjectList that current project has been selected
  */
-const ProjectComponent = ({title, body, members, icon, isSelected, setSelected}) => {
+const ProjectComponent = ({name, description, members, startDate, endDate, icon, isSelected, setSelected}) => {
+  let key = 0;
   return (
     <>
       <TouchableOpacity
@@ -24,15 +27,29 @@ const ProjectComponent = ({title, body, members, icon, isSelected, setSelected})
         onPress={setSelected}
         activeOpacity={0.75}>
         <MaterialCommunityIcons name={icon} color={'white'} size={65} />
-        <Text style={styles.projectName}>{title}</Text>
+        <Text style={styles.projectName}>{name}</Text>
       </TouchableOpacity>
 
       {/* Body text */}
       {isSelected ? (
         <View style={styles.projectInfo}>
-          <Text style={styles.projectTitle}>{title}</Text>
-          <Text style={styles.members}>{members}</Text>
-          <Text style={styles.projectText}>{body} </Text>
+          
+          {/* Project title */}
+          <Text style={styles.projectTitle}>{name}</Text>
+
+          {/* Project date */}
+          <Text style={styles.dateText}>{`${startDate} - ${endDate === null ? 'Present' : endDate}`}</Text>
+
+          {/* Members list */}
+          <Text style={styles.members} key={key++}>
+            {'Members: ' + members.join(', ')}
+          </Text>
+
+          {/* Description */}
+          {description.map(entry => (
+            <Text style={styles.projectText} key={key++}>{entry + '\n'}</Text>
+          ))}
+
         </View>
       ) : null}
     </>
@@ -62,12 +79,17 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.MONTSERRAT_BLACK,
     fontSize: 22,
     textAlign: 'center',
-    marginBottom: 15,
   },
   members: {
     fontFamily: Fonts.KARLA_BOLDITALIC,
     fontSize: 18,
     marginBottom: 10,
+  },
+  dateText: {
+    fontFamily: Fonts.KARLA_REGULAR,
+    fontSize: 17,
+    textAlign: 'center',
+    marginBottom: 15,
   },
   projectText: {
     fontFamily: Fonts.KARLA_REGULAR,

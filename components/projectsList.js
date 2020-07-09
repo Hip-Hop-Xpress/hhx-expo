@@ -1,34 +1,51 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ProjectComponent from '../components/projectComponent';
 import PROJECTS from '../api/constants/projects';
+import fetchProjects from '../api/endpoints/projects';
 
 /**
  * List of projects made of project components
  */
 const ProjectsList = () => {
   const [selectedProject, setSelectedProject] = useState('');
+  const [projectsData, setProjectsData] = useState([]);
+  const promise = fetchProjects();
 
-  const makeSelectToggleHandler = title => {
+  useEffect(() => {
+    promise.then(response => {
+      console.log('Projects fetched successfully');
+      setProjectsData(response.data);
+    })
+    .catch(error => {
+      console.log(error);
+      // If error occurs, fetch data from constants
+      setProjectsData(PROJECTS);
+    });
+  }, []);
+
+  const makeSelectToggleHandler = name => {
     return () => {
-      if (selectedProject === title) {
+      if (selectedProject === name) {
         setSelectedProject('');
       } else {
-        setSelectedProject(title);
+        setSelectedProject(name);
       }
     };
   };
 
   let key = 0;
 
-  const Projects = PROJECTS.map(project => (
+  const Projects = projectsData.map(project => (
     <ProjectComponent
-      title={project.title}
-      body={project.body}
+      name={project.name}
+      description={project.description}
       members={project.members}
+      startDate={project.startDate}
+      endDate={project.endDate}
       icon={project.icon}
       key={key++}
-      isSelected={selectedProject === project.title}
-      setSelected={makeSelectToggleHandler(project.title)}
+      isSelected={selectedProject === project.name}
+      setSelected={makeSelectToggleHandler(project.name)}
     />
   ));
 
