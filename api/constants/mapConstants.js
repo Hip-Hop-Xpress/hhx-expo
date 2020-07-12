@@ -9,8 +9,8 @@ export const COORDS = {
   mapStartLat: UIUC_COORDS.latitude,
   mapStartLong: UIUC_COORDS.longitude,
   busLocation: {
-    latitude: 40.102,
-    longitude: -88.2272,
+    latitude: UIUC_COORDS.latitude,
+    longitude: UIUC_COORDS.longitude,
   },
 };
 

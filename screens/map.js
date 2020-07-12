@@ -26,11 +26,12 @@ import * as Fonts from '../styles/fonts';
 let {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
 
-const LATITUDE_DELTA = 0.0922;
+const LATITUDE_DELTA = 0.05;  // originally 0.0922
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
 export default function Map() {
-  const locateBus = {
+  // Prop for Map marker
+  const busCoordinates = {
     latitude: COORDS.busLocation.latitude,
     longitude: COORDS.busLocation.longitude,
     latitudeDelta: LATITUDE_DELTA,
@@ -65,7 +66,7 @@ export default function Map() {
                   latitudeDelta: LATITUDE_DELTA,
                   longitudeDelta: LONGITUDE_DELTA,
                 }}>
-                <MapView.Marker coordinate={locateBus} />
+                <MapView.Marker coordinate={busCoordinates} />
               </MapView>
             </View>
 
