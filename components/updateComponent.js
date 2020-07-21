@@ -13,6 +13,7 @@ const UpdateComponent = props => {
         () =>
           props.navigation.navigate('Update', {
             title: props.title,
+            author: props.author,
             body: props.body,
             date: props.date,
           })

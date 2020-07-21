@@ -28,7 +28,8 @@ const UpdatesList = props => {
     <UpdateComponent
       title={update.title}
       body={update.body}
-      date={update.date}
+      date={update.dateCreated.substring(0, 21)}
+      author={update.author}
       key={update.id}
       navigation={props.navigation}
     />

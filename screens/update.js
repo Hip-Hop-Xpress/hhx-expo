@@ -16,6 +16,7 @@ const Update = props => {
   const {title} = props.route.params;
   const {body} = props.route.params;
   const {date} = props.route.params;
+  const {author} = props.route.params;
 
   return (
     <>
@@ -32,8 +33,9 @@ const Update = props => {
             </View>
 
             {/* Date */}
-            <View style={styles.date}>
-              <Text style={styles.dateText}>{date}</Text>
+            <View style={styles.info}>
+              <Text style={styles.infoText}>{author}</Text>
+              <Text style={styles.infoText}>{date}</Text>
             </View>
 
             {/* Text body */}
@@ -62,11 +64,11 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
     paddingHorizontal: 20,
   },
-  date: {
+  info: {
     paddingHorizontal: 12,
     paddingBottom: 20,
   },
-  dateText: {
+  infoText: {
     fontFamily: Fonts.KARLA_BOLDITALIC,
     fontSize: 16,
     textAlign: 'right',
