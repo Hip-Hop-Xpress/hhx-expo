@@ -16,8 +16,10 @@ const Update = props => {
   const {title} = props.route.params;
   const {body} = props.route.params;
   const {date} = props.route.params;
+  const {lastUpdated} = props.route.params;
   const {author} = props.route.params;
 
+  let bodyKey = 0;
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -34,13 +36,21 @@ const Update = props => {
 
             {/* Date */}
             <View style={styles.info}>
-              <Text style={styles.infoText}>{author}</Text>
-              <Text style={styles.infoText}>{date}</Text>
+              <Text style={styles.authorText}>{author}</Text>
+              <Text style={styles.dateText}>{date}</Text>
+              {/* Only show updated timestamp if the update has ever been updated */}
+              {lastUpdated !== null && <Text style={styles.dateText}>{'Last updated: ' + lastUpdated.substring(0,21)}</Text>}
             </View>
 
             {/* Text body */}
             <View style={[styles.body, globalStyles.illiniBlue]}>
-              <Text style={styles.bodyText}>{body}</Text>
+              {body.map(paragraph => (
+                <View style={styles.paragraph} key={bodyKey++}>
+                  <Text style={styles.bodyText} key={bodyKey}>
+                    {paragraph}
+                  </Text>
+                </View>
+              ))}
             </View>
           </View>
         </ScrollView>
@@ -68,12 +78,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingBottom: 20,
   },
-  infoText: {
+  authorText: {
     fontFamily: Fonts.KARLA_BOLDITALIC,
-    fontSize: 16,
+    fontSize: 18,
+    textAlign: 'right',
+    color: 'white',
+  },
+  dateText: {
+    fontFamily: Fonts.KARLA_REGULAR,
+    fontSize: 17,
     textAlign: 'right',
     color: 'lightgray',
   },
+  paragraph: {
+    marginVertical: 10,
+  }, 
   bodyText: {
     fontFamily: Fonts.KARLA_REGULAR,
     fontSize: 21,
