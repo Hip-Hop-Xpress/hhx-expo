@@ -21,19 +21,19 @@ const Voting = ({navigation}) => {
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={globalStyles.illiniBlue}>
-        <ScrollView>
         <Header />
+        <ScrollView>
           {/* Body */}
           <View style={styles.body}>
             {/* Title */}
             <View style={styles.title}>
               <Text style={styles.titleText}>{strings.voting.title}</Text>
             </View>
-            
             <UpdatesList navigation={navigation} />
+            <Text style={styles.introText}>test</Text>
 
           </View>
-          </ScrollView>
+        </ScrollView>
       </SafeAreaView>
     </>
   );

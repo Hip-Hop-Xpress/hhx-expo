@@ -8,14 +8,20 @@ import fetchUpdates from '../api/endpoints/updates';
 const UpdatesList = props => {
   const [updates, setUpdates] = useState([]);
   const [refreshing, setRefreshing] = useState(false);
-  const promise = fetchUpdates();
+  
 
   // Handle the promise obtained with fetching data from API
   useEffect(() => {
+    requestUpdates();
+  }, []);
+
+  const requestUpdates = () => {
+    const promise = fetchUpdates();
     promise
       .then(response => {
         console.log('Fetched updates successfully!');
         setUpdates(response.data);
+        setRefreshing(false);
       })
       .catch(error => {
         console.log(error);
@@ -23,8 +29,9 @@ const UpdatesList = props => {
         // If error occurs, set to constant
         // TODO: give some warning to user in case error occurs
         setUpdates(UPDATES);
+        setRefreshing(false);
       });
-  }, []);
+  }
 
   const renderUpdateComponent = ({ item: update }) => (
     <UpdateComponent
@@ -37,6 +44,11 @@ const UpdatesList = props => {
       navigation={props.navigation}
     />
   );
+
+  const handleRefresh = () => {
+    setRefreshing(true);
+    requestUpdates();
+  }
 
 
   // const Updates = updates.map(update => (
@@ -58,7 +70,10 @@ const UpdatesList = props => {
         renderItem={renderUpdateComponent}
         keyExtractor={update => update.id}
         contentContainerStyle={{flexGrow: 1}}
-        
+        refreshing={refreshing}
+        onRefresh={handleRefresh}
+        scrollEnabled={true}
+        showsVerticalScrollIndicator
       />
     </View>
   );
