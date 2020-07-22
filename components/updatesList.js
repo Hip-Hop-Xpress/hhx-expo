@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 
 import UpdateComponent from './updateComponent';
 import UPDATES from '../api/constants/updates';
@@ -7,6 +7,7 @@ import fetchUpdates from '../api/endpoints/updates';
 
 const UpdatesList = props => {
   const [updates, setUpdates] = useState([]);
+  const [refreshing, setRefreshing] = useState(false);
   const promise = fetchUpdates();
 
   // Handle the promise obtained with fetching data from API
@@ -51,13 +52,15 @@ const UpdatesList = props => {
   // ));
 
   return (
-    <>
-      {<FlatList
-        data={UPDATES}
+    <View>
+      <FlatList
+        data={updates}
         renderItem={renderUpdateComponent}
-        keyExtractor={update => update.id} 
-      />}
-    </>
+        keyExtractor={update => update.id}
+        contentContainerStyle={{flexGrow: 1}}
+        
+      />
+    </View>
   );
 };
 

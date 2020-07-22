@@ -1,3 +1,11 @@
+const fakeUpdate = {
+  title: 'Fake title',
+  author: 'Fake author',
+  body: [
+    'Fake body'
+  ]
+}
+
 const updates = [
   {
     id: 0,
@@ -36,6 +44,10 @@ const updates = [
       'We are collaborating with the School of Architecture and the School of Music to design and build the inside during a class co-taught by Professors Erickson (Architecture), Kruse (Music) and Patterson (Music and Engineering).'
     ],
   },
+  {
+    ...fakeUpdate,
+    id: 50
+  }
 ];
 
 export default updates;

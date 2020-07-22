@@ -21,9 +21,10 @@ const Voting = ({navigation}) => {
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={globalStyles.illiniBlue}>
+        <ScrollView>
         <Header />
           {/* Body */}
-          <View style={[styles.body]}>
+          <View style={styles.body}>
             {/* Title */}
             <View style={styles.title}>
               <Text style={styles.titleText}>{strings.voting.title}</Text>
@@ -32,6 +33,7 @@ const Voting = ({navigation}) => {
             <UpdatesList navigation={navigation} />
 
           </View>
+          </ScrollView>
       </SafeAreaView>
     </>
   );
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
   },
   body: {
     backgroundColor: 'white',
-    marginBottom: 40,
+    marginBottom: 0,
     paddingBottom: 40,
   },
 
