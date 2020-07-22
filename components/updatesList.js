@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FlatList } from 'react-native';
 
 import UpdateComponent from './updateComponent';
 import UPDATES from '../api/constants/updates';
@@ -24,19 +25,40 @@ const UpdatesList = props => {
       });
   }, []);
 
-  const Updates = updates.map(update => (
+  const renderUpdateComponent = ({ item: update }) => (
     <UpdateComponent
       title={update.title}
       body={update.body}
-      date={update.dateCreated.substring(0, 21)}
+      date={update.dateCreated !== undefined ? update.dateCreated.substring(0, 21) : ''}
       lastUpdated={update.lastUpdated}
       author={update.author}
       key={update.id}
       navigation={props.navigation}
     />
-  ));
+  );
 
-  return <>{Updates}</>;
+
+  // const Updates = updates.map(update => (
+  //   <UpdateComponent
+  //     title={update.title}
+  //     body={update.body}
+  //     date={update.dateCreated.substring(0, 21)}
+  //     lastUpdated={update.lastUpdated}
+  //     author={update.author}
+  //     key={update.id}
+  //     navigation={props.navigation}
+  //   />
+  // ));
+
+  return (
+    <>
+      {<FlatList
+        data={updates}
+        renderItem={renderUpdateComponent}
+        keyExtractor={update => update.id} 
+      />}
+    </>
+  );
 };
 
 export default UpdatesList;
