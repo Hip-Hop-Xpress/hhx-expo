@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import ArcGISMapView from 'react-native-arcgis-mapview';
 
 // Components
 import Header from '../components/header';
@@ -53,6 +54,10 @@ export default function Map() {
 
             {/* Subtitle */}
             <Text style={styles.introText}>{strings.maps.subtitle}</Text>
+
+            <ArcGISMapView ref={mapView => this.mapView = mapView}
+            // your props here
+            />
 
             {/* Map */}
             <View style={styles.mapContainer}>
