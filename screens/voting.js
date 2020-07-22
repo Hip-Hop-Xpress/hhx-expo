@@ -15,17 +15,20 @@ import strings from '../assets/strings';
 
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
+import * as Colors from '../styles/colors';
 
-const Voting = ({navigation}) => {
+const Updates = ({navigation}) => {
   return (
     <>
-      <StatusBar barStyle="light-content" />
-      <Header />
+      <StatusBar barStyle="default-content" />
+      <SafeAreaView style={{backgroundColor: Colors.ILLINI_BLUE}}>
+        <Header />
+      </SafeAreaView>
       {/* Body */}
       <View style={styles.body}>
         {/* Title */}
         <View style={styles.title}>
-          <Text style={styles.titleText}>{strings.voting.title}</Text>
+          <Text style={styles.titleText}>{strings.updates.title}</Text>
         </View>
         <UpdatesList navigation={navigation} />
 
@@ -61,4 +64,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Voting;
+export default Updates;

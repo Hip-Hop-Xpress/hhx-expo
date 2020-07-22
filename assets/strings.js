@@ -21,8 +21,8 @@ const strings = {
     subtitle:
       'The Double Dutch Boom Bus is always busy. Learn more about our projects here!',
   },
-  voting: {
-    title: 'Voting',
+  updates: {
+    title: 'Updates',
     subtitle: 'Coming soon!',
   },
   featured: {
