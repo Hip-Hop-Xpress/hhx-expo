@@ -53,7 +53,7 @@ const UpdatesList = props => {
   return (
     <>
       {<FlatList
-        data={updates}
+        data={UPDATES}
         renderItem={renderUpdateComponent}
         keyExtractor={update => update.id} 
       />}

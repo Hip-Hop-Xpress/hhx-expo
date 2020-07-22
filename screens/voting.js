@@ -6,32 +6,32 @@ import {
   View,
   Text,
   StatusBar,
+  FlatList
 } from 'react-native';
 
 import Header from '../components/header';
+import UpdatesList from '../components/updatesList';
 import strings from '../assets/strings';
 
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 
-export default function Voting() {
+const Voting = ({navigation}) => {
   return (
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={globalStyles.illiniBlue}>
         <Header />
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
           {/* Body */}
           <View style={[styles.body]}>
             {/* Title */}
             <View style={styles.title}>
               <Text style={styles.titleText}>{strings.voting.title}</Text>
             </View>
+            
+            <UpdatesList navigation={navigation} />
 
-            {/* Subtitle */}
-            <Text style={styles.introText}>{strings.voting.subtitle}</Text>
           </View>
-        </ScrollView>
       </SafeAreaView>
     </>
   );
@@ -63,3 +63,5 @@ const styles = StyleSheet.create({
   },
 
 });
+
+export default Voting;
