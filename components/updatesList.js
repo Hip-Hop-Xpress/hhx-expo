@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, FlatList } from 'react-native';
+import { View, SafeAreaView, FlatList } from 'react-native';
 
 import UpdateComponent from './updateComponent';
 import UPDATES from '../api/constants/updates';
@@ -49,7 +49,6 @@ const UpdatesList = props => {
     setRefreshing(true);
     requestUpdates();
   }
-
 
   // const Updates = updates.map(update => (
   //   <UpdateComponent

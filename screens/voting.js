@@ -20,35 +20,30 @@ const Voting = ({navigation}) => {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={globalStyles.illiniBlue}>
-        <Header />
-        <ScrollView>
-          {/* Body */}
-          <View style={styles.body}>
-            {/* Title */}
-            <View style={styles.title}>
-              <Text style={styles.titleText}>{strings.voting.title}</Text>
-            </View>
-            <UpdatesList navigation={navigation} />
-            <Text style={styles.introText}>test</Text>
+      <Header />
+      {/* Body */}
+      <View style={styles.body}>
+        {/* Title */}
+        <View style={styles.title}>
+          <Text style={styles.titleText}>{strings.voting.title}</Text>
+        </View>
+        <UpdatesList navigation={navigation} />
 
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+      </View>
     </>
   );
 }
 
 const styles = StyleSheet.create({
   title: {
-    paddingTop: 20,
-    paddingBottom: 15,
+    paddingTop: 5,
+    paddingBottom: 5,
   },
   titleText: {
     fontFamily: Fonts.MONTSERRAT_BLACK,
     marginTop: 5,
-    marginBottom: 10,
-    fontSize: 32,
+    marginBottom: 5,
+    fontSize: 30,
     textAlign: 'center',
   },
   introText: {
@@ -61,7 +56,7 @@ const styles = StyleSheet.create({
   body: {
     backgroundColor: 'white',
     marginBottom: 0,
-    paddingBottom: 40,
+    paddingBottom: 140,
   },
 
 });

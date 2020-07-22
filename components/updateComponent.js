@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
   updateContainer: {
     marginVertical: 1,
     paddingHorizontal: 12,
-    paddingTop: 60,  // 12
-    paddingBottom: 60,  // 20
+    paddingTop: 12,  // 12
+    paddingBottom: 20,  // 20
   },
   updateTitle: {
     fontFamily: Fonts.KARLA_REGULAR,
