@@ -77,7 +77,7 @@ export default function Map() {
             
             {/* ArcGIS Story Map Link */}
             <Text style={styles.bodyText}>
-                Check out our story map on the history of the Chicago blues!
+                {strings.maps.storyMapDesc}
             </Text>
 
             <TouchableOpacity 
@@ -87,7 +87,7 @@ export default function Map() {
               }}
             >
               <Text style={styles.navButtontext}>
-                Becoming of the Chicago Blues Movement
+                {strings.maps.storyMapTitle}
               </Text>
             </TouchableOpacity>
             
