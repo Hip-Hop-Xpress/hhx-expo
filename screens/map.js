@@ -7,10 +7,10 @@ import {
   Text,
   StatusBar,
   Dimensions,
+  Linking,
 } from 'react-native';
 
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
-import ArcGISMapView from 'react-native-arcgis-mapview';
 
 // Components
 import Header from '../components/header';
@@ -23,12 +23,15 @@ import {COORDS, CONTACTS} from '../api/constants/mapConstants';
 // Styles
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
+import { Button } from 'react-native-paper';
 
 let {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
 
 const LATITUDE_DELTA = 0.05;  // originally 0.0922
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+
+const arcgisMapUrl = 'https://www.arcgis.com/apps/MapJournal/index.html?appid=5147c188b9664d00bdc88842b8ae4139';
 
 export default function Map() {
   // Prop for Map marker
@@ -55,9 +58,6 @@ export default function Map() {
             {/* Subtitle */}
             <Text style={styles.introText}>{strings.maps.subtitle}</Text>
 
-            <ArcGISMapView ref={mapView => this.mapView = mapView}
-            // your props here
-            />
 
             {/* Map */}
             <View style={styles.mapContainer}>
@@ -74,6 +74,10 @@ export default function Map() {
                 <MapView.Marker coordinate={busCoordinates} />
               </MapView>
             </View>
+
+            <Button onPress={() => {
+              Linking.openURL(arcgisMapUrl)
+            }}>ArcGIS Story Map</Button>
 
             {/* Request */}
             <Text style={styles.introText}>{strings.maps.request}</Text>
