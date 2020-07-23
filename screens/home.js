@@ -116,7 +116,7 @@ const Home = ({navigation}) => {
   );
 }
 
-const win = Dimensions.get('window');
+const screen = Dimensions.get('screen');
 
 const styles = StyleSheet.create({
   header: {
@@ -169,13 +169,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     color: 'black',
   },
-  logo: {
-    marginVertical: 10,
-    marginHorizontal: win.width / 3.9,
-    width: 209,
-    height: 25,
-  },
   busImage: {
+    width: screen.width,
     height: 250,
     flex: 1,
   },
