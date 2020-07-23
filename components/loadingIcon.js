@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { ActivityIndicator } from 'react-native';
-import { ILLINI_BLUE } from '../styles/colors';
+import { ILLINI_ORANGE } from '../styles/colors';
 
-const LoadingIcon = () => {
+const LoadingIcon = ({color}) => {
   return (
-    <ActivityIndicator size="large" color={ILLINI_BLUE}  />
+    <ActivityIndicator size="large" color={color || ILLINI_ORANGE}  />
   )
 }
 

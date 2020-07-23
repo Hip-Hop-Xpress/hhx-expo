@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import VariationComponent from './variationComponent';
 import VARIATIONS from '../api/constants/variations';
 import fetchVariations from '../api/endpoints/variations';
+import LoadingIcon from './loadingIcon';
 
 const VariationsList = ({navigation}) => {
   const [variationsData, setVariationsData] = useState([]);
@@ -35,7 +36,12 @@ const VariationsList = ({navigation}) => {
     />
   ));
 
-  return <>{Variations}</>
+  return (
+  <>
+    {variationsData.length === 0 && <LoadingIcon />}
+    {Variations}
+  </>
+  );
 }
 
 export default VariationsList;
