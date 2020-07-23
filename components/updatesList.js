@@ -6,6 +6,7 @@ import LoadingIcon from './loadingIcon';
 
 import UPDATES from '../api/constants/updates';
 import fetchUpdates from '../api/endpoints/updates';
+import assignData from '../api/assignData';
 
 const UpdatesList = props => {
   const [updates, setUpdates] = useState([]);
@@ -17,21 +18,8 @@ const UpdatesList = props => {
   }, []);
 
   const requestUpdates = () => {
-    const promise = fetchUpdates();
-    promise
-      .then(response => {
-        console.log('Fetched updates successfully!');
-        setUpdates(response.data);
-        setRefreshing(false);
-      })
-      .catch(error => {
-        console.log(error);
-
-        // If error occurs, set to constant
-        // TODO: give some warning to user in case error occurs
-        setUpdates(UPDATES);
-        setRefreshing(false);
-      });
+    assignData('/v1/updates', setUpdates, UPDATES);
+    setRefreshing(false);
   }
 
   const renderUpdateComponent = ({ item: update }) => (
