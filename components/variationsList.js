@@ -3,25 +3,14 @@ import VariationComponent from './variationComponent';
 import VARIATIONS from '../api/constants/variations';
 import fetchVariations from '../api/endpoints/variations';
 import LoadingIcon from './loadingIcon';
+import assignData from '../api/assignData';
 
 const VariationsList = ({navigation}) => {
   const [variationsData, setVariationsData] = useState([]);
-  const promise = fetchVariations();
 
   // Handle the promise obtained with fetching data from API
   useEffect(() => {
-    promise
-      .then(response => {
-        console.log('Fetched variations successfully!');
-        setVariationsData(response.data);
-      })
-      .catch(error => {
-        console.log(error);
-
-        // If error occurs, set to constant
-        // TODO: give some warning to user in case error occurs
-        setVariationsData(VARIATIONS);
-      });
+    assignData('/v1/variations', setVariationsData, VARIATIONS);
   }, []);
   
   let key = 0;
