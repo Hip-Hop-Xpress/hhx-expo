@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { View, SafeAreaView, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 
 import UpdateComponent from './updateComponent';
+import LoadingIcon from './loadingIcon';
+
 import UPDATES from '../api/constants/updates';
 import fetchUpdates from '../api/endpoints/updates';
-import { ActivityIndicator } from 'react-native-paper';
 
 const UpdatesList = props => {
   const [updates, setUpdates] = useState([]);
@@ -50,21 +51,9 @@ const UpdatesList = props => {
     requestUpdates();
   }
 
-  // const Updates = updates.map(update => (
-  //   <UpdateComponent
-  //     title={update.title}
-  //     body={update.body}
-  //     date={update.dateCreated.substring(0, 21)}
-  //     lastUpdated={update.lastUpdated}
-  //     author={update.author}
-  //     key={update.id}
-  //     navigation={props.navigation}
-  //   />
-  // ));
-
   return (
     <View>
-      {updates.length === 0 && <ActivityIndicator size="small" />}
+      {updates.length === 0 && <LoadingIcon />}
       <FlatList
         data={updates}
         renderItem={renderUpdateComponent}

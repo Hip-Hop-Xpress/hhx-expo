@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import ProjectComponent from '../components/projectComponent';
+import ProjectComponent from './projectComponent';
 import PROJECTS from '../api/constants/projects';
 import fetchProjects from '../api/endpoints/projects';
+import LoadingIcon from './loadingIcon';
 
 /**
  * List of projects made of project components
@@ -49,7 +50,12 @@ const ProjectsList = () => {
     />
   ));
 
-  return <>{Projects}</>;
+  return (
+    <>
+      {projectsData.length === 0 && <LoadingIcon />}
+      {Projects}
+    </>
+  );
 }
 
 export default ProjectsList;
