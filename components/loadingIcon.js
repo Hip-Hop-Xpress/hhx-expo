@@ -5,7 +5,11 @@ import { ILLINI_ORANGE } from '../styles/colors';
 
 const LoadingIcon = ({color}) => {
   return (
-    <ActivityIndicator size="large" color={color || ILLINI_ORANGE}  />
+    <ActivityIndicator 
+      size="large" 
+      color={color || ILLINI_ORANGE} 
+      style={{alignSelf: "center"}}
+    />
   )
 }
 
