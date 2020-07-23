@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from 'react';
+
 import ProjectComponent from './projectComponent';
-import PROJECTS from '../api/constants/projects';
 import LoadingIcon from './loadingIcon';
+
+import PROJECTS from '../api/constants/projects';
 import assignData from '../api/assignData';
+import { ENDPOINTS } from '../api/endpoints';
 
 /**
  * List of projects made of project components
@@ -12,7 +15,7 @@ const ProjectsList = () => {
   const [projectsData, setProjectsData] = useState([]);
 
   useEffect(() => {
-    assignData('/v1/projects', setProjectsData, PROJECTS);
+    assignData(ENDPOINTS.projects, setProjectsData, PROJECTS);
   }, []);
 
   const makeSelectToggleHandler = name => {

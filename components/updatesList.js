@@ -5,7 +5,7 @@ import UpdateComponent from './updateComponent';
 import LoadingIcon from './loadingIcon';
 
 import UPDATES from '../api/constants/updates';
-import fetchUpdates from '../api/endpoints/updates';
+import { ENDPOINTS } from '../api/endpoints';
 import assignData from '../api/assignData';
 
 const UpdatesList = props => {
@@ -18,7 +18,7 @@ const UpdatesList = props => {
   }, []);
 
   const requestUpdates = () => {
-    assignData('/v1/updates', setUpdates, UPDATES);
+    assignData(ENDPOINTS.updates, setUpdates, UPDATES);
     setRefreshing(false);
   }
 

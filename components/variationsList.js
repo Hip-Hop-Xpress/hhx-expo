@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
+
 import VariationComponent from './variationComponent';
-import VARIATIONS from '../api/constants/variations';
 import LoadingIcon from './loadingIcon';
+
+import VARIATIONS from '../api/constants/variations';
 import assignData from '../api/assignData';
+import { ENDPOINTS } from '../api/endpoints';
 
 const VariationsList = ({navigation}) => {
   const [variationsData, setVariationsData] = useState([]);
 
   // Handle the promise obtained with fetching data from API
   useEffect(() => {
-    assignData('/v1/variations', setVariationsData, VARIATIONS);
+    assignData(ENDPOINTS.variations, setVariationsData, VARIATIONS);
   }, []);
   
   let key = 0;
