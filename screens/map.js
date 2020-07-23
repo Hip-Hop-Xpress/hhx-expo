@@ -8,6 +8,7 @@ import {
   StatusBar,
   Dimensions,
   Linking,
+  TouchableOpacity
 } from 'react-native';
 
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
@@ -23,7 +24,7 @@ import {COORDS, CONTACTS} from '../api/constants/mapConstants';
 // Styles
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
-import { Button } from 'react-native-paper';
+import { ILLINI_BLUE } from '../styles/colors';
 
 let {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
@@ -56,8 +57,7 @@ export default function Map() {
             </View>
 
             {/* Subtitle */}
-            <Text style={styles.introText}>{strings.maps.subtitle}</Text>
-
+            <Text style={styles.bodyText}>{strings.maps.subtitle}</Text>
 
             {/* Map */}
             <View style={styles.mapContainer}>
@@ -74,16 +74,31 @@ export default function Map() {
                 <MapView.Marker coordinate={busCoordinates} />
               </MapView>
             </View>
+            
+            {/* ArcGIS Story Map Link */}
+            <Text style={styles.bodyText}>
+                Check out our story map on the history of the Chicago blues!
+            </Text>
 
-            <Button onPress={() => {
-              Linking.openURL(arcgisMapUrl)
-            }}>ArcGIS Story Map</Button>
+            <TouchableOpacity 
+              style={styles.navButton} 
+              onPress={() => {
+                Linking.openURL(arcgisMapUrl)
+              }}
+            >
+              <Text style={styles.navButtontext}>
+                Becoming of the Chicago Blues Movement
+              </Text>
+            </TouchableOpacity>
+            
+            <View style={styles.contactContainer}>
+              {/* Request */}
+              <Text style={styles.bodyText}>{strings.maps.request}</Text>
 
-            {/* Request */}
-            <Text style={styles.introText}>{strings.maps.request}</Text>
+              {/* Contacts */}
+              <SocialMedia platforms={CONTACTS} />
+            </View>
 
-            {/* Contacts */}
-            <SocialMedia platforms={CONTACTS} />
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -103,7 +118,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     textAlign: 'center',
   },
-  introText: {
+  bodyText: {
     fontFamily: Fonts.KARLA_REGULAR,
     textAlign: 'center',
     marginHorizontal: 30,
@@ -128,16 +143,18 @@ const styles = StyleSheet.create({
     height: 400,
     width: '100%',
   },
-  socialMediaContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    paddingVertical: 10,
-    marginBottom: -1,
+  navButton: {
+    paddingVertical: 15,
+    marginVertical: 2,
+    backgroundColor: ILLINI_BLUE
   },
-  socialMediaButton: {
-    borderRadius: 50,
-    width: 55,
+  navButtontext: {
+    fontFamily: Fonts.MONTSERRAT_BLACK,
+    fontSize: 20,
+    textAlign: 'center',
+    color: 'white',
   },
+  contactContainer: {
+    marginVertical: 25
+  }
 });
