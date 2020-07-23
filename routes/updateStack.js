@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import Voting from '../screens/voting';
+import Updates from '../screens/updates';
 import Update from '../screens/update';
 import * as Colors from '../styles/colors';
 
@@ -29,7 +29,7 @@ const UpdateStack = props => {
       {/* Updates Screen */}
       <Stack.Screen
         name="Voting"
-        component={Voting}
+        component={Updates}
         options={{
           gestureDirection: 'horizontal',
           gestureEnabled: true,
