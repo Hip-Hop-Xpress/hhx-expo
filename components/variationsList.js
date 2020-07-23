@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import VariationComponent from './variationComponent';
 import VARIATIONS from '../api/constants/variations';
-import fetchVariations from '../api/endpoints/variations';
 import LoadingIcon from './loadingIcon';
 import assignData from '../api/assignData';
 
