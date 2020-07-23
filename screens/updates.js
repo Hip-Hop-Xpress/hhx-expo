@@ -2,11 +2,9 @@ import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
   Text,
   StatusBar,
-  FlatList
 } from 'react-native';
 
 import Header from '../components/header';

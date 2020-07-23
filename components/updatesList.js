@@ -4,12 +4,12 @@ import { View, SafeAreaView, FlatList } from 'react-native';
 import UpdateComponent from './updateComponent';
 import UPDATES from '../api/constants/updates';
 import fetchUpdates from '../api/endpoints/updates';
+import { ActivityIndicator } from 'react-native-paper';
 
 const UpdatesList = props => {
   const [updates, setUpdates] = useState([]);
   const [refreshing, setRefreshing] = useState(false);
   
-
   // Handle the promise obtained with fetching data from API
   useEffect(() => {
     requestUpdates();
@@ -64,6 +64,7 @@ const UpdatesList = props => {
 
   return (
     <View>
+      {updates.length === 0 && <ActivityIndicator size="small" />}
       <FlatList
         data={updates}
         renderItem={renderUpdateComponent}
