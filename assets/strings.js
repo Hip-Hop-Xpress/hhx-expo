@@ -33,7 +33,7 @@ const strings = {
     title: 'Where are we now?',
     subtitle: 'Find out where the Double Dutch Boom Bus is right now!',
     storyMapDesc: 'Check out our story map on the history of the Chicago blues!',
-    storyMapTitle: 'Becoming of the Chciago Blues Movement',
+    storyMapTitle: 'Becoming of the Chicago Blues Movement',
     request: 'Want to bring the bus to your community? Contact us!',
   },
   courses: {
