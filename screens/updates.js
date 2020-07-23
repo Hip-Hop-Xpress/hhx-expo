@@ -2,51 +2,49 @@ import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
   Text,
   StatusBar,
 } from 'react-native';
 
 import Header from '../components/header';
+import UpdatesList from '../components/updatesList';
 import strings from '../assets/strings';
 
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
+import * as Colors from '../styles/colors';
 
-export default function Voting() {
+const Updates = ({navigation}) => {
   return (
     <>
-      <StatusBar barStyle="light-content" />
-      <SafeAreaView style={globalStyles.illiniBlue}>
+      <StatusBar barStyle="default-content" />
+      <SafeAreaView style={{backgroundColor: Colors.ILLINI_BLUE}}>
         <Header />
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
-          {/* Body */}
-          <View style={[styles.body]}>
-            {/* Title */}
-            <View style={styles.title}>
-              <Text style={styles.titleText}>{strings.voting.title}</Text>
-            </View>
-
-            {/* Subtitle */}
-            <Text style={styles.introText}>{strings.voting.subtitle}</Text>
-          </View>
-        </ScrollView>
       </SafeAreaView>
+      {/* Body */}
+      <View style={styles.body}>
+        {/* Title */}
+        <View style={styles.title}>
+          <Text style={styles.titleText}>{strings.updates.title}</Text>
+        </View>
+        <UpdatesList navigation={navigation} />
+
+      </View>
     </>
   );
 }
 
 const styles = StyleSheet.create({
   title: {
-    paddingTop: 20,
-    paddingBottom: 15,
+    paddingTop: 5,
+    paddingBottom: 5,
   },
   titleText: {
     fontFamily: Fonts.MONTSERRAT_BLACK,
     marginTop: 5,
-    marginBottom: 10,
-    fontSize: 32,
+    marginBottom: 5,
+    fontSize: 30,
     textAlign: 'center',
   },
   introText: {
@@ -58,8 +56,10 @@ const styles = StyleSheet.create({
   },
   body: {
     backgroundColor: 'white',
-    marginBottom: 40,
-    paddingBottom: 40,
+    marginBottom: 0,
+    paddingBottom: 140,
   },
 
 });
+
+export default Updates;

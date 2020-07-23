@@ -6,7 +6,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 // Screens/stacks
 import HomeStack from './homeStack';
 import Projects from '../screens/projects';
-import Voting from '../screens/voting';
+import UpdateStack from './updateStack';
 import FeaturedStack from './featuredStack';
 import Map from '../screens/map';
 
@@ -54,18 +54,6 @@ function AppTabs() {
             />
           ),
         }}
-      />
-
-      {/* Voting Screen */}
-      <Tab.Screen
-        name="Voting"
-        component={Voting}
-        options={{
-          tabBarLabel: 'Voting',
-          tabBarIcon: ({color}) => (
-            <MaterialCommunityIcons name="check" color={color} size={iconSize} />
-          ),
-        }}
       />    
 
       {/* Featured Screen */}
@@ -76,6 +64,18 @@ function AppTabs() {
           tabBarLabel: 'Featured',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="fire" color={color} size={iconSize} />
+          ),
+        }}
+      />
+
+      {/* Updates Screen */}
+      <Tab.Screen
+        name="Updates"
+        component={UpdateStack}
+        options={{
+          tabBarLabel: 'Updates',
+          tabBarIcon: ({color}) => (
+            <MaterialCommunityIcons name="bell" color={color} size={iconSize} />
           ),
         }}
       />

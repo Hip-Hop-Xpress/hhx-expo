@@ -1,19 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { View, SafeAreaView, FlatList } from 'react-native';
 
 import UpdateComponent from './updateComponent';
 import UPDATES from '../api/constants/updates';
 import fetchUpdates from '../api/endpoints/updates';
+import { ActivityIndicator } from 'react-native-paper';
 
 const UpdatesList = props => {
   const [updates, setUpdates] = useState([]);
-  const promise = fetchUpdates();
-
+  const [refreshing, setRefreshing] = useState(false);
+  
   // Handle the promise obtained with fetching data from API
   useEffect(() => {
+    requestUpdates();
+  }, []);
+
+  const requestUpdates = () => {
+    const promise = fetchUpdates();
     promise
       .then(response => {
         console.log('Fetched updates successfully!');
         setUpdates(response.data);
+        setRefreshing(false);
       })
       .catch(error => {
         console.log(error);
@@ -21,22 +29,54 @@ const UpdatesList = props => {
         // If error occurs, set to constant
         // TODO: give some warning to user in case error occurs
         setUpdates(UPDATES);
+        setRefreshing(false);
       });
-  }, []);
+  }
 
-  const Updates = updates.map(update => (
+  const renderUpdateComponent = ({ item: update }) => (
     <UpdateComponent
       title={update.title}
       body={update.body}
-      date={update.dateCreated.substring(0, 21)}
+      date={update.dateCreated !== undefined ? update.dateCreated.substring(0, 21) : ''}
       lastUpdated={update.lastUpdated}
       author={update.author}
       key={update.id}
       navigation={props.navigation}
     />
-  ));
+  );
 
-  return <>{Updates}</>;
+  const handleRefresh = () => {
+    setRefreshing(true);
+    requestUpdates();
+  }
+
+  // const Updates = updates.map(update => (
+  //   <UpdateComponent
+  //     title={update.title}
+  //     body={update.body}
+  //     date={update.dateCreated.substring(0, 21)}
+  //     lastUpdated={update.lastUpdated}
+  //     author={update.author}
+  //     key={update.id}
+  //     navigation={props.navigation}
+  //   />
+  // ));
+
+  return (
+    <View>
+      {updates.length === 0 && <ActivityIndicator size="small" />}
+      <FlatList
+        data={updates}
+        renderItem={renderUpdateComponent}
+        keyExtractor={update => update.id}
+        contentContainerStyle={{flexGrow: 1}}
+        refreshing={refreshing}
+        onRefresh={handleRefresh}
+        scrollEnabled={true}
+        showsVerticalScrollIndicator
+      />
+    </View>
+  );
 };
 
 export default UpdatesList;

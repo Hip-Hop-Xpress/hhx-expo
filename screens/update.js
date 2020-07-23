@@ -39,7 +39,7 @@ const Update = props => {
               <Text style={styles.authorText}>{author}</Text>
               <Text style={styles.dateText}>{date}</Text>
               {/* Only show updated timestamp if the update has ever been updated */}
-              {lastUpdated !== null && <Text style={styles.dateText}>{'Last updated: ' + lastUpdated.substring(0,21)}</Text>}
+              {(lastUpdated !== null && lastUpdated !== undefined) && <Text style={styles.dateText}>{'Last updated: ' + lastUpdated.substring(0,21)}</Text>}
             </View>
 
             {/* Text body */}
