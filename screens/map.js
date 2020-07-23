@@ -7,6 +7,8 @@ import {
   Text,
   StatusBar,
   Dimensions,
+  Linking,
+  TouchableOpacity
 } from 'react-native';
 
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
@@ -22,12 +24,15 @@ import {COORDS, CONTACTS} from '../api/constants/mapConstants';
 // Styles
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
+import { ILLINI_BLUE } from '../styles/colors';
 
 let {width, height} = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
 
 const LATITUDE_DELTA = 0.05;  // originally 0.0922
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+
+const arcgisMapUrl = 'https://www.arcgis.com/apps/MapJournal/index.html?appid=5147c188b9664d00bdc88842b8ae4139';
 
 export default function Map() {
   // Prop for Map marker
@@ -52,7 +57,7 @@ export default function Map() {
             </View>
 
             {/* Subtitle */}
-            <Text style={styles.introText}>{strings.maps.subtitle}</Text>
+            <Text style={styles.bodyText}>{strings.maps.subtitle}</Text>
 
             {/* Map */}
             <View style={styles.mapContainer}>
@@ -69,12 +74,31 @@ export default function Map() {
                 <MapView.Marker coordinate={busCoordinates} />
               </MapView>
             </View>
+            
+            {/* ArcGIS Story Map Link */}
+            <Text style={styles.bodyText}>
+                {strings.maps.storyMapDesc}
+            </Text>
 
-            {/* Request */}
-            <Text style={styles.introText}>{strings.maps.request}</Text>
+            <TouchableOpacity 
+              style={styles.navButton} 
+              onPress={() => {
+                Linking.openURL(arcgisMapUrl)
+              }}
+            >
+              <Text style={styles.navButtontext}>
+                {strings.maps.storyMapTitle}
+              </Text>
+            </TouchableOpacity>
+            
+            <View style={styles.contactContainer}>
+              {/* Request */}
+              <Text style={styles.bodyText}>{strings.maps.request}</Text>
 
-            {/* Contacts */}
-            <SocialMedia platforms={CONTACTS} />
+              {/* Contacts */}
+              <SocialMedia platforms={CONTACTS} />
+            </View>
+
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -94,7 +118,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     textAlign: 'center',
   },
-  introText: {
+  bodyText: {
     fontFamily: Fonts.KARLA_REGULAR,
     textAlign: 'center',
     marginHorizontal: 30,
@@ -119,16 +143,18 @@ const styles = StyleSheet.create({
     height: 400,
     width: '100%',
   },
-  socialMediaContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    paddingVertical: 10,
-    marginBottom: -1,
+  navButton: {
+    paddingVertical: 15,
+    marginVertical: 2,
+    backgroundColor: ILLINI_BLUE
   },
-  socialMediaButton: {
-    borderRadius: 50,
-    width: 55,
+  navButtontext: {
+    fontFamily: Fonts.MONTSERRAT_BLACK,
+    fontSize: 20,
+    textAlign: 'center',
+    color: 'white',
   },
+  contactContainer: {
+    marginVertical: 25
+  }
 });
