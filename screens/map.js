@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -19,22 +19,30 @@ import SocialMedia from '../components/socialMedia';
 
 // Strings/data
 import strings from '../assets/strings';
-import {COORDS, CONTACTS} from '../api/constants/mapConstants';
+import assignData from '../api/assignData';
+import { ENDPOINTS } from '../api/endpoints';
+import {UIUC_LOCATION, COORDS, CONTACTS} from '../api/constants/mapConstants';
 
 // Styles
 import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 import { ILLINI_BLUE } from '../styles/colors';
 
-let {width, height} = Dimensions.get('window');
-const ASPECT_RATIO = width / height;
-
-const LATITUDE_DELTA = 0.05;  // originally 0.0922
-const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
-
 const arcgisMapUrl = 'https://www.arcgis.com/apps/MapJournal/index.html?appid=5147c188b9664d00bdc88842b8ae4139';
 
-export default function Map() {
+const Map = () => {
+  const [locationInfo, setLocationInfo] = useState({});
+
+  useEffect(() => {
+    assignData(ENDPOINTS.location, setLocationInfo, UIUC_LOCATION);
+  }, []);
+
+  let {width, height} = Dimensions.get('window');
+  const ASPECT_RATIO = width / height;
+  
+  const LATITUDE_DELTA = 0.05;  // originally 0.0922
+  const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+
   // Prop for Map marker
   const busCoordinates = {
     latitude: COORDS.busLocation.latitude,
@@ -158,3 +166,5 @@ const styles = StyleSheet.create({
     marginVertical: 25
   }
 });
+
+export default Map;
