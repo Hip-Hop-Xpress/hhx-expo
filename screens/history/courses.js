@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import Timeline from 'react-native-timeline-flatlist'
+import LoadingIcon from '../../components/loadingIcon';
 
 // Text/data
 import strings from '../../assets/strings';
@@ -69,6 +70,7 @@ const Courses = () => {
 
           {/* Body */}
           <View style={styles.body}>
+            {coursesData.length === 0 && <LoadingIcon />}
             <Timeline 
               style={styles.list}
               data={coursesData}
