@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -6,7 +6,6 @@ import {
   View,
   Text,
   StatusBar,
-  Image,
 } from 'react-native';
 
 import Timeline from 'react-native-timeline-flatlist'
@@ -23,54 +22,39 @@ import * as Colors from '../../styles/colors';
 /**
  * Screen showcasing past courses held by the Hip Hop Xpress
  */
-export default class Courses extends Component {
-  constructor(){
-    super()
-    this.data = COURSES_DATA;
-  } 
+const Courses = () => {
+  return (
+    <>
+      <StatusBar barStyle="light-content" />
+      <SafeAreaView style={globalStyles.illiniBlue}>
+        <ScrollView contentInsetAdjustmentBehavior="automatic">
 
-  render() {
-    //'rgb(45,156,219)'
-    return (
-      <>
-        <StatusBar barStyle="light-content" />
-        <SafeAreaView style={globalStyles.illiniBlue}>
-          <ScrollView contentInsetAdjustmentBehavior="automatic">
+          {/* Text over top image */}
+          <View style={styles.topView}>
+            <Text style={[styles.topText, globalStyles.illiniBlue]}>{strings.courses.title}</Text>
+          </View>
 
-            <View>
-              {/* Top image */}
-              <Image
-                style={styles.topImage}
-                source={require('../../assets/images/camp.jpg')}
-              />
-              {/* Text over top image */}
-              <View style={styles.topView}>
-                <Text style={[styles.topText, globalStyles.illiniBlue]}>{strings.courses.title}</Text>
-              </View>
-            </View>
+          {/* Body */}
+          <View style={styles.body}>
+            <Timeline 
+              style={styles.list}
+              data={COURSES_DATA}
+              separator={true}
+              circleSize={20}
+              circleColor={Colors.ILLINI_BLUE}
+              lineColor={Colors.ILLINI_BLUE}
+              timeContainerStyle={{minWidth:95, marginTop: -5}}
+              timeStyle={styles.timeStyle}
+              options={{
+                style:{paddingTop:5}
+              }}
+            />
+          </View>
 
-            {/* Body */}
-            <View style={[styles.body]}>
-                <Timeline 
-                  style={styles.list}
-                  data={this.data}
-                  separator={true}
-                  circleSize={20}
-                  circleColor={Colors.ILLINI_BLUE}
-                  lineColor={Colors.ILLINI_BLUE}
-                  timeContainerStyle={{minWidth:95, marginTop: -5}}
-                  timeStyle={styles.timeStyle}
-                  options={{
-                    style:{paddingTop:5}
-                  }}
-                />
-            </View>
-  
-          </ScrollView>
-        </SafeAreaView>
-      </>
-    );
-  }
+        </ScrollView>
+      </SafeAreaView>
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -86,11 +70,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   topView: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -124,3 +103,5 @@ const styles = StyleSheet.create({
     overflow: 'hidden'
   },
 });
+
+export default Courses;
