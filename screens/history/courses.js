@@ -34,7 +34,7 @@ const Courses = () => {
    * @param {Array} coursesData courses data directly from API
    */
   const processCoursesData = (coursesData) => {
-
+    // Map each course's data to the schema required for Timeline
     const processedData = coursesData.map((course) => {
       return {
         time: course.startDate + (
@@ -49,10 +49,11 @@ const Courses = () => {
       };
     });
 
+    // Assign processed course data to state variable
     setCoursesData(processedData);
-
   };
 
+  // Grab courses data from API and process, or use constants if request fails
   useEffect(() => {
     assignData(ENDPOINTS.courses, processCoursesData, COURSES_DATA);
   }, []);
@@ -93,10 +94,6 @@ const Courses = () => {
 }
 
 const styles = StyleSheet.create({
-  topImage: {
-    height: 250,
-    flex: 1,
-  },
   topText: {
     fontFamily: 'Montserrat-Black',
     color: 'white',
@@ -111,10 +108,6 @@ const styles = StyleSheet.create({
   list: {
     flex: 1,
     marginTop:20,
-  },
-  title: {
-    paddingTop: 20,
-    paddingBottom: 15,
   },
   titleText: {
     fontFamily: Fonts.MONTSERRAT_BLACK,
