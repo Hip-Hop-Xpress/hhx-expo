@@ -4,7 +4,7 @@
 export const ENDPOINTS = {
   courses:      '/v1/courses',
   featured:     '/v1/featured',
-  histories:    '/v1/histories',
+  historic:    '/v1/historic',
   location:     '/v1/location',
   participants: '/v1/participants',
   projects:     '/v1/projects',
