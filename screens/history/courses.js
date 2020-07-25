@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -12,17 +12,50 @@ import Timeline from 'react-native-timeline-flatlist'
 
 // Text/data
 import strings from '../../assets/strings';
+import assignData from '../../api/assignData';
+import { ENDPOINTS } from '../../api/endpoints';
 import COURSES_DATA from '../../api/constants/coursesData';
 
 // Styles
 import globalStyles from '../../styles/global';
 import * as Fonts from '../../styles/fonts';
-import * as Colors from '../../styles/colors';
+import { ILLINI_BLUE, ILLINI_ORANGE } from '../../styles/colors';
 
 /**
  * Screen showcasing past courses held by the Hip Hop Xpress
  */
 const Courses = () => {
+  const [coursesData, setCoursesData] = useState([]);
+
+  /**
+   * Processes and assigns courses data from API to fit with
+   * data prop in react-native-timeline-flatlist
+   * @param {Array} coursesData courses data directly from API
+   */
+  const processCoursesData = (coursesData) => {
+
+    const processedData = coursesData.map((course) => {
+      return {
+        time: course.startDate + (
+          course.endDate === null || course.endDate === course.startDate 
+            ? '' 
+            : '\n' + course.endDate
+        ),
+        title: course.name,
+        description: course.description.reduce((bodyString, paragraph) => {
+          return bodyString + '\n' + paragraph
+        }, ''),
+      };
+    });
+
+    setCoursesData(processedData);
+
+  };
+
+  useEffect(() => {
+    assignData(ENDPOINTS.courses, processCoursesData, COURSES_DATA);
+  }, []);
+
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -38,12 +71,12 @@ const Courses = () => {
           <View style={styles.body}>
             <Timeline 
               style={styles.list}
-              data={COURSES_DATA}
+              data={coursesData}
               separator={true}
               circleSize={20}
-              circleColor={Colors.ILLINI_BLUE}
-              lineColor={Colors.ILLINI_BLUE}
-              timeContainerStyle={{minWidth:95, marginTop: -5}}
+              circleColor={ILLINI_BLUE}
+              lineColor={ILLINI_BLUE}
+              timeContainerStyle={{minWidth:95, marginTop: 0}}
               timeStyle={styles.timeStyle}
               options={{
                 style:{paddingTop:5}
@@ -96,10 +129,10 @@ const styles = StyleSheet.create({
   },
   timeStyle: {
     textAlign: 'center', 
-    backgroundColor:'rgba(232, 74, 39, 0.85)', 
-    color:'white', 
-    padding:5, 
-    borderRadius:13,
+    backgroundColor: ILLINI_ORANGE, 
+    color: 'white', 
+    padding: 5, 
+    borderRadius: 13,
     overflow: 'hidden'
   },
 });
