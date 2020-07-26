@@ -31,7 +31,7 @@ const Featured = ({navigation}) => {
   }, []);
 
   // Artist on featured page must be the "current" artist, as signified by .current member
-  const currentArtist = FEATURED_ARTISTS.find(artist => artist.current)
+  const currentArtist = featuredArtists.find(artist => artist.current)
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -54,7 +54,10 @@ const Featured = ({navigation}) => {
                 {strings.featured.pastArtists}
               </Text>
               <View style={featuredStyles.artistsContainer}>
-                <FeaturedArtistsList navigation={navigation}/>
+                <FeaturedArtistsList 
+                  featuredArtists={featuredArtists} 
+                  navigation={navigation}
+                />
               </View>
             </View>
           }
