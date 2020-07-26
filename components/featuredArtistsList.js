@@ -13,11 +13,11 @@ const FeaturedArtistsList = ({navigation}) => {
   const Artists = FEATURED_ARTISTS.map(artist => (
     artist.current ? null : (
     <FeaturedArtistComponent
-      name={artist.artistName}
+      name={artist.name}
       date={artist.date}
-      title={artist.bioTitle}
-      bio={artist.bioBody}
-      socialMedia={artist.socialMedia}
+      bio={artist.bio}
+      headerImageUrl={artist.headerImageUrl}
+      socials={artist.socials}
       navigation={navigation}
       key={key++}
     />
