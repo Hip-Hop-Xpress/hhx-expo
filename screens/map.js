@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { RefreshControl } from 'react-native';
 import {
   SafeAreaView,
   StyleSheet,
@@ -32,6 +33,13 @@ const arcgisMapUrl = 'https://www.arcgis.com/apps/MapJournal/index.html?appid=51
 
 const Map = () => {
   const [locationInfo, setLocationInfo] = useState(UIUC_LOCATION);
+  const [refreshing, setRefreshing] = useState(false);
+
+  const onRefresh = () => {
+    setRefreshing(true);
+    assignData(ENDPOINTS.location, setLocationInfo, UIUC_LOCATION);
+    setRefreshing(false);
+  }
 
   useEffect(() => {
     assignData(ENDPOINTS.location, setLocationInfo, UIUC_LOCATION);
@@ -56,7 +64,12 @@ const Map = () => {
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={globalStyles.illiniBlue}>
         <Header />
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
+        <ScrollView 
+          contentInsetAdjustmentBehavior="automatic"
+          refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          }
+        >
           {/* Body */}
           <View style={[styles.body]}>
             {/* Title */}
