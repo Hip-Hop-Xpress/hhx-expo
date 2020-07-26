@@ -31,7 +31,7 @@ import { ILLINI_BLUE } from '../styles/colors';
 const arcgisMapUrl = 'https://www.arcgis.com/apps/MapJournal/index.html?appid=5147c188b9664d00bdc88842b8ae4139';
 
 const Map = () => {
-  const [locationInfo, setLocationInfo] = useState({});
+  const [locationInfo, setLocationInfo] = useState(UIUC_LOCATION);
 
   useEffect(() => {
     assignData(ENDPOINTS.location, setLocationInfo, UIUC_LOCATION);
@@ -45,8 +45,8 @@ const Map = () => {
 
   // Prop for Map marker
   const busCoordinates = {
-    latitude: COORDS.busLocation.latitude,
-    longitude: COORDS.busLocation.longitude,
+    latitude: locationInfo.latitude,
+    longitude: locationInfo.longitude,
     latitudeDelta: LATITUDE_DELTA,
     longitudeDelta: LONGITUDE_DELTA,
   };
@@ -66,6 +66,9 @@ const Map = () => {
 
             {/* Subtitle */}
             <Text style={styles.bodyText}>{strings.maps.subtitle}</Text>
+            <Text style={styles.bodyText}>
+              Current location: {locationInfo.name}
+            </Text>
 
             {/* Map */}
             <View style={styles.mapContainer}>
