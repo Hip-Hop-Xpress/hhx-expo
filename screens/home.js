@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import {
   SafeAreaView,
@@ -19,6 +19,8 @@ import SocialMedia from '../components/socialMedia';
 
 // Text/data imports
 import strings from '../assets/strings';
+import assignData from '../api/assignData';
+import { ENDPOINTS } from '../api/endpoints';
 import PLATFORMS from '../api/constants/socialMedia';
 
 // Styles
@@ -26,8 +28,13 @@ import globalStyles from '../styles/global';
 import * as Fonts from '../styles/fonts';
 import * as Colors from '../styles/colors';
 
-
 const Home = ({navigation}) => {
+  const [socialMediaInfo, setSocialMedInfo] = useState([]);
+
+  useEffect(() => {
+    assignData(ENDPOINTS.socials, setSocialMedInfo, PLATFORMS);
+  }, []);
+
   // App layout
   return (
     <>
@@ -107,7 +114,7 @@ const Home = ({navigation}) => {
 
             {/* Social Media Section */}
             <View style={styles.sectionContainer}>
-              <SocialMedia platforms={PLATFORMS} />
+              <SocialMedia platforms={socialMediaInfo} />
             </View>
           </View>
         </ScrollView>
