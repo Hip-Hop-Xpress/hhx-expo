@@ -10,38 +10,25 @@ import strings from '../assets/strings';
 
 /**
  * Shows a featured artist's information
- * @param {string} name        name of artist
- * @param {string} date        date the artist was featured
- * @param {string} bio         body paragraphs describing the artist
- * @param {string} title       title of the artist's bio
- * @param {Array}  socialMedia holds all artist's social media platforms
+ * @param {string} name           name of artist
+ * @param {string} date           date the artist was featured
+ * @param {string} bio            body paragraphs describing the artist
+ * @param {string} headerImageUrl url for header image
+ * @param {Array}  socials        holds all artist's social media platforms
  */
-const ArtistBodyContent = ({name, date, bio, title, socialMedia}) => {
+const ArtistBodyContent = ({name, date, bio, socials, headerImageUrl}) => {
   return (
     <View style={[featuredStyles.body, globalStyles.illiniBlue]}>
-      {/* Top image/title card */}
-      <View>
-        {/* Artist's image */}
-        <Image
-          source={require('../assets/featured/default/default_header_blurred.jpg')}
-        />
-        {/* Text over artist image */}
-        <View style={featuredStyles.imageCard}>
-          <Text style={featuredStyles.artistNameText}>
-            {name}
-          </Text>
-        </View>
-      </View>
-
+    
       {/* Title */}
       <View style={featuredStyles.title}>
         <Text style={featuredStyles.titleText}>
-          {strings.featured.title}
+          {name}
         </Text>
         {/* Artist image */}
         <Image
           style={featuredStyles.artistImage}
-          source={require('../assets/featured/default/default_profile.jpg')}
+          source={{ uri: headerImageUrl }}
         />
         <Text style={featuredStyles.dateText}>
           {date}
@@ -50,12 +37,12 @@ const ArtistBodyContent = ({name, date, bio, title, socialMedia}) => {
 
       {/* Social Media Container */}
       <View style={globalStyles.illiniBlue}>
-          <SocialMedia platforms={socialMedia} />
+        <SocialMedia platforms={socials} />
       </View>
 
       {/* Bio */}
       <View style={[globalStyles.illiniBlue, featuredStyles.bioContainer]}>
-        <Text style={featuredStyles.bioTitle}>{title}</Text>
+        <Text style={featuredStyles.bioTitle}>About</Text>
         <Text style={featuredStyles.bioBody}>{bio}</Text>
       </View>
 

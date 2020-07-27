@@ -18,9 +18,9 @@ import featuredStyles from '../../styles/featuredStyles';
 const Artist = props => {
   const {name} = props.route.params;
   const {date} = props.route.params;
-  const {title} = props.route.params;
+  const {headerImageUrl} = props.route.params;
   const {bio} = props.route.params;
-  const {socialMedia} = props.route.params;
+  const {socials} = props.route.params;
 
   return (
     <>
@@ -35,7 +35,8 @@ const Artist = props => {
             date={date}
             title={title}
             bio={bio}
-            socialMedia={socialMedia}
+            headerImageUrl={headerImageUrl}
+            socials={socials}
           />
         </ScrollView>
       </SafeAreaView>

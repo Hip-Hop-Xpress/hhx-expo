@@ -12,11 +12,11 @@ import * as Fonts from '../styles/fonts';
  * @param {string} date        date the artist was featured
  * 
  * These next props are simply passed to the artist page; they are not used in this component
- * @param {string} bio         body paragraphs describing the artist
- * @param {string} title       title of the artist's bio
- * @param {Array}  socialMedia hold's all artist's social media platforms
+ * @param {string} bio            body paragraphs describing the artist
+ * @param {string} headerImageUrl url for header image
+ * @param {Array}  socials    hold's all artist's social media platforms
  */
-const ArtistComponent = ({navigation, name, date, title, bio, socialMedia}) => {
+const ArtistComponent = ({navigation, name, date, bio, socials}) => {
   const artist = (
     <TouchableOpacity
       activeOpacity={0.75}
@@ -26,9 +26,8 @@ const ArtistComponent = ({navigation, name, date, title, bio, socialMedia}) => {
           navigation.navigate('Past Featured Artist', {
             name: name,
             date: date,
-            title: title,
             bio: bio,
-            socialMedia: socialMedia,
+            socials: socials,
           })
       }
     >

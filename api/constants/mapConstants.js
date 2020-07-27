@@ -1,16 +1,17 @@
 // Placeholder bus coordinates
-const UIUC_COORDS = {
+export const UIUC_LOCATION = {
   latitude: 40.102,
   longitude: -88.2272,
+  name: 'University of Illinois Urbana-Champaign'
 };
 
 // Object holding information for bus and map
 export const COORDS = {
-  mapStartLat: UIUC_COORDS.latitude,
-  mapStartLong: UIUC_COORDS.longitude,
+  mapStartLat: UIUC_LOCATION.latitude,
+  mapStartLong: UIUC_LOCATION.longitude,
   busLocation: {
-    latitude: UIUC_COORDS.latitude,
-    longitude: UIUC_COORDS.longitude,
+    latitude: UIUC_LOCATION.latitude,
+    longitude: UIUC_LOCATION.longitude,
   },
 };
 

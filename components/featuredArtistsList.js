@@ -7,17 +7,17 @@ import FEATURED_ARTISTS from '../api/constants/featuredArtists';
  * 
  * @param {Object} navigation navigation object from Featured Stack, lets user click to artist page 
  */
-const FeaturedArtistsList = ({navigation}) => {
+const FeaturedArtistsList = ({featuredArtists, navigation}) => {
   let key = 0;
   
-  const Artists = FEATURED_ARTISTS.map(artist => (
+  const Artists = featuredArtists.map(artist => (
     artist.current ? null : (
     <FeaturedArtistComponent
-      name={artist.artistName}
+      name={artist.name}
       date={artist.date}
-      title={artist.bioTitle}
-      bio={artist.bioBody}
-      socialMedia={artist.socialMedia}
+      bio={artist.bio}
+      headerImageUrl={artist.headerImageUrl}
+      socials={artist.socials}
       navigation={navigation}
       key={key++}
     />
