@@ -4,8 +4,10 @@ import * as Permissions from 'expo-permissions';
 import { Platform } from 'react-native';
 
 // Taken directly from here:
+// https://docs.expo.io/push-notifications/overview/
 // https://docs.expo.io/push-notifications/push-notifications-setup/
-const registerForPushNotificationsAsync = async (setToken) => {
+const registerForPushNotificationsAsync = async () => {
+  let token;
   if (Constants.isDevice) {
     const { status: existingStatus } = 
       await Permissions.getAsync(Permissions.NOTIFICATIONS);
@@ -21,9 +23,8 @@ const registerForPushNotificationsAsync = async (setToken) => {
       return;
     }
 
-    const token = await Notifications.getExpoPushTokenAsync();
+    token = (await Notifications.getExpoPushTokenAsync()).data;
     console.log(token);
-    setToken(token);
 
   } else {
     alert('Must use physical device for Push Notifications');
@@ -33,10 +34,12 @@ const registerForPushNotificationsAsync = async (setToken) => {
     Notifications.createChannelAndroidAsync('default', {
       name: 'default',
       sound: true,
-      priority: 'max',
+      priority: Notifications.AndroidImportance.MAX,
       vibrate: [0, 250, 250, 250],
     });
   }
+
+  return token;
 
 };
 

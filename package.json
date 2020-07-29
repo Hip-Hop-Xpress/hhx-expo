@@ -15,8 +15,11 @@
     "@use-expo/font": "^2.0.0",
     "axios": "^0.19.2",
     "eslint": "^7.1.0",
-    "expo": "~37.0.3",
+    "expo": "^37.0.8",
+    "expo-constants": "~9.0.0",
     "expo-font": "~8.1.0",
+    "expo-notifications": "~0.1.1",
+    "expo-permissions": "~8.1.0",
     "font": "0.0.4",
     "logkitty": "^0.7.1",
     "mem": "^6.1.0",
@@ -33,10 +36,7 @@
     "react-native-vector-icons": "^6.6.0",
     "react-native-web": "^0.11.7",
     "react-navigation": "^4.3.8",
-    "react-navigation-stack": "^2.3.13",
-    "expo-permissions": "~8.1.0",
-    "expo-notifications": "~0.1.1",
-    "expo-constants": "~9.0.0"
+    "react-navigation-stack": "^2.3.13"
   },
   "devDependencies": {
     "babel-preset-expo": "~8.1.0",
