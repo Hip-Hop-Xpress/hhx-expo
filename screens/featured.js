@@ -5,6 +5,7 @@ import {SafeAreaView, ScrollView, View, Text, StatusBar} from 'react-native';
 import Header from '../components/header';
 import ArtistBody from '../components/featuredArtistBody';
 import FeaturedArtistsList from '../components/featuredArtistsList';
+import LoadingIcon from '../components/loadingIcon';
 
 // Data/text imports
 import FEATURED_ARTISTS from '../api/constants/featuredArtists';
@@ -31,7 +32,7 @@ const Featured = ({navigation}) => {
   }, []);
 
   // Artist on featured page must be the "current" artist, as signified by .current member
-  const currentArtist = featuredArtists.find(artist => artist.current)
+  const currentArtist = featuredArtists.find(artist => artist.current);
   return (
     <>
       <StatusBar barStyle="light-content" />
@@ -39,13 +40,16 @@ const Featured = ({navigation}) => {
         <Header />
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           {/* Body */}
-          <ArtistBody
+          {featuredArtists.length === 0
+            ? <LoadingIcon />
+            : 
+          (<ArtistBody
             name={currentArtist.name}
             date={currentArtist.date}
             bio={currentArtist.bio}
             socials={currentArtist.socials}
             headerImageUrl={currentArtist.headerImageUrl}
-          />
+          />)}
 
           {/* Past artists */}
           {featuredArtists.length > 1 &&
