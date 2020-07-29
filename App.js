@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
+import { Alert } from 'react-native';
 import BottomNavigator from './routes/bottomNavigator';
 import {NavigationContainer} from '@react-navigation/native';
 import * as Font from 'expo-font';
@@ -22,6 +23,21 @@ export default function App() {
     // Listener for notification
     responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
       console.log(response);
+    });
+
+    // This listener is fired whenever a notification is received while the app is foregrounded
+    notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
+      console.log(notification);
+      Alert.alert(
+        notification.request.content.title,
+        notification.request.content.body,
+        [
+          {
+            text: 'Close',
+            style: 'default'
+          }
+        ]
+      )
     });
 
     return () => {
