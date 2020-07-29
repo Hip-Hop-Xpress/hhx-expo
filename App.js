@@ -7,6 +7,15 @@ import { AppLoading } from 'expo';
 import * as Notifications from 'expo-notifications';
 import registerForPushNotificationsAsync from './api/registerForPushNotificationsAsync';
 
+// Determines how the app will handle notifications while foregrounded
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: false,
+    shouldSetBadge: true,
+  }),
+});
+
 /**
  * Mobile app for the Hip Hop Xpress
  */
