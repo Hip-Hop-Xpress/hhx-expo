@@ -2,6 +2,8 @@ import Constants from 'expo-constants';
 import * as Notifications from 'expo-notifications';
 import * as Permissions from 'expo-permissions';
 import { Alert, Platform, Linking } from 'react-native';
+import API from './api';
+import { ENDPOINTS } from './endpoints';
 
 // Taken directly from here:
 // https://docs.expo.io/push-notifications/overview/
@@ -38,8 +40,10 @@ const registerForPushNotificationsAsync = async () => {
 
     // Get the token and send it to our API
     token = (await Notifications.getExpoPushTokenAsync()).data;
-    // TODO: send the token (POST /v1/tokens) to our api
-    console.log(token);
+    
+    API.post(ENDPOINTS.tokens, { pushToken: token })
+      .then(res => console.log('Successfully sent push token!', res))
+      .catch(e => console.error('Sending push token failed', e));
 
   } else {
     Alert.alert('Warning', 'NOTE: This device will not receive push notifications as it is not a physical device.');

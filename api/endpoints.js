@@ -10,5 +10,6 @@ export const ENDPOINTS = {
   projects:     '/v1/projects',
   socials:      '/v1/socials',
   updates:      '/v1/updates',
-  variations:   '/v1/variations'
+  variations:   '/v1/variations',
+  tokens:       '/v1/tokens'
 };
